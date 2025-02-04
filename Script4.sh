@@ -77,7 +77,7 @@ for sample in /Volumes/Seagate/monotrack/workdir/Raw_Reads/*.fastq.gz
 
 done
 
-/opt/anaconda3/envs/medaka/bin/python monotrac/plotting.py
+/opt/anaconda3/envs/medaka/bin/python Plots/plotting.py
 
 #samtools sort -o Mapped/Sorted_bam/${base}.sorted.bam Mapped/${base}.bam
 #samtools index Mapped/Sorted_bam/${base}.sorted.bam
