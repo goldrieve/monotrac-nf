@@ -8,9 +8,9 @@ mkdir workdir/Fastqc/Fastq_unzip
 mkdir workdir/Fastqc/Fastqc_fc
 mkdir workdir/Raw_Reads
 mkdir workdir/Mapped 
-mkdir workdir/Mapped/Mapped_fastqc
-mkdir workdir/Mapped/Sorted_bam
-mkdir workdir/Mapped/Mosdepth
+mkdir workdir/Mapped/Mapped_fastq
+mkdir workdir/Mapped/Sorted_bam # potentially do not need 
+mkdir workdir/Mapped/Mosdepth # potentially do not need 
 mkdir workdir/monotrac
 mkdir workdir/isolate_fasta 
 mkdir workdir/Consensus 
@@ -36,17 +36,17 @@ for sample in /Volumes/Seagate/monotrack/workdir/Raw_Reads/*.fastq.gz
     fastqc --mem 10000 --nano "${sample}" -o Fastqc
 
     # count the number of reads using the fasqc files 
-    unzip Fastqc/"${base}"_fastqc.zip -d Fastqc/Fastqc_unzip
+    unzip Fastqc/"${base}"_fastqc.zip -d Fastqc/Fastq_unzip
     #echo "the number of reads in the file is"
-    grep "Total Sequences" Fastqc/Fastqc_unzip/"${base}"_fastqc/fastqc_data.txt
+    grep "Total Sequences" Fastqc/Fastq_unzip/"${base}"_fastqc/fastqc_data.txt
  
     echo "Mapping ${base} reads to mono-trac targets"
     # map reads to monotrac targets
-    minimap2 -a -x map-ont References/targets_sequence.fasta "${sample}" | samtools view -Sb -F 4 | samtools fastq | gzip > Mapped/Mapped_fastqc/${base}.fastq.gz
+    minimap2 -a -x map-ont References/targets_sequence.fasta "${sample}" | samtools view -Sb -F 4 | samtools fastq - | gzip > Mapped/Mapped_fastq/${base}.fastq.gz
 
     # perform fastqc on the fastq files and then use the subsequent qc files to count the number of aligned sequences 
     echo "Performing fastqc on the aligned reads of ${base}"
-    fastqc --mem 10000 --nano Mapped/Mapped_fastqc/${base}.fastq.gz -o Fastqc/Fastqc_fc/
+    fastqc --mem 10000 --nano Mapped/Mapped_fastq/${base}.fastq.gz -o Fastqc/Fastqc_fc/
     unzip Fastqc/Fastqc_fc/"${base}"_fastqc.zip -d Fastqc/Fastqc_fc/
     echo "the number of aligned reads is"
     grep "Total Sequences" Fastqc/Fastqc_fc/"${base}"_fastqc/fastqc_data.txt
@@ -54,7 +54,7 @@ for sample in /Volumes/Seagate/monotrack/workdir/Raw_Reads/*.fastq.gz
     # Generating consensus sequences for the raw reads
     echo "Generating a consensus sequence for ${base}"
     conda activate medaka
-    medaka_consensus -i Mapped/Mapped_fastqc/${base}.fastq.gz -d References/targets_sequence2.fasta -o Consensus/${base}
+    medaka_consensus -i Mapped/Mapped_fastq/${base}.fastq.gz -d References/targets_sequence2.fasta -o Consensus/${base}
     echo "Calling variant in ${base}"
     medaka variant References/targets_sequence2.fasta Consensus/${base}/consensus_probs.hdf Consensus/${base}/medaka.vcf
     cp Consensus/${base}/consensus.fasta C.fasta/${base}.fas
