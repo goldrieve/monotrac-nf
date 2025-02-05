@@ -22,7 +22,7 @@ cd workdir
 
 echo "Running pipeline"
  
-for sample in /Volumes/Seagate/monotrack/workdir/Raw_Reads/*.fastq.gz
+for sample in data/*.fastq.gz
  
     do
     
