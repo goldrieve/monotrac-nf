@@ -1,5 +1,5 @@
 #!/bin/bash
-source /opt/anaconda3/etc/profile.d/conda.sh
+conda activate archie 
 
 mkdir workdir
 mkdir workdir/References
@@ -9,8 +9,8 @@ mkdir workdir/Fastqc/Fastqc_fc
 mkdir workdir/Raw_Reads
 mkdir workdir/Mapped 
 mkdir workdir/Mapped/Mapped_fastq
-mkdir workdir/Mapped/Sorted_bam # potentially do not need 
-mkdir workdir/Mapped/Mosdepth # potentially do not need 
+#mkdir workdir/Mapped/Sorted_bam # potentially do not need 
+#mkdir workdir/Mapped/Mosdepth # potentially do not need 
 mkdir workdir/monotrac
 mkdir workdir/isolate_fasta 
 mkdir workdir/Consensus 
@@ -29,7 +29,6 @@ for sample in /Volumes/Seagate/monotrack/workdir/Raw_Reads/*.fastq.gz
     dir="/Volumes/Seagate/monotrack/workdir/Raw_Reads"
     base=$(basename "$sample" ".fastq.gz")
 
-    conda activate monotrac
 
     # run FastQC
     echo "Performing FastQC on ${base}"
@@ -53,14 +52,12 @@ for sample in /Volumes/Seagate/monotrack/workdir/Raw_Reads/*.fastq.gz
 
     # Generating consensus sequences for the raw reads
     echo "Generating a consensus sequence for ${base}"
-    conda activate medaka
     medaka_consensus -i Mapped/Mapped_fastq/${base}.fastq.gz -d References/targets_sequence2.fasta -o Consensus/${base}
     echo "Calling variant in ${base}"
     medaka variant References/targets_sequence2.fasta Consensus/${base}/consensus_probs.hdf Consensus/${base}/medaka.vcf
     cp Consensus/${base}/consensus.fasta C.fasta/${base}.fas
 
     echo "Calculating the depth of reads for ${base}"
-    conda activate monotrac
     mosdepth Mosdepth/${base} Consensus/${base}/calls_to_draft.bam
 
     # create a new directory called temp, copy all fasta files from isolat_fasta and c.fasta into 
@@ -78,8 +75,3 @@ for sample in /Volumes/Seagate/monotrack/workdir/Raw_Reads/*.fastq.gz
 done
 
 /opt/anaconda3/envs/medaka/bin/python Plots/plotting.py
-
-#samtools sort -o Mapped/Sorted_bam/${base}.sorted.bam Mapped/${base}.bam
-#samtools index Mapped/Sorted_bam/${base}.sorted.bam
-#echo "performing mosdepth on ${base}"
-#mosdepth Mapped/Mosdepth/${base} Mapped/Sorted_bam/${base}.sorted.bam
