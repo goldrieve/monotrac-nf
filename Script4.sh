@@ -64,30 +64,18 @@ for sample in /Volumes/Seagate/monotrack/workdir/Raw_Reads/*.fastq.gz
     #mosdepth Mosdepth/${base} Consensus/${base}/calls_to_draft.bam
 
     
-    plotting_data=Mosdepth/${base}.mosdepth.global.dist.txt
-
-    /opt/anaconda3/envs/medaka/bin/python monotrac/depth_plots.py
+    
+    /opt/anaconda3/envs/medaka/bin/python monotrac/depth_plots.py Mosdepth/${base}.mosdepth.global.dist.txt
 
 done
 
+
 #/opt/anaconda3/envs/medaka/bin/python Plots/plotting.py
 
-#cp isolate_fasta/*.fas workdir/C.fasta/
+#/opt/anaconda3/envs/medaka/bin/python monotrac/concatenate_2.py
+
 #conda activate mafft
-#/opt/anaconda3/envs/mafft/bin/python monotrac/concatenate.py
-#mv reordered_fastas C.fasta
-#cd C.fasta/reordered_fastas
 
-#for file in *.fas
+#mafft --auto reordered_fastas/concatenated_sequences.fasta > reordered_fastas/aligned_genomes.fasta
+#FastTree -nt -gtr -gamma reordered_fastas/aligned_genomes.fasta > Plots/tree11.nwk
 
-    #do 
-
-    #echo ">${file%%.*}" >> concatenated_genomes.fasta
-    #awk '!/^>/ {print}' "$file" >> concatenated_genomes.fasta
-    
-#done
-
-#mafft --auto concatenated_genomes.fasta > aligned_genomes.fasta
-#FastTree -nt -gtr -gamma aligned_genomes.fasta > tree11.nwk
-
-#/opt/anaconda3/envs/medaka/bin/python Plots/analysis.py
