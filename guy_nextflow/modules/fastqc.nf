@@ -10,10 +10,6 @@ process FASTQC {
 
     script:
     """
-    if [ ! -f ${reads} ]; then
-        echo "Input file ${reads} does not exist or cannot be read"
-        exit 1
-    fi
     fastqc ${reads}
     """
 }
