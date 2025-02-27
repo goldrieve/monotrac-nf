@@ -1,15 +1,15 @@
 process FASTQC {
     conda "/opt/anaconda3/envs/monotrac"
-    publishDir "${params.outdir}"
+    publishDir "${params.outdir}/Fastqc"
     
     input:
     path reads
 
     output:
-    path "${reads[0].baseName.replaceAll(/\.fq(\.gz)?$/, "")}_fastqc.html"
+    path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_fastqc.html"
 
     script:
     """
-    fastqc ${reads}
+    fastqc --mem 10000 --nano ${reads}
     """
 }

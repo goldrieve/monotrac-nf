@@ -1,0 +1,12 @@
+Calling variant
+[13:22:38 - DataIndx] Loaded 1/1 (100.00%) sample files.
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/medaka/bin/medaka", line 8, in <module>
+    sys.exit(main())
+  File "/opt/anaconda3/envs/medaka/lib/python3.8/site-packages/medaka/medaka.py", line 843, in main
+    args.func(args)
+  File "/opt/anaconda3/envs/medaka/lib/python3.8/site-packages/medaka/variant.py", line 225, in variants_from_hdf
+    with medaka.vcf.VCFWriter(
+  File "/opt/anaconda3/envs/medaka/lib/python3.8/site-packages/medaka/vcf.py", line 500, in __enter__
+    self.handle = open(self.filename, self.mode, encoding='utf-8')
+FileNotFoundError: [Errno 2] No such file or directory: 'VCF/early_1_1_consensus_medaka.vcf'

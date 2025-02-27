@@ -1,0 +1,15 @@
+Generating a consensus sequence for early_1_1.fq.gz
+TF_CPP_MIN_LOG_LEVEL is set to '3'
+Attempting to automatically select model version.
+WARNING: Failed to detect a model version, will use default: 'r1041_e82_400bps_sup_v5.0.0'
+Checking program versions
+This is medaka 1.12.1
+Program    Version    Required   Pass     
+bcftools   1.11       1.11       True     
+bgzip      1.21       1.11       True     
+minimap2   2.11       2.11       True     
+samtools   1.11       1.11       True     
+tabix      1.21       1.11       True     
+Aligning basecalls to draft
+Running medaka consensus
+Polished assembly written to Consensus/early_1_1.fq.gz/consensus.fasta, have a nice day.
