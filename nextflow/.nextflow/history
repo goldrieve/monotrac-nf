@@ -33,3 +33,20 @@
 2025-02-27 13:22:35	4s	maniac_newton	ERR	97bf69b0bd792ffeb027c5c97a3bc42a	dccfbadd-4ceb-4cf4-ad7b-bfec00c32b71	nextflow run main.nf -resume
 2025-02-27 13:23:11	1.8s	cheeky_poisson	OK	97bf69b0bd792ffeb027c5c97a3bc42a	dccfbadd-4ceb-4cf4-ad7b-bfec00c32b71	nextflow run main.nf -resume
 2025-02-27 13:29:33	1.8s	festering_mandelbrot	OK	97bf69b0bd792ffeb027c5c97a3bc42a	dccfbadd-4ceb-4cf4-ad7b-bfec00c32b71	nextflow run main.nf -resume
+2025-02-27 13:50:04	17.3s	curious_stallman	ERR	2b279e96c8bf5f6bd8442c7363876c42	dccfbadd-4ceb-4cf4-ad7b-bfec00c32b71	nextflow run main.nf -resume
+2025-02-27 14:00:59	16.4s	kickass_lamarck	ERR	2b279e96c8bf5f6bd8442c7363876c42	dccfbadd-4ceb-4cf4-ad7b-bfec00c32b71	nextflow run main.nf -resume
+2025-02-27 14:02:35	15.7s	silly_williams	ERR	21ba4b2e6e8427edcc69facb9eeb14a3	dccfbadd-4ceb-4cf4-ad7b-bfec00c32b71	nextflow run main.nf -resume
+2025-02-27 14:05:16	15.7s	shrivelled_volta	ERR	21ba4b2e6e8427edcc69facb9eeb14a3	dccfbadd-4ceb-4cf4-ad7b-bfec00c32b71	nextflow run main.nf -resume
+2025-02-27 14:09:28	15.3s	wise_ardinghelli	ERR	21ba4b2e6e8427edcc69facb9eeb14a3	dccfbadd-4ceb-4cf4-ad7b-bfec00c32b71	nextflow run main.nf -resume
+2025-02-27 14:11:33	15.8s	high_agnesi	ERR	21ba4b2e6e8427edcc69facb9eeb14a3	dccfbadd-4ceb-4cf4-ad7b-bfec00c32b71	nextflow run main.nf -resume
+2025-02-27 14:18:30	16.4s	furious_poincare	OK	21ba4b2e6e8427edcc69facb9eeb14a3	dccfbadd-4ceb-4cf4-ad7b-bfec00c32b71	nextflow run main.nf -resume
+2025-02-27 14:23:08	1.3s	happy_angela	OK	21ba4b2e6e8427edcc69facb9eeb14a3	dccfbadd-4ceb-4cf4-ad7b-bfec00c32b71	nextflow run main.nf -resume
+2025-02-27 14:23:56	1s	fervent_morse	OK	21ba4b2e6e8427edcc69facb9eeb14a3	dccfbadd-4ceb-4cf4-ad7b-bfec00c32b71	nextflow run main.nf -resume
+2025-02-27 14:31:25	1.5s	loving_brazil	OK	21ba4b2e6e8427edcc69facb9eeb14a3	dccfbadd-4ceb-4cf4-ad7b-bfec00c32b71	nextflow run main.nf -resume
+2025-02-27 14:31:52	17.1s	furious_mendel	OK	21ba4b2e6e8427edcc69facb9eeb14a3	3fa098d7-5bba-4683-b7a5-b607481b317d	nextflow run main.nf
+2025-02-27 14:36:24	1.4s	chaotic_lamarck	ERR	21ba4b2e6e8427edcc69facb9eeb14a3	f243a217-6e3d-4a00-ab0e-96a1f3dabda2	nextflow run main.nf
+2025-02-27 14:36:59	27.4s	sad_keller	OK	21ba4b2e6e8427edcc69facb9eeb14a3	7469109a-1322-43a6-8564-9b151d2d594e	nextflow run main.nf
+2025-02-27 14:50:18	25.8s	sharp_meninsky	OK	21ba4b2e6e8427edcc69facb9eeb14a3	6c87e19a-cbaf-4ac3-9d90-989260bad59b	nextflow run main.nf
+2025-02-27 14:56:57	1.7s	maniac_pauling	OK	173527de218d8295afe27dc5af78df14	6c87e19a-cbaf-4ac3-9d90-989260bad59b	nextflow run main.nf -resume
+2025-02-27 14:57:12	22.7s	fervent_kalam	OK	173527de218d8295afe27dc5af78df14	6c87e19a-cbaf-4ac3-9d90-989260bad59b	nextflow run main.nf -resume
+2025-02-27 15:01:24	22.8s	distracted_curry	OK	7bbc59006311b55959655fc698de0822	6c87e19a-cbaf-4ac3-9d90-989260bad59b	nextflow run main.nf -resume

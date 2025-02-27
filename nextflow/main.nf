@@ -8,6 +8,7 @@ params.cores = "4"
 params.outdir = "$projectDir/output"
 params.help = ""
 params.mode = "full"
+params.depth = "10"
 
 if (params.help) {
     help = """mono-trac.nf: A pipeline for analysing mono-trac data
@@ -38,23 +39,13 @@ ch_reads = ch_samplesheet.splitCsv(header:true).map {
 
 include { MINIMAP } from './modules/minimap2.nf'
 
-include { MEDAKACON } from './modules/medakacon.nf'
-
 include { MEDAKAVAR } from './modules/medakavar.nf'
 
 workflow {
     // Running the first fastqc process
     if (params.mode == "full") {
         fastqc_ch = FASTQC(ch_reads)
-    
-        // running minimap2
-        minimap_ch = MINIMAP(ch_reads, file(params.reference_2))
-
-        // running medaka consensus
-        medakacon_ch = MEDAKACON(ch_reads, file(params.reference_1))
-
-        // running medaka variant
-        medakavar_ch = MEDAKAVAR(medakacon_ch, file(params.reference_1))
+        medakavar_ch = MEDAKAVAR(ch_reads, params.reference_1, params.depth)
     }  
 
     else {
