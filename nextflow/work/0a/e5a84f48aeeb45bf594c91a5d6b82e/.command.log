@@ -1,0 +1,41 @@
+FastTree Version 2.1.11 Double precision (No SSE3)
+Alignment: aligned.fas
+Nucleotide distances: Jukes-Cantor Joins: balanced Support: SH-like 1000
+Search: Normal +NNI +SPR (2 rounds range 10) +ML-NNI opt-each=1
+TopHits: 1.00*sqrtN close=default refresh=0.80
+ML Model: Generalized Time-Reversible, CAT approximation with 20 rate categories
+Ignored unknown character k (seen 2 times)
+Ignored unknown character m (seen 2 times)
+Ignored unknown character r (seen 5 times)
+Ignored unknown character s (seen 2 times)
+Ignored unknown character y (seen 3 times)
+Initial topology in 0.01 seconds
+Refining topology: 8 rounds ME-NNIs, 2 rounds ME-SPRs, 4 rounds ML-NNIs
+Total branch-length 0.008 after 0.04 sec
+ML-NNI round 1: LogLk = -36449.269 NNIs 0 max delta 0.00 Time 0.09
+      0.13 seconds: Optimizing GTR model, step 2 of 12
+      0.24 seconds: Optimizing GTR model, step 5 of 12
+      0.35 seconds: Optimizing GTR model, step 9 of 12
+GTR Frequencies: 0.2486 0.2307 0.2848 0.2359
+GTR rates(ac ag at cg ct gt) 0.8769 4.8031 0.5715 0.9075 5.1689 1.0000
+      0.46 seconds: Site likelihoods with rate category 1 of 20
+Switched to using 20 rate categories (CAT approximation)
+Rate categories were divided by 0.625 so that average rate = 1.0
+CAT-based log-likelihoods may not be comparable across runs
+ML-NNI round 2: LogLk = -36224.722 NNIs 0 max delta 0.00 Time 0.52
+Turning off heuristics for final round of ML NNIs (converged)
+ML-NNI round 3: LogLk = -36224.722 NNIs 0 max delta 0.00 Time 0.60 (final)
+      0.59 seconds: ML Lengths 1 of 2 splits
+Optimize all lengths: LogLk = -36224.722 Time 0.64
+      1.22 seconds: Site likelihoods with rate category 1 of 20
+      1.52 seconds: Optimizing alpha round 2
+      1.63 seconds: Optimizing alpha round 3
+      1.77 seconds: Optimizing alpha round 4
+      1.92 seconds: Optimizing alpha round 5
+      2.06 seconds: Optimizing alpha round 6
+      2.17 seconds: Optimizing alpha round 7
+      2.28 seconds: Optimizing alpha round 8
+      2.40 seconds: Optimizing alpha round 9
+      2.51 seconds: Optimizing alpha round 10
+Gamma(20) LogLk = -36282.292 alpha = 0.057 rescaling lengths by 1.214
+Total time: 2.68 seconds Unique: 4/4 Bad splits: 0/1

@@ -2,13 +2,11 @@ import os
 from Bio import SeqIO
 from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
- 
-# Define the directory containing the FASTA files
-fasta_dir = '.'
-output_dir = 'reordered_fastas'
+import sys
+
+output_dir = sys.argv[1]
+fasta_files = sys.argv[2:]
 os.makedirs(output_dir, exist_ok=True)
- 
-# Output file for concatenated sequences
 concatenated_fasta = os.path.join(output_dir, 'concatenated_sequences.fasta')
  
 # Define the desired gene order
@@ -36,11 +34,11 @@ gene_order = [
  
 # Step 1: Concatenate all gene sequences from each isolate into a single sequence
 with open(concatenated_fasta, 'w') as outfile:
-    for fasta_file in os.listdir(fasta_dir):
+    for fasta_file in fasta_files:
         if fasta_file.endswith('.fasta') or fasta_file.endswith('.fas'):
-            file_path = os.path.join(fasta_dir, fasta_file)
             concatenated_sequence = ''
-            records_dict = SeqIO.to_dict(SeqIO.parse(file_path, 'fasta'))
+            records_dict = SeqIO.to_dict(SeqIO.parse(fasta_file, 'fasta'))
+            
             for gene_id in gene_order:
                 if gene_id in records_dict:
                     concatenated_sequence += str(records_dict[gene_id].seq)

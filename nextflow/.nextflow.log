@@ -1,138 +1,103 @@
-Mar-03 13:57:47.602 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
-Mar-03 13:57:47.840 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.4
-Mar-03 13:57:47.858 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/archiehogan/.nextflow/plugins; core-plugins: nf-amazon@2.9.2,nf-azure@1.10.2,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.3,nf-tower@1.9.3,nf-wave@1.7.4
-Mar-03 13:57:47.884 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Mar-03 13:57:47.885 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Mar-03 13:57:47.886 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
-Mar-03 13:57:47.898 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Mar-03 13:57:47.910 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Volumes/Seagate/monotrac/nextflow/nextflow.config
-Mar-03 13:57:47.912 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Volumes/Seagate/monotrac/nextflow/nextflow.config
-Mar-03 13:57:47.931 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/archiehogan/.nextflow/secrets/store.json
-Mar-03 13:57:47.933 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@5339bbad] - activable => nextflow.secret.LocalSecretsProvider@5339bbad
-Mar-03 13:57:47.935 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Mar-03 13:57:48.201 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
-Mar-03 13:57:48.211 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [silly_kilby] DSL2 - revision: 941f45971a
-Mar-03 13:57:48.212 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Mar-03 13:57:48.212 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
-Mar-03 13:57:48.246 [main] DEBUG nextflow.Session - Session UUID: 2526a54b-5cc2-4f5e-8f08-7f49d7879c14
-Mar-03 13:57:48.246 [main] DEBUG nextflow.Session - Run name: silly_kilby
-Mar-03 13:57:48.246 [main] DEBUG nextflow.Session - Executor pool size: 8
-Mar-03 13:57:48.252 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Mar-03 13:57:48.255 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
-Mar-03 13:57:48.272 [main] DEBUG nextflow.cli.CmdRun - 
+Mar-03 15:51:20.718 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -resume
+Mar-03 15:51:20.932 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.4
+Mar-03 15:51:20.948 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/archiehogan/.nextflow/plugins; core-plugins: nf-amazon@2.9.2,nf-azure@1.10.2,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.3,nf-tower@1.9.3,nf-wave@1.7.4
+Mar-03 15:51:20.973 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Mar-03 15:51:20.973 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Mar-03 15:51:20.976 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Mar-03 15:51:20.985 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Mar-03 15:51:20.998 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Volumes/Seagate/monotrac/nextflow/nextflow.config
+Mar-03 15:51:21.000 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Volumes/Seagate/monotrac/nextflow/nextflow.config
+Mar-03 15:51:21.019 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/archiehogan/.nextflow/secrets/store.json
+Mar-03 15:51:21.021 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@42cc13a0] - activable => nextflow.secret.LocalSecretsProvider@42cc13a0
+Mar-03 15:51:21.024 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Mar-03 15:51:21.284 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Mar-03 15:51:21.294 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [fervent_panini] DSL2 - revision: 19bf7b1bd9
+Mar-03 15:51:21.295 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Mar-03 15:51:21.295 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Mar-03 15:51:21.330 [main] DEBUG nextflow.Session - Session UUID: 2e4ce701-852d-4fd6-92a2-00558b6c2291
+Mar-03 15:51:21.331 [main] DEBUG nextflow.Session - Run name: fervent_panini
+Mar-03 15:51:21.331 [main] DEBUG nextflow.Session - Executor pool size: 8
+Mar-03 15:51:21.337 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Mar-03 15:51:21.341 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Mar-03 15:51:21.361 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 24.10.4 build 5934
   Created: 20-01-2025 16:47 UTC (16:47 BST)
   System: Mac OS X 15.3
   Runtime: Groovy 4.0.23 on OpenJDK 64-Bit Server VM 21+35
   Encoding: UTF-8 (UTF-8)
-  Process: 95320@Archies-MacBook-Air-286.local [127.0.0.1]
-  CPUs: 8 - Mem: 8 GB (87.3 MB) - Swap: 3 GB (432.6 MB)
-Mar-03 13:57:48.281 [main] DEBUG nextflow.Session - Work-dir: /Volumes/Seagate/monotrac/nextflow/work [Mac OS X]
-Mar-03 13:57:48.359 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Mar-03 13:57:48.365 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Mar-03 13:57:48.378 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Mar-03 13:57:48.384 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
-Mar-03 13:57:48.436 [main] DEBUG nextflow.Session - Session start
-Mar-03 13:57:48.645 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Mar-03 13:57:48.930 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Mar-03 13:57:48.930 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Mar-03 13:57:48.942 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Mar-03 13:57:48.946 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=8 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
-Mar-03 13:57:48.948 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
-Mar-03 13:57:48.985 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Mar-03 13:57:48.985 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Mar-03 13:57:48.989 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Mar-03 13:57:48.989 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Mar-03 13:57:48.992 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Mar-03 13:57:49.011 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Mar-03 13:57:49.020 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Mar-03 13:57:49.020 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Mar-03 13:57:49.023 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Mar-03 13:57:49.023 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Mar-03 13:57:49.025 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Mar-03 13:57:49.025 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Mar-03 13:57:49.026 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC, ALIGN, PLOTTING, MEDAKAVAR, MOSDEPTH, FASTTREE, BOXPLOT
-Mar-03 13:57:49.026 [main] DEBUG nextflow.Session - Igniting dataflow network (8)
-Mar-03 13:57:49.031 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTQC
-Mar-03 13:57:49.031 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MEDAKAVAR
-Mar-03 13:57:49.031 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MOSDEPTH
-Mar-03 13:57:49.032 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > PLOTTING
-Mar-03 13:57:49.032 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ALIGN
-Mar-03 13:57:49.032 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BOXPLOT
-Mar-03 13:57:49.032 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTTREE
-Mar-03 13:57:49.032 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Process: 13115@Archies-MacBook-Air-286.local [127.0.0.1]
+  CPUs: 8 - Mem: 8 GB (202.6 MB) - Swap: 4 GB (932.4 MB)
+Mar-03 15:51:21.387 [main] DEBUG nextflow.Session - Work-dir: /Volumes/Seagate/monotrac/nextflow/work [Mac OS X]
+Mar-03 15:51:21.400 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Mar-03 15:51:21.406 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Mar-03 15:51:21.418 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Mar-03 15:51:21.425 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Mar-03 15:51:21.709 [main] DEBUG nextflow.Session - Session start
+Mar-03 15:51:21.949 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-03 15:51:22.229 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-03 15:51:22.229 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-03 15:51:22.232 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Mar-03 15:51:22.237 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=8 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Mar-03 15:51:22.238 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Mar-03 15:51:22.279 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-03 15:51:22.279 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-03 15:51:22.284 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-03 15:51:22.284 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-03 15:51:22.287 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-03 15:51:22.287 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-03 15:51:22.291 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-03 15:51:22.291 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-03 15:51:22.294 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-03 15:51:22.294 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-03 15:51:22.297 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-03 15:51:22.297 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-03 15:51:22.299 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC, PLOTTING, ALIGN, MEDAKAVAR, MOSDEPTH, FASTTREE, BOXPLOT
+Mar-03 15:51:22.299 [main] DEBUG nextflow.Session - Igniting dataflow network (9)
+Mar-03 15:51:22.304 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTQC
+Mar-03 15:51:22.304 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MEDAKAVAR
+Mar-03 15:51:22.304 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MOSDEPTH
+Mar-03 15:51:22.305 [PathVisitor-2] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /Volumes/Seagate/monotrac/nextflow/isolate_fasta/; pattern: *.fas; options: [:]
+Mar-03 15:51:22.305 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > PLOTTING
+Mar-03 15:51:22.305 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ALIGN
+Mar-03 15:51:22.305 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BOXPLOT
+Mar-03 15:51:22.305 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTTREE
+Mar-03 15:51:22.305 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
   Script_34b874c951f22e60: /Volumes/Seagate/monotrac/nextflow/./modules/boxplot.nf
+  Script_ef0bae263a232d14: /Volumes/Seagate/monotrac/nextflow/main.nf
   Script_af8225aab15b0f4a: /Volumes/Seagate/monotrac/nextflow/./modules/fastqc.nf
   Script_9f7336fab6852298: /Volumes/Seagate/monotrac/nextflow/./modules/medakavar.nf
   Script_0f4132ec63b48263: /Volumes/Seagate/monotrac/nextflow/./modules/plotting.nf
-  Script_351f4b554904cb09: /Volumes/Seagate/monotrac/nextflow/main.nf
+  Script_75f87270387dea9b: /Volumes/Seagate/monotrac/nextflow/./modules/align.nf
   Script_ee019a6d35737ad5: /Volumes/Seagate/monotrac/nextflow/./modules/mosdepth.nf
   Script_c580bbcc5b5e237e: /Volumes/Seagate/monotrac/nextflow/./modules/fasttree.nf
-  Script_03faa1edca57573f: /Volumes/Seagate/monotrac/nextflow/./modules/align.nf
-Mar-03 13:57:49.032 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
-Mar-03 13:57:49.032 [main] DEBUG nextflow.Session - Session await
-Mar-03 13:57:49.124 [Actor Thread 4] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/opt/anaconda3/envs/medaka; path=/opt/anaconda3/envs/medaka
-Mar-03 13:57:49.124 [Actor Thread 5] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/opt/anaconda3/envs/monotrac; path=/opt/anaconda3/envs/monotrac
-Mar-03 13:57:49.166 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 13:57:49.167 [Task submitter] INFO  nextflow.Session - [3a/bda4d6] Submitted process > MEDAKAVAR (2)
-Mar-03 13:57:49.176 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 13:57:49.177 [Task submitter] INFO  nextflow.Session - [3b/e2987e] Submitted process > MEDAKAVAR (1)
-Mar-03 13:57:49.181 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 13:57:49.181 [Task submitter] INFO  nextflow.Session - [70/dd9818] Submitted process > MEDAKAVAR (3)
-Mar-03 13:57:49.186 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 13:57:49.187 [Task submitter] INFO  nextflow.Session - [d5/9b8e7f] Submitted process > FASTQC (3)
-Mar-03 13:57:49.194 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 13:57:49.194 [Task submitter] INFO  nextflow.Session - [fc/b32cd5] Submitted process > FASTQC (2)
-Mar-03 13:57:49.197 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 13:57:49.198 [Task submitter] INFO  nextflow.Session - [87/d3646d] Submitted process > FASTQC (1)
-Mar-03 13:58:00.077 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: FASTQC (1); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/87/d3646d48b4ca215ce61802e8cfa885]
-Mar-03 13:58:00.081 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
-Mar-03 13:58:02.013 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: FASTQC (2); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/fc/b32cd5ae895827d4f4178163b0b4a1]
-Mar-03 13:58:07.068 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: FASTQC (3); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/d5/9b8e7fed89bd58ec4525d9ffe5af54]
-Mar-03 13:59:24.373 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: MEDAKAVAR (2); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/3a/bda4d62e56ae9f8378cd820a81391b]
-Mar-03 13:59:24.435 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 13:59:24.436 [Task submitter] INFO  nextflow.Session - [ff/4b78c5] Submitted process > MOSDEPTH (1)
-Mar-03 13:59:26.145 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: MOSDEPTH (1); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/ff/4b78c5a7a75a9a12341f5e7c45d3b0]
-Mar-03 13:59:26.159 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 13:59:26.159 [Task submitter] INFO  nextflow.Session - [0c/d06e95] Submitted process > PLOTTING (1)
-Mar-03 13:59:26.161 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 13:59:26.162 [Task submitter] INFO  nextflow.Session - [75/61d560] Submitted process > BOXPLOT (1)
-Mar-03 13:59:27.589 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: MEDAKAVAR (1); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/3b/e2987ed1ec0aacc39e56ff0f30b43b]
-Mar-03 13:59:27.604 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 13:59:27.605 [Task submitter] INFO  nextflow.Session - [b1/329c79] Submitted process > MOSDEPTH (2)
-Mar-03 13:59:28.716 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: MOSDEPTH (2); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/b1/329c79d81b8fea32646f1d654f833b]
-Mar-03 13:59:28.722 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 13:59:28.723 [Task submitter] INFO  nextflow.Session - [77/036ed2] Submitted process > BOXPLOT (2)
-Mar-03 13:59:28.726 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 13:59:28.726 [Task submitter] INFO  nextflow.Session - [89/f93911] Submitted process > PLOTTING (2)
-Mar-03 13:59:30.788 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: BOXPLOT (1); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/75/61d56025ba93baf37668e971b620f2]
-Mar-03 13:59:32.288 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: BOXPLOT (2); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/77/036ed2c23aa8a0301731ff4d7d25fb]
-Mar-03 13:59:34.409 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: PLOTTING (1); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/0c/d06e95e1470465d765794393f0190f]
-Mar-03 13:59:36.451 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: PLOTTING (2); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/89/f9391168b1be838e348e540beed4f5]
-Mar-03 14:01:12.190 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: MEDAKAVAR (3); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/70/dd981857818701a416cbb52505398d]
-Mar-03 14:01:12.251 [Actor Thread 8] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/opt/anaconda3/envs/mafft; path=/opt/anaconda3/envs/mafft
-Mar-03 14:01:12.266 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:01:12.267 [Task submitter] INFO  nextflow.Session - [cf/1d5de6] Submitted process > MOSDEPTH (3)
-Mar-03 14:01:12.280 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:01:12.280 [Task submitter] INFO  nextflow.Session - [2a/301025] Submitted process > ALIGN
-Mar-03 14:01:13.716 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: MOSDEPTH (3); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/cf/1d5de64f601bcb6dc156d8556a293e]
-Mar-03 14:01:13.734 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:01:13.734 [Task submitter] INFO  nextflow.Session - [68/4f3228] Submitted process > PLOTTING (3)
-Mar-03 14:01:13.737 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:01:13.737 [Task submitter] INFO  nextflow.Session - [8f/a39448] Submitted process > BOXPLOT (3)
-Mar-03 14:01:14.775 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: ALIGN; status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/2a/301025ad8a1356bd65cd936f28f22a]
-Mar-03 14:01:14.798 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:01:14.798 [Task submitter] INFO  nextflow.Session - [28/6725e4] Submitted process > FASTTREE
-Mar-03 14:01:16.365 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: FASTTREE; status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/28/6725e4fd7438939dbbe2e753255640]
-Mar-03 14:01:17.647 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: BOXPLOT (3); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/8f/a39448cceb32c7cf0e25b9fa0037a7]
-Mar-03 14:01:23.394 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: PLOTTING (3); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/68/4f32281b51b29d307c4ed2887e2898]
-Mar-03 14:01:23.397 [main] DEBUG nextflow.Session - Session await > all processes finished
-Mar-03 14:01:23.495 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
-Mar-03 14:01:23.495 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Mar-03 14:01:23.501 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
-Mar-03 14:01:23.503 [main] INFO  nextflow.Nextflow - 
+Mar-03 15:51:22.306 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Mar-03 15:51:22.306 [main] DEBUG nextflow.Session - Session await
+Mar-03 15:51:22.365 [Actor Thread 3] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/opt/anaconda3/envs/medaka; path=/opt/anaconda3/envs/medaka
+Mar-03 15:51:22.365 [Actor Thread 2] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/opt/anaconda3/envs/monotrac; path=/opt/anaconda3/envs/monotrac
+Mar-03 15:51:22.444 [Actor Thread 9] INFO  nextflow.processor.TaskProcessor - [93/0bfad1] Cached process > MEDAKAVAR (3)
+Mar-03 15:51:22.444 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [05/62583c] Cached process > MEDAKAVAR (2)
+Mar-03 15:51:22.444 [Actor Thread 1] INFO  nextflow.processor.TaskProcessor - [83/c2180b] Cached process > FASTQC (3)
+Mar-03 15:51:22.451 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [ee/f8b6c4] Cached process > FASTQC (2)
+Mar-03 15:51:22.452 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [8f/530ff1] Cached process > FASTQC (1)
+Mar-03 15:51:22.453 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [78/b0b067] Cached process > MEDAKAVAR (1)
+Mar-03 15:51:22.456 [Actor Thread 2] INFO  nextflow.processor.TaskProcessor - [b9/aea3df] Cached process > MOSDEPTH (1)
+Mar-03 15:51:22.456 [Actor Thread 11] INFO  nextflow.processor.TaskProcessor - [aa/358dac] Cached process > MOSDEPTH (2)
+Mar-03 15:51:22.462 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [00/9ad4d2] Cached process > MOSDEPTH (3)
+Mar-03 15:51:22.466 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [88/3f7297] Cached process > PLOTTING (1)
+Mar-03 15:51:22.466 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [d9/eae60e] Cached process > PLOTTING (2)
+Mar-03 15:51:22.476 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [b0/65ff60] Cached process > BOXPLOT (1)
+Mar-03 15:51:22.476 [Actor Thread 16] INFO  nextflow.processor.TaskProcessor - [0e/bc9c39] Cached process > BOXPLOT (2)
+Mar-03 15:51:22.477 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [e4/b3e347] Cached process > PLOTTING (3)
+Mar-03 15:51:22.482 [Actor Thread 20] INFO  nextflow.processor.TaskProcessor - [15/27aa33] Cached process > BOXPLOT (3)
+Mar-03 15:51:22.483 [Actor Thread 7] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/opt/anaconda3/envs/mafft; path=/opt/anaconda3/envs/mafft
+Mar-03 15:51:22.486 [Actor Thread 2] INFO  nextflow.processor.TaskProcessor - [3e/a9a380] Cached process > ALIGN
+Mar-03 15:51:22.490 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [c8/9f2a32] Cached process > FASTTREE
+Mar-03 15:51:22.491 [main] DEBUG nextflow.Session - Session await > all processes finished
+Mar-03 15:51:22.550 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Mar-03 15:51:22.550 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Mar-03 15:51:22.551 [main] INFO  nextflow.Nextflow - 
 Done!
-Mar-03 14:01:23.507 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=17; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=8m 3s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=6; peakCpus=6; peakMemory=0; ]
-Mar-03 14:01:23.617 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
-Mar-03 14:01:23.648 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
-Mar-03 14:01:23.648 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+Mar-03 15:51:22.554 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=17; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=8m 34s;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Mar-03 15:51:22.568 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Mar-03 15:51:22.606 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Mar-03 15:51:22.607 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

@@ -1,0 +1,4 @@
+Processing file: ./barcode2_consensus.mosdepth.summary.txt
+Columns in barcode2_consensus.mosdepth.summary.txt: ['chrom', 'length', 'bases', 'mean', 'min', 'max']
+Warning: 'source_file' column missing in barcode2_consensus.mosdepth.summary.txt. Adding it.
+Combined data saved to combined_data.csv

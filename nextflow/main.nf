@@ -9,7 +9,7 @@ params.outdir = "$projectDir/output"
 params.help = ""
 params.mode = "full"
 params.depth = "10"
-params.isolates = "$projectDir/isolate_fasta/*.fas"
+params.isolates = "$projectDir/isolate_fasta"
 
 if (params.help) {
     help = """mono-trac.nf: A pipeline for analysing mono-trac data
@@ -47,6 +47,7 @@ include { PLOTTING } from './modules/plotting.nf'
 include { BOXPLOT } from './modules/boxplot.nf'
 
 include { ALIGN } from './modules/align.nf'
+isolates_fasta_files = Channel.fromPath("${params.isolates}/*.fas").collect()
 
 include { FASTTREE } from './modules/fasttree.nf'
 
@@ -58,7 +59,7 @@ workflow {
         medakavar_ch = MEDAKAVAR(ch_reads, params.reference_1, params.depth)
         mosdepth_ch = MOSDEPTH(medakavar_ch.consensus)
         plotting_ch = PLOTTING(mosdepth_ch.global)
-        align_ch = ALIGN((medakavar_ch.fasta).collect())
+        align_ch = ALIGN((medakavar_ch.fasta).collect(), isolates_fasta_files)
         boxplot_ch = BOXPLOT(mosdepth_ch.summary)
         fasttree_ch = FASTTREE(align_ch)
     }  
