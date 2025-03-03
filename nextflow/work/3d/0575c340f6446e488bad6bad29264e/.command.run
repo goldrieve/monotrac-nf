@@ -1,0 +1,306 @@
+#!/bin/bash
+### ---
+### name: 'ALIGN'
+### outputs:
+### - 'aligned.fas'
+### ...
+set -e
+set -u
+NXF_DEBUG=${NXF_DEBUG:=0}; [[ $NXF_DEBUG > 1 ]] && set -x
+NXF_ENTRY=${1:-nxf_main}
+
+
+nxf_sleep() {
+  sleep $1 2>/dev/null || sleep 1;
+}
+
+nxf_date() {
+    local ts=$(date +%s%3N);
+    if [[ ${#ts} == 10 ]]; then echo ${ts}000
+    elif [[ $ts == *%3N ]]; then echo ${ts/\%3N/000}
+    elif [[ $ts == *3N ]]; then echo ${ts/3N/000}
+    elif [[ ${#ts} == 13 ]]; then echo $ts
+    else echo "Unexpected timestamp value: $ts"; exit 1
+    fi
+}
+
+nxf_env() {
+    echo '============= task environment ============='
+    env | sort | sed "s/\(.*\)AWS\(.*\)=\(.\{6\}\).*/\1AWS\2=\3xxxxxxxxxxxxx/"
+    echo '============= task output =================='
+}
+
+nxf_kill() {
+    declare -a children
+    while read P PP;do
+        children[$PP]+=" $P"
+    done < <(ps -e -o pid= -o ppid=)
+
+    kill_all() {
+        [[ $1 != $$ ]] && kill $1 2>/dev/null || true
+        for i in ${children[$1]:=}; do kill_all $i; done
+    }
+
+    kill_all $1
+}
+
+nxf_mktemp() {
+    local base=${1:-/tmp}
+    mkdir -p "$base"
+    if [[ $(uname) = Darwin ]]; then mktemp -d $base/nxf.XXXXXXXXXX
+    else TMPDIR="$base" mktemp -d -t nxf.XXXXXXXXXX
+    fi
+}
+
+nxf_fs_copy() {
+  local source=$1
+  local target=$2
+  local basedir=$(dirname $1)
+  mkdir -p $target/$basedir
+  cp -fRL $source $target/$basedir
+}
+
+nxf_fs_move() {
+  local source=$1
+  local target=$2
+  local basedir=$(dirname $1)
+  mkdir -p $target/$basedir
+  mv -f $source $target/$basedir
+}
+
+nxf_fs_rsync() {
+  rsync -rRl $1 $2
+}
+
+nxf_fs_rclone() {
+  rclone copyto $1 $2/$1
+}
+
+nxf_fs_fcp() {
+  fcp $1 $2/$1
+}
+
+on_exit() {
+    exit_status=${nxf_main_ret:=$?}
+    printf -- $exit_status > /Volumes/Seagate/monotrac/nextflow/work/3d/0575c340f6446e488bad6bad29264e/.exitcode
+    set +u
+    exit $exit_status
+}
+
+on_term() {
+    set +e
+    [[ "$pid" ]] && nxf_kill $pid
+}
+
+nxf_launch() {
+    /bin/bash -ue /Volumes/Seagate/monotrac/nextflow/work/3d/0575c340f6446e488bad6bad29264e/.command.sh
+}
+
+nxf_stage() {
+    true
+    # stage input files
+    rm -f Pakwa.fas
+    rm -f IVMt1.fas
+    rm -f BoTat-1-1.fas
+    rm -f OVI.fas
+    rm -f MCAM-ET-2013-MU-01.fas
+    rm -f Canadian-Strain.fas
+    rm -f AnTat-12-1S.fas
+    rm -f EATRO3.fas
+    rm -f AnTat-3-3.fas
+    rm -f Philippines.fas
+    rm -f MSUS-CI-83-TSW-11.fas
+    rm -f AnTat-3-1.fas
+    rm -f STIB-851.fas
+    rm -f SVP.fas
+    rm -f MU09.fas
+    rm -f MHOM-ZM-80-TRPZ-23.fas
+    rm -f MCAM-ET-2013-MU-09.fas
+    rm -f ABBA.fas
+    rm -f American-Strain.fas
+    rm -f ERR9695747.fas
+    rm -f HAMBURG.fas
+    rm -f STIB900.fas
+    rm -f 348BT.fas
+    rm -f Jua.fas
+    rm -f STIB-816.fas
+    rm -f MCAM-ET-2013-MU-04.fas
+    rm -f Kazakstan.fas
+    rm -f 940.fas
+    rm -f MCAM-ET-2013-MU-17.fas
+    rm -f 340AT.fas
+    rm -f Te-Ap-N-D1.fas
+    rm -f MBO-NG-74-R10.fas
+    rm -f 108BT.fas
+    rm -f MSUS-CI-78-TSW382.fas
+    rm -f MCAM-ET-2013-MU-02.fas
+    rm -f FEO.fas
+    rm -f Nabe.fas
+    rm -f LOGRA.fas
+    rm -f NDMI.fas
+    rm -f 280104.fas
+    rm -f STIB247.fas
+    rm -f GPAP-CI-82-KP10-29.fas
+    rm -f MHOM-SD-82-BIYAMINA.fas
+    rm -f 57AT.fas
+    rm -f barcode2.fas
+    rm -f MCAM-ET-2013-MU-14.fas
+    rm -f Colombia.fas
+    rm -f Rumphi.fas
+    rm -f Alfort.fas
+    rm -f MCAM-ET-2013-MU-05.fas
+    rm -f MSUS-CI-78-TSW-157.fas
+    rm -f LIGO.fas
+    rm -f UPA_PO.fas
+    rm -f GMOM-ZM-83-TRPZ-317.fas
+    rm -f 108AT.fas
+    rm -f 927.fas
+    rm -f MCAP-CI-91-BALEA-2.fas
+    rm -f Kenya.fas
+    rm -f FEO-AnTat-16-1.fas
+    rm -f Zagora-I-17.fas
+    rm -f Bosendja.fas
+    rm -f AGAL-CI-78-TCH312.fas
+    rm -f ATCC-30019.fas
+    rm -f MHOM-ZM-83-TRPZ-349.fas
+    rm -f OUSOU.fas
+    rm -f MHOM-SD-82-MUSIKIA-cloneA.fas
+    rm -f BIM-AnTat-8-1-P8.fas
+    rm -f ATCC-30023.fas
+    rm -f Dodola_943.fas
+    rm -f ATCC30019.fas
+    rm -f MBOT-GM-77-GB2.fas
+    rm -f STIB386.fas
+    rm -f MSUS-CI-82-TSW62.fas
+    rm -f 15BT-relapse.fas
+    rm -f MU10.fas
+    rm -f EATRO2340.fas
+    rm -f Merzouga-56.fas
+    rm -f barcode3.fas
+    rm -f STIB818.fas
+    rm -f STIB805.fas
+    rm -f ROUPO-VAVOUA--80-MURAZ-14.fas
+    rm -f RoTat_1.2.fas
+    rm -f NKOUA.fas
+    rm -f MBA.fas
+    rm -f LiTat-1-5-P9.fas
+    rm -f E28.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/Pakwa.fas Pakwa.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/IVMt1.fas IVMt1.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/BoTat-1-1.fas BoTat-1-1.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/OVI.fas OVI.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MCAM-ET-2013-MU-01.fas MCAM-ET-2013-MU-01.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/Canadian-Strain.fas Canadian-Strain.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/AnTat-12-1S.fas AnTat-12-1S.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/EATRO3.fas EATRO3.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/AnTat-3-3.fas AnTat-3-3.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/Philippines.fas Philippines.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MSUS-CI-83-TSW-11.fas MSUS-CI-83-TSW-11.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/AnTat-3-1.fas AnTat-3-1.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/STIB-851.fas STIB-851.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/SVP.fas SVP.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MU09.fas MU09.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MHOM-ZM-80-TRPZ-23.fas MHOM-ZM-80-TRPZ-23.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MCAM-ET-2013-MU-09.fas MCAM-ET-2013-MU-09.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/ABBA.fas ABBA.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/American-Strain.fas American-Strain.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/work/bb/b96de29d3b35f766cba280601eecda/ERR9695747_consensus/ERR9695747.fas ERR9695747.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/HAMBURG.fas HAMBURG.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/STIB900.fas STIB900.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/348BT.fas 348BT.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/Jua.fas Jua.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/STIB-816.fas STIB-816.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MCAM-ET-2013-MU-04.fas MCAM-ET-2013-MU-04.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/Kazakstan.fas Kazakstan.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/940.fas 940.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MCAM-ET-2013-MU-17.fas MCAM-ET-2013-MU-17.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/340AT.fas 340AT.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/Te-Ap-N-D1.fas Te-Ap-N-D1.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MBO-NG-74-R10.fas MBO-NG-74-R10.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/108BT.fas 108BT.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MSUS-CI-78-TSW382.fas MSUS-CI-78-TSW382.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MCAM-ET-2013-MU-02.fas MCAM-ET-2013-MU-02.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/FEO.fas FEO.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/Nabe.fas Nabe.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/LOGRA.fas LOGRA.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/NDMI.fas NDMI.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/280104.fas 280104.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/STIB247.fas STIB247.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/GPAP-CI-82-KP10-29.fas GPAP-CI-82-KP10-29.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MHOM-SD-82-BIYAMINA.fas MHOM-SD-82-BIYAMINA.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/57AT.fas 57AT.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/work/ce/870aa514f746340972c0c8ebf56020/barcode2_consensus/barcode2.fas barcode2.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MCAM-ET-2013-MU-14.fas MCAM-ET-2013-MU-14.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/Colombia.fas Colombia.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/Rumphi.fas Rumphi.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/Alfort.fas Alfort.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MCAM-ET-2013-MU-05.fas MCAM-ET-2013-MU-05.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MSUS-CI-78-TSW-157.fas MSUS-CI-78-TSW-157.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/LIGO.fas LIGO.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/UPA_PO.fas UPA_PO.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/GMOM-ZM-83-TRPZ-317.fas GMOM-ZM-83-TRPZ-317.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/108AT.fas 108AT.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/927.fas 927.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MCAP-CI-91-BALEA-2.fas MCAP-CI-91-BALEA-2.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/Kenya.fas Kenya.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/FEO-AnTat-16-1.fas FEO-AnTat-16-1.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/Zagora-I-17.fas Zagora-I-17.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/Bosendja.fas Bosendja.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/AGAL-CI-78-TCH312.fas AGAL-CI-78-TCH312.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/ATCC-30019.fas ATCC-30019.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MHOM-ZM-83-TRPZ-349.fas MHOM-ZM-83-TRPZ-349.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/OUSOU.fas OUSOU.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MHOM-SD-82-MUSIKIA-cloneA.fas MHOM-SD-82-MUSIKIA-cloneA.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/BIM-AnTat-8-1-P8.fas BIM-AnTat-8-1-P8.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/ATCC-30023.fas ATCC-30023.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/Dodola_943.fas Dodola_943.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/ATCC30019.fas ATCC30019.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MBOT-GM-77-GB2.fas MBOT-GM-77-GB2.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/STIB386.fas STIB386.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MSUS-CI-82-TSW62.fas MSUS-CI-82-TSW62.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/15BT-relapse.fas 15BT-relapse.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MU10.fas MU10.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/EATRO2340.fas EATRO2340.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/Merzouga-56.fas Merzouga-56.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/work/8a/e6b142abf5dd53ad1fbd680c0098ac/barcode3_consensus/barcode3.fas barcode3.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/STIB818.fas STIB818.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/STIB805.fas STIB805.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/ROUPO-VAVOUA--80-MURAZ-14.fas ROUPO-VAVOUA--80-MURAZ-14.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/RoTat_1.2.fas RoTat_1.2.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/NKOUA.fas NKOUA.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/MBA.fas MBA.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/LiTat-1-5-P9.fas LiTat-1-5-P9.fas
+    ln -s /Volumes/Seagate/monotrac/nextflow/isolate_fasta/E28.fas E28.fas
+}
+
+nxf_unstage() {
+    true
+    [[ ${nxf_main_ret:=0} != 0 ]] && return
+}
+
+nxf_main() {
+    trap on_exit EXIT
+    trap on_term TERM INT USR2
+    trap '' USR1
+
+    [[ "${NXF_CHDIR:-}" ]] && cd "$NXF_CHDIR"
+    NXF_SCRATCH=''
+    [[ $NXF_DEBUG > 0 ]] && nxf_env
+    touch /Volumes/Seagate/monotrac/nextflow/work/3d/0575c340f6446e488bad6bad29264e/.command.begin
+    set +u
+    # conda environment
+    source $(conda info --json | awk '/conda_prefix/ { gsub(/"|,/, "", $2); print $2 }')/bin/activate /opt/anaconda3/envs/mafft
+    set -u
+    export PATH="$PATH:/Volumes/Seagate/monotrac/nextflow/bin"
+    [[ $NXF_SCRATCH ]] && cd $NXF_SCRATCH
+    export NXF_TASK_WORKDIR="$PWD"
+    nxf_stage
+
+    set +e
+    (set -o pipefail; (nxf_launch | tee .command.out) 3>&1 1>&2 2>&3 | tee .command.err) &
+    pid=$!
+    wait $pid || nxf_main_ret=$?
+    nxf_unstage
+}
+
+$NXF_ENTRY

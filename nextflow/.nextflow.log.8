@@ -1,631 +1,118 @@
-Mar-03 14:37:41.299 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
-Mar-03 14:37:41.479 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.4
-Mar-03 14:37:41.496 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/archiehogan/.nextflow/plugins; core-plugins: nf-amazon@2.9.2,nf-azure@1.10.2,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.3,nf-tower@1.9.3,nf-wave@1.7.4
-Mar-03 14:37:41.520 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Mar-03 14:37:41.521 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Mar-03 14:37:41.522 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
-Mar-03 14:37:41.531 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Mar-03 14:37:41.544 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Volumes/Seagate/monotrac/nextflow/nextflow.config
-Mar-03 14:37:41.546 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Volumes/Seagate/monotrac/nextflow/nextflow.config
-Mar-03 14:37:41.564 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/archiehogan/.nextflow/secrets/store.json
-Mar-03 14:37:41.566 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@452c8a40] - activable => nextflow.secret.LocalSecretsProvider@452c8a40
-Mar-03 14:37:41.569 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Mar-03 14:37:41.887 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
-Mar-03 14:37:41.896 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [elegant_mandelbrot] DSL2 - revision: 3c7b1cd5b5
-Mar-03 14:37:41.897 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Mar-03 14:37:41.897 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
-Mar-03 14:37:41.932 [main] DEBUG nextflow.Session - Session UUID: 2a6dcc6b-098a-48eb-a6e4-4d08f46706a8
-Mar-03 14:37:41.932 [main] DEBUG nextflow.Session - Run name: elegant_mandelbrot
-Mar-03 14:37:41.932 [main] DEBUG nextflow.Session - Executor pool size: 8
-Mar-03 14:37:41.937 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Mar-03 14:37:41.942 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
-Mar-03 14:37:41.961 [main] DEBUG nextflow.cli.CmdRun - 
+Mar-03 16:06:37.057 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -resume
+Mar-03 16:06:37.316 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.4
+Mar-03 16:06:37.335 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/archiehogan/.nextflow/plugins; core-plugins: nf-amazon@2.9.2,nf-azure@1.10.2,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.3,nf-tower@1.9.3,nf-wave@1.7.4
+Mar-03 16:06:37.360 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Mar-03 16:06:37.361 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Mar-03 16:06:37.362 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Mar-03 16:06:37.372 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Mar-03 16:06:37.385 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Volumes/Seagate/monotrac/nextflow/nextflow.config
+Mar-03 16:06:37.387 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Volumes/Seagate/monotrac/nextflow/nextflow.config
+Mar-03 16:06:37.406 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/archiehogan/.nextflow/secrets/store.json
+Mar-03 16:06:37.408 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@42cc13a0] - activable => nextflow.secret.LocalSecretsProvider@42cc13a0
+Mar-03 16:06:37.411 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Mar-03 16:06:37.689 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Mar-03 16:06:37.699 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [suspicious_hoover] DSL2 - revision: 03f0188191
+Mar-03 16:06:37.699 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Mar-03 16:06:37.700 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Mar-03 16:06:37.735 [main] DEBUG nextflow.Session - Session UUID: 2e4ce701-852d-4fd6-92a2-00558b6c2291
+Mar-03 16:06:37.736 [main] DEBUG nextflow.Session - Run name: suspicious_hoover
+Mar-03 16:06:37.736 [main] DEBUG nextflow.Session - Executor pool size: 8
+Mar-03 16:06:37.741 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Mar-03 16:06:37.744 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Mar-03 16:06:37.841 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 24.10.4 build 5934
   Created: 20-01-2025 16:47 UTC (16:47 BST)
   System: Mac OS X 15.3
   Runtime: Groovy 4.0.23 on OpenJDK 64-Bit Server VM 21+35
   Encoding: UTF-8 (UTF-8)
-  Process: 96710@Archies-MacBook-Air-286.local [127.0.0.1]
-  CPUs: 8 - Mem: 8 GB (69.1 MB) - Swap: 4 GB (788.4 MB)
-Mar-03 14:37:41.979 [main] DEBUG nextflow.Session - Work-dir: /Volumes/Seagate/monotrac/nextflow/work [Mac OS X]
-Mar-03 14:37:41.993 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Mar-03 14:37:41.998 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Mar-03 14:37:42.012 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Mar-03 14:37:42.018 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
-Mar-03 14:37:42.055 [main] DEBUG nextflow.Session - Session start
-Mar-03 14:37:42.257 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Mar-03 14:37:42.561 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Mar-03 14:37:42.561 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Mar-03 14:37:42.564 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Mar-03 14:37:42.568 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=8 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
-Mar-03 14:37:42.570 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
-Mar-03 14:37:42.607 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Mar-03 14:37:42.607 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Mar-03 14:37:42.619 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Mar-03 14:37:42.619 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Mar-03 14:37:42.621 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Mar-03 14:37:42.621 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Mar-03 14:37:42.628 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Mar-03 14:37:42.628 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Mar-03 14:37:42.630 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Mar-03 14:37:42.630 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Mar-03 14:37:42.632 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Mar-03 14:37:42.632 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Mar-03 14:37:42.633 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC, PLOTTING, ALIGN, MEDAKAVAR, MOSDEPTH, FASTTREE, BOXPLOT
-Mar-03 14:37:42.633 [main] DEBUG nextflow.Session - Igniting dataflow network (9)
-Mar-03 14:37:42.638 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTQC
-Mar-03 14:37:42.638 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MEDAKAVAR
-Mar-03 14:37:42.638 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MOSDEPTH
-Mar-03 14:37:42.638 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > PLOTTING
-Mar-03 14:37:42.638 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ALIGN
-Mar-03 14:37:42.639 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BOXPLOT
-Mar-03 14:37:42.639 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTTREE
-Mar-03 14:37:42.639 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Process: 13631@Archies-MacBook-Air-286.local [10.126.213.212]
+  CPUs: 8 - Mem: 8 GB (70.6 MB) - Swap: 4 GB (996.4 MB)
+Mar-03 16:06:37.870 [main] DEBUG nextflow.Session - Work-dir: /Volumes/Seagate/monotrac/nextflow/work [Mac OS X]
+Mar-03 16:06:37.885 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Mar-03 16:06:37.890 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Mar-03 16:06:37.903 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Mar-03 16:06:37.910 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Mar-03 16:06:38.156 [main] DEBUG nextflow.Session - Session start
+Mar-03 16:06:38.377 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-03 16:06:38.731 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-03 16:06:38.732 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-03 16:06:38.735 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Mar-03 16:06:38.739 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=8 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Mar-03 16:06:38.740 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Mar-03 16:06:38.778 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-03 16:06:38.778 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-03 16:06:38.783 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-03 16:06:38.783 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-03 16:06:38.786 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-03 16:06:38.786 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-03 16:06:38.790 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-03 16:06:38.790 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-03 16:06:38.792 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-03 16:06:38.792 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-03 16:06:38.795 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-03 16:06:38.795 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-03 16:06:38.797 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-03 16:06:38.797 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-03 16:06:38.799 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC, PLOTTING, ALIGN, MEDAKAVAR, MOSDEPTH, FASTTREE, BOXPLOT, COMBINEFILES
+Mar-03 16:06:38.799 [main] DEBUG nextflow.Session - Igniting dataflow network (10)
+Mar-03 16:06:38.803 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTQC
+Mar-03 16:06:38.804 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MEDAKAVAR
+Mar-03 16:06:38.804 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MOSDEPTH
+Mar-03 16:06:38.804 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > PLOTTING
+Mar-03 16:06:38.804 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ALIGN
+Mar-03 16:06:38.804 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BOXPLOT
+Mar-03 16:06:38.804 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTTREE
+Mar-03 16:06:38.804 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > COMBINEFILES
+Mar-03 16:06:38.805 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
   Script_34b874c951f22e60: /Volumes/Seagate/monotrac/nextflow/./modules/boxplot.nf
   Script_af8225aab15b0f4a: /Volumes/Seagate/monotrac/nextflow/./modules/fastqc.nf
+  Script_ab4124661ce738ee: /Volumes/Seagate/monotrac/nextflow/./modules/combineFiles.nf
   Script_9f7336fab6852298: /Volumes/Seagate/monotrac/nextflow/./modules/medakavar.nf
-  Script_0f9f25e88bba788b: /Volumes/Seagate/monotrac/nextflow/./modules/align.nf
   Script_0f4132ec63b48263: /Volumes/Seagate/monotrac/nextflow/./modules/plotting.nf
-  Script_524f49447b147ba8: /Volumes/Seagate/monotrac/nextflow/main.nf
+  Script_75f87270387dea9b: /Volumes/Seagate/monotrac/nextflow/./modules/align.nf
+  Script_2a7e5f205540f691: /Volumes/Seagate/monotrac/nextflow/main.nf
   Script_ee019a6d35737ad5: /Volumes/Seagate/monotrac/nextflow/./modules/mosdepth.nf
   Script_c580bbcc5b5e237e: /Volumes/Seagate/monotrac/nextflow/./modules/fasttree.nf
-Mar-03 14:37:42.639 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
-Mar-03 14:37:42.639 [main] DEBUG nextflow.Session - Session await
-Mar-03 14:37:42.639 [PathVisitor-2] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /Volumes/Seagate/monotrac/nextflow/isolate_fasta/; pattern: *.fas; options: [:]
-Mar-03 14:37:42.700 [Actor Thread 3] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/opt/anaconda3/envs/medaka; path=/opt/anaconda3/envs/medaka
-Mar-03 14:37:42.700 [Actor Thread 4] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/opt/anaconda3/envs/monotrac; path=/opt/anaconda3/envs/monotrac
-Mar-03 14:37:42.756 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:37:42.757 [Task submitter] INFO  nextflow.Session - [28/cb5f8c] Submitted process > FASTQC (2)
-Mar-03 14:37:42.762 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:37:42.762 [Task submitter] INFO  nextflow.Session - [03/b0bb80] Submitted process > FASTQC (1)
-Mar-03 14:37:42.766 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:37:42.767 [Task submitter] INFO  nextflow.Session - [9e/3fe68a] Submitted process > FASTQC (3)
-Mar-03 14:37:42.773 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:37:42.773 [Task submitter] INFO  nextflow.Session - [ac/6aba92] Submitted process > MEDAKAVAR (1)
-Mar-03 14:37:42.779 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:37:42.779 [Task submitter] INFO  nextflow.Session - [d4/2d6d8a] Submitted process > MEDAKAVAR (3)
-Mar-03 14:37:42.812 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:37:42.812 [Task submitter] INFO  nextflow.Session - [b0/ab9d7d] Submitted process > MEDAKAVAR (2)
-Mar-03 14:37:53.183 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: FASTQC (1); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/03/b0bb80a9d95b3f56d91d07581c725b]
-Mar-03 14:37:53.186 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
-Mar-03 14:37:54.170 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: FASTQC (2); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/28/cb5f8ca57cb7dfff2ec9b4c862fd4b]
-Mar-03 14:37:59.182 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: FASTQC (3); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/9e/3fe68a0062bc8185e7b4ab07b64643]
-Mar-03 14:39:18.741 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: MEDAKAVAR (2); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/b0/ab9d7dd6dcb118f8417c0684434982]
-Mar-03 14:39:18.830 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:39:18.830 [Task submitter] INFO  nextflow.Session - [2a/f8008d] Submitted process > MOSDEPTH (1)
-Mar-03 14:39:20.442 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: MOSDEPTH (1); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/2a/f8008d930eaa01c76e1b61242dc87e]
-Mar-03 14:39:20.459 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:39:20.460 [Task submitter] INFO  nextflow.Session - [ae/2bc115] Submitted process > BOXPLOT (1)
-Mar-03 14:39:20.464 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:39:20.464 [Task submitter] INFO  nextflow.Session - [76/0b0738] Submitted process > PLOTTING (1)
-Mar-03 14:39:22.273 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: MEDAKAVAR (1); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/ac/6aba9279b404ef27003dffdd725048]
-Mar-03 14:39:22.283 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:39:22.283 [Task submitter] INFO  nextflow.Session - [9c/b67b40] Submitted process > MOSDEPTH (2)
-Mar-03 14:39:23.385 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: MOSDEPTH (2); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/9c/b67b401bd981a7b9180390b142c302]
-Mar-03 14:39:23.409 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:39:23.409 [Task submitter] INFO  nextflow.Session - [dd/78d38e] Submitted process > BOXPLOT (2)
-Mar-03 14:39:23.416 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:39:23.416 [Task submitter] INFO  nextflow.Session - [22/fa5b80] Submitted process > PLOTTING (2)
-Mar-03 14:39:25.153 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: BOXPLOT (1); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/ae/2bc1158ec97ede78ee7e909fd1c6d5]
-Mar-03 14:39:26.849 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: BOXPLOT (2); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/dd/78d38e1bf1ec4ca5b641d3de51d21c]
-Mar-03 14:39:28.530 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: PLOTTING (1); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/76/0b0738b0e62887c9306a44e0b6a9ff]
-Mar-03 14:39:30.755 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: PLOTTING (2); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/22/fa5b80dfd52be73da1a614adfe85ba]
-Mar-03 14:41:03.013 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: MEDAKAVAR (3); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/d4/2d6d8aaf3deab3cf6f79735fe8c433]
-Mar-03 14:41:03.059 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:03.059 [Task submitter] INFO  nextflow.Session - [23/2771ca] Submitted process > MOSDEPTH (3)
-Mar-03 14:41:03.064 [Actor Thread 1] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/opt/anaconda3/envs/mafft; path=/opt/anaconda3/envs/mafft
-Mar-03 14:41:03.069 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:03.069 [Task submitter] INFO  nextflow.Session - [f8/e2d39d] Submitted process > ALIGN (3)
-Mar-03 14:41:03.079 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:03.079 [Task submitter] INFO  nextflow.Session - [f6/6a9d70] Submitted process > ALIGN (6)
-Mar-03 14:41:03.085 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:03.085 [Task submitter] INFO  nextflow.Session - [c3/db7911] Submitted process > ALIGN (4)
-Mar-03 14:41:03.088 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:03.088 [Task submitter] INFO  nextflow.Session - [0f/18a3af] Submitted process > ALIGN (7)
-Mar-03 14:41:03.092 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:03.092 [Task submitter] INFO  nextflow.Session - [7c/caaed2] Submitted process > ALIGN (10)
-Mar-03 14:41:03.097 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:03.098 [Task submitter] INFO  nextflow.Session - [a7/3dc46c] Submitted process > ALIGN (1)
-Mar-03 14:41:03.105 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:03.106 [Task submitter] INFO  nextflow.Session - [8f/1cb5de] Submitted process > ALIGN (11)
-Mar-03 14:41:05.250 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: MOSDEPTH (3); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/23/2771ca2581a667a9c223d1f74c3b20]
-Mar-03 14:41:05.253 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:05.253 [Task submitter] INFO  nextflow.Session - [c0/04ccd1] Submitted process > ALIGN (8)
-Mar-03 14:41:06.834 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: ALIGN (10); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/7c/caaed2b848711fda2ac8eb85fc9d8b]
-Mar-03 14:41:06.839 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:06.839 [Task submitter] INFO  nextflow.Session - [9f/1fbcb7] Submitted process > ALIGN (9)
-Mar-03 14:41:06.858 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: ALIGN (3); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/f8/e2d39d9dc94a7c7cfa6f5a31186b82]
-Mar-03 14:41:06.858 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: ALIGN (6); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/f6/6a9d708c334c24ca8ed65e9c5fdbca]
-Mar-03 14:41:06.858 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: ALIGN (1); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/a7/3dc46ce261789957613700519d9d1b]
-Mar-03 14:41:06.862 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:06.862 [Task submitter] INFO  nextflow.Session - [6a/cde6b0] Submitted process > ALIGN (12)
-Mar-03 14:41:06.870 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:06.870 [Task submitter] INFO  nextflow.Session - [e7/b54556] Submitted process > ALIGN (2)
-Mar-03 14:41:06.876 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:06.876 [Task submitter] INFO  nextflow.Session - [5a/b4dd57] Submitted process > ALIGN (15)
-Mar-03 14:41:06.893 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: ALIGN (7); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/0f/18a3af9e5400cbff3d94028c777469]
-Mar-03 14:41:06.907 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:06.907 [Task submitter] INFO  nextflow.Session - [d0/619e4c] Submitted process > ALIGN (5)
-Mar-03 14:41:06.910 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: ALIGN (11); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/8f/1cb5dec46f7ee5fbe6b112d5212be4]
-Mar-03 14:41:06.916 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:06.916 [Task submitter] INFO  nextflow.Session - [f5/d80fdc] Submitted process > ALIGN (13)
-Mar-03 14:41:06.957 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: ALIGN (4); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/c3/db79110c580f694fc5ae31f7142539]
-Mar-03 14:41:06.965 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:06.966 [Task submitter] INFO  nextflow.Session - [cc/5b60fd] Submitted process > ALIGN (17)
-Mar-03 14:41:08.320 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: ALIGN (8); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/c0/04ccd193fa745d6fc612baceb18ef0]
-Mar-03 14:41:08.333 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:08.333 [Task submitter] INFO  nextflow.Session - [07/e6135a] Submitted process > ALIGN (21)
-Mar-03 14:41:09.896 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: ALIGN (9); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/9f/1fbcb7fff2c87fac529ea7fb1c6a1c]
-Mar-03 14:41:09.900 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:09.901 [Task submitter] INFO  nextflow.Session - [0d/e1beda] Submitted process > ALIGN (18)
-Mar-03 14:41:09.931 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: ALIGN (2); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/e7/b54556d947bead5edf10103be6ac35]
-Mar-03 14:41:09.933 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:09.933 [Task submitter] INFO  nextflow.Session - [37/f2a666] Submitted process > ALIGN (16)
-Mar-03 14:41:09.937 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: ALIGN (15); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/5a/b4dd57c992d36560474501a20b5fb3]
-Mar-03 14:41:09.945 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:09.945 [Task submitter] INFO  nextflow.Session - [14/ad9de0] Submitted process > ALIGN (14)
-Mar-03 14:41:09.965 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: ALIGN (13); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/f5/d80fdcccb109b3c08986c4863ea133]
-Mar-03 14:41:09.966 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: ALIGN (17); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/cc/5b60fdaacc8546a1dce80dc4212f0f]
-Mar-03 14:41:09.968 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:09.968 [Task submitter] INFO  nextflow.Session - [f7/98be48] Submitted process > ALIGN (24)
-Mar-03 14:41:09.971 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:09.974 [Task submitter] INFO  nextflow.Session - [53/6cf4d6] Submitted process > ALIGN (20)
-Mar-03 14:41:10.016 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: ALIGN (12); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/6a/cde6b0c436a813245ef653903a7616]
-Mar-03 14:41:10.023 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:10.024 [Task submitter] INFO  nextflow.Session - [6f/a348d6] Submitted process > ALIGN (19)
-Mar-03 14:41:10.030 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: ALIGN (5); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/d0/619e4c57c101747945ff63a4058725]
-Mar-03 14:41:10.034 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:10.035 [Task submitter] INFO  nextflow.Session - [d6/56cacf] Submitted process > ALIGN (27)
-Mar-03 14:41:11.394 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: ALIGN (21); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/07/e6135aade28680754ae5a685fa06e6]
-Mar-03 14:41:11.399 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:11.399 [Task submitter] INFO  nextflow.Session - [7c/69e0cb] Submitted process > ALIGN (22)
-Mar-03 14:41:12.920 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: ALIGN (18); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/0d/e1beda1256f07e12205a19ac3bcb6a]
-Mar-03 14:41:12.924 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:12.926 [Task submitter] INFO  nextflow.Session - [dd/6d4243] Submitted process > ALIGN (26)
-Mar-03 14:41:13.015 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: ALIGN (16); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/37/f2a666dabec56f6cffe5a1ca594ee3]
-Mar-03 14:41:13.018 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: ALIGN (20); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/53/6cf4d667ce12ecdd9fd41d88e717ab]
-Mar-03 14:41:13.018 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:13.019 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: ALIGN (19); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/6f/a348d64698e36a544aba16e7a7c266]
-Mar-03 14:41:13.019 [Task submitter] INFO  nextflow.Session - [14/721acd] Submitted process > ALIGN (25)
-Mar-03 14:41:13.022 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:13.022 [Task submitter] INFO  nextflow.Session - [65/86eb65] Submitted process > ALIGN (32)
-Mar-03 14:41:13.026 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:13.027 [Task submitter] INFO  nextflow.Session - [42/4e6545] Submitted process > ALIGN (30)
-Mar-03 14:41:13.038 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 40; name: ALIGN (27); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/d6/56cacf0451e439844d48a24f2de15a]
-Mar-03 14:41:13.042 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: ALIGN (14); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/14/ad9de04761689c19429a1dcbe8bb41]
-Mar-03 14:41:13.042 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: ALIGN (24); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/f7/98be48872614fd89e0485cf1db3b09]
-Mar-03 14:41:13.044 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:13.044 [Task submitter] INFO  nextflow.Session - [84/761b29] Submitted process > ALIGN (23)
-Mar-03 14:41:13.047 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:13.047 [Task submitter] INFO  nextflow.Session - [4f/082248] Submitted process > ALIGN (31)
-Mar-03 14:41:13.060 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:13.061 [Task submitter] INFO  nextflow.Session - [31/fd1172] Submitted process > ALIGN (36)
-Mar-03 14:41:14.679 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: ALIGN (22); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/7c/69e0cb1830b3fd1618637703708b35]
-Mar-03 14:41:14.739 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:14.740 [Task submitter] INFO  nextflow.Session - [1c/aa7e32] Submitted process > ALIGN (28)
-Mar-03 14:41:16.156 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 49; name: ALIGN (36); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/31/fd11720a501989a11de1c332a5c598]
-Mar-03 14:41:16.159 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:16.160 [Task submitter] INFO  nextflow.Session - [76/1ce18b] Submitted process > ALIGN (38)
-Mar-03 14:41:16.189 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: ALIGN (25); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/14/721acdc52addbea7ce398f119d3678]
-Mar-03 14:41:16.194 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:16.195 [Task submitter] INFO  nextflow.Session - [8c/7a7856] Submitted process > ALIGN (33)
-Mar-03 14:41:16.222 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: ALIGN (26); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/dd/6d4243c0494512335d96bfadcc93f6]
-Mar-03 14:41:16.228 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:16.229 [Task submitter] INFO  nextflow.Session - [2e/5929ed] Submitted process > ALIGN (29)
-Mar-03 14:41:16.239 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 45; name: ALIGN (32); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/65/86eb651e68905b9be0656c2f243a43]
-Mar-03 14:41:16.246 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:16.247 [Task submitter] INFO  nextflow.Session - [db/5dc2f1] Submitted process > ALIGN (40)
-Mar-03 14:41:16.264 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: ALIGN (23); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/84/761b29643e731b4bd922f6cbf5e7b1]
-Mar-03 14:41:16.264 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 44; name: ALIGN (31); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/4f/082248edbd78ed3365244b42249934]
-Mar-03 14:41:16.269 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:16.270 [Task submitter] INFO  nextflow.Session - [60/a52d50] Submitted process > ALIGN (34)
-Mar-03 14:41:16.279 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:16.279 [Task submitter] INFO  nextflow.Session - [bc/186ffe] Submitted process > ALIGN (43)
-Mar-03 14:41:16.333 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 43; name: ALIGN (30); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/42/4e6545cfbe685f10c4b6214a664477]
-Mar-03 14:41:16.343 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:16.344 [Task submitter] INFO  nextflow.Session - [b2/d5191b] Submitted process > ALIGN (37)
-Mar-03 14:41:18.139 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 41; name: ALIGN (28); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/1c/aa7e3231cbe7e0489b1b751304f105]
-Mar-03 14:41:18.146 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:18.147 [Task submitter] INFO  nextflow.Session - [34/8c9d0e] Submitted process > ALIGN (45)
-Mar-03 14:41:19.349 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 46; name: ALIGN (33); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/8c/7a7856f0fa686b1411ce95c2a856a6]
-Mar-03 14:41:19.355 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:19.356 [Task submitter] INFO  nextflow.Session - [9f/98ea86] Submitted process > ALIGN (42)
-Mar-03 14:41:19.357 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 53; name: ALIGN (40); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/db/5dc2f13caf25f44d5f3188b654b513]
-Mar-03 14:41:19.358 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:19.358 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 51; name: ALIGN (38); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/76/1ce18b254b43d77803a2d52d123492]
-Mar-03 14:41:19.358 [Task submitter] INFO  nextflow.Session - [3c/8d120e] Submitted process > ALIGN (35)
-Mar-03 14:41:19.360 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:19.360 [Task submitter] INFO  nextflow.Session - [16/fb532c] Submitted process > ALIGN (49)
-Mar-03 14:41:19.376 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 42; name: ALIGN (29); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/2e/5929edb48d69c1eb3c0b0ffbdfd9b4]
-Mar-03 14:41:19.380 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:19.380 [Task submitter] INFO  nextflow.Session - [99/ee8364] Submitted process > ALIGN (41)
-Mar-03 14:41:19.395 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 56; name: ALIGN (43); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/bc/186ffe2f28160fc257d7fb607cdb9c]
-Mar-03 14:41:19.399 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:19.400 [Task submitter] INFO  nextflow.Session - [0c/268e96] Submitted process > ALIGN (39)
-Mar-03 14:41:19.434 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 50; name: ALIGN (37); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/b2/d5191b2eefeccf3afbf44b750a1eef]
-Mar-03 14:41:19.438 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:19.439 [Task submitter] INFO  nextflow.Session - [4b/e000c2] Submitted process > ALIGN (44)
-Mar-03 14:41:19.497 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 47; name: ALIGN (34); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/60/a52d50a86f53e9a1276dfa6e0ea1ad]
-Mar-03 14:41:19.503 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:19.503 [Task submitter] INFO  nextflow.Session - [df/2676a8] Submitted process > ALIGN (50)
-Mar-03 14:41:21.406 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 58; name: ALIGN (45); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/34/8c9d0e9c3f4ca659fc79b935aec6c8]
-Mar-03 14:41:21.480 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:21.480 [Task submitter] INFO  nextflow.Session - [1b/e0fbc2] Submitted process > ALIGN (48)
-Mar-03 14:41:22.320 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 62; name: ALIGN (49); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/16/fb532c3a8372fdadf3654890954350]
-Mar-03 14:41:22.328 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:22.328 [Task submitter] INFO  nextflow.Session - [73/92159d] Submitted process > ALIGN (52)
-Mar-03 14:41:22.378 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 63; name: ALIGN (50); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/df/2676a8da9978730890ce704b201fb6]
-Mar-03 14:41:22.384 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:22.384 [Task submitter] INFO  nextflow.Session - [ad/822a7f] Submitted process > ALIGN (46)
-Mar-03 14:41:22.428 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 55; name: ALIGN (42); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/9f/98ea8690d3dfe342b4efcbb7803afd]
-Mar-03 14:41:22.435 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:22.436 [Task submitter] INFO  nextflow.Session - [f6/38e1b4] Submitted process > ALIGN (53)
-Mar-03 14:41:22.453 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 48; name: ALIGN (35); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/3c/8d120e8f29fc6e6599aad441212bcd]
-Mar-03 14:41:22.465 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:22.465 [Task submitter] INFO  nextflow.Session - [20/7c6cf3] Submitted process > ALIGN (47)
-Mar-03 14:41:22.491 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 52; name: ALIGN (39); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/0c/268e9659336e77e4cead1330119735]
-Mar-03 14:41:22.499 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:22.499 [Task submitter] INFO  nextflow.Session - [98/bb1de3] Submitted process > ALIGN (56)
-Mar-03 14:41:22.527 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 54; name: ALIGN (41); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/99/ee8364c6c4bb95b0eb48a73114c163]
-Mar-03 14:41:22.531 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:22.531 [Task submitter] INFO  nextflow.Session - [4b/377b4b] Submitted process > ALIGN (55)
-Mar-03 14:41:22.549 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 57; name: ALIGN (44); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/4b/e000c24affd988ed3a94e1e129a414]
-Mar-03 14:41:22.555 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:22.555 [Task submitter] INFO  nextflow.Session - [0e/f720b0] Submitted process > ALIGN (54)
-Mar-03 14:41:24.573 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 61; name: ALIGN (48); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/1b/e0fbc2827aa781fcf1c49b1609114d]
-Mar-03 14:41:24.576 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:24.576 [Task submitter] INFO  nextflow.Session - [36/c39e2f] Submitted process > ALIGN (59)
-Mar-03 14:41:25.383 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 60; name: ALIGN (47); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/20/7c6cf3263f605e74dd9475c492eb81]
-Mar-03 14:41:25.389 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:25.390 [Task submitter] INFO  nextflow.Session - [85/df462a] Submitted process > ALIGN (51)
-Mar-03 14:41:25.427 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 65; name: ALIGN (52); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/73/92159d76987d93f52532a0874bb5f8]
-Mar-03 14:41:25.432 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:25.432 [Task submitter] INFO  nextflow.Session - [fb/802f31] Submitted process > ALIGN (58)
-Mar-03 14:41:25.453 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 59; name: ALIGN (46); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/ad/822a7faf3de0df95d09c465813918e]
-Mar-03 14:41:25.457 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:25.457 [Task submitter] INFO  nextflow.Session - [94/628264] Submitted process > ALIGN (60)
-Mar-03 14:41:25.597 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 68; name: ALIGN (55); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/4b/377b4b0d6cac226da3351ce91de70e]
-Mar-03 14:41:25.600 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:25.600 [Task submitter] INFO  nextflow.Session - [4d/ec9309] Submitted process > ALIGN (61)
-Mar-03 14:41:25.606 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 66; name: ALIGN (53); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/f6/38e1b441fbec71ad93a5fc45a99b25]
-Mar-03 14:41:25.663 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:25.663 [Task submitter] INFO  nextflow.Session - [87/c7424a] Submitted process > ALIGN (63)
-Mar-03 14:41:25.680 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 67; name: ALIGN (54); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/0e/f720b0682704c2aa8fc880d1cc23ff]
-Mar-03 14:41:25.684 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:25.685 [Task submitter] INFO  nextflow.Session - [5f/5c37ab] Submitted process > ALIGN (62)
-Mar-03 14:41:25.783 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 69; name: ALIGN (56); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/98/bb1de3f87d28ab86bdb3972d151d60]
-Mar-03 14:41:25.796 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:25.796 [Task submitter] INFO  nextflow.Session - [54/5f732b] Submitted process > ALIGN (67)
-Mar-03 14:41:28.053 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 72; name: ALIGN (59); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/36/c39e2f6ea5c37b03cbfa585d880381]
-Mar-03 14:41:28.060 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:28.060 [Task submitter] INFO  nextflow.Session - [9e/fdc91a] Submitted process > ALIGN (57)
-Mar-03 14:41:28.660 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 73; name: ALIGN (60); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/94/6282641d77bd6817c3951b57710613]
-Mar-03 14:41:28.666 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:28.667 [Task submitter] INFO  nextflow.Session - [75/8f82db] Submitted process > ALIGN (64)
-Mar-03 14:41:28.698 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 64; name: ALIGN (51); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/85/df462a404d9ddb4c86f78a22e2e2e8]
-Mar-03 14:41:28.700 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:28.700 [Task submitter] INFO  nextflow.Session - [5e/866d51] Submitted process > ALIGN (65)
-Mar-03 14:41:28.714 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 71; name: ALIGN (58); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/fb/802f3168c4550f572adf8d575c49f1]
-Mar-03 14:41:28.719 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:28.720 [Task submitter] INFO  nextflow.Session - [1b/452002] Submitted process > ALIGN (69)
-Mar-03 14:41:28.749 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 75; name: ALIGN (62); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/5f/5c37ab7e3bfcedcd6e930aaa4b628a]
-Mar-03 14:41:28.755 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:28.755 [Task submitter] INFO  nextflow.Session - [6d/a127ee] Submitted process > ALIGN (66)
-Mar-03 14:41:28.771 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 74; name: ALIGN (61); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/4d/ec93095ead6037e997b79c10786d85]
-Mar-03 14:41:28.775 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:28.775 [Task submitter] INFO  nextflow.Session - [96/850974] Submitted process > ALIGN (68)
-Mar-03 14:41:28.799 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 76; name: ALIGN (63); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/87/c7424a8b7b418e2c6409ccd2509a80]
-Mar-03 14:41:28.803 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:28.807 [Task submitter] INFO  nextflow.Session - [ee/48d31d] Submitted process > ALIGN (70)
-Mar-03 14:41:28.957 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 80; name: ALIGN (67); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/54/5f732b34c84026f75541676394e2e1]
-Mar-03 14:41:28.966 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:28.967 [Task submitter] INFO  nextflow.Session - [dd/a47640] Submitted process > ALIGN (74)
-Mar-03 14:41:31.256 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 70; name: ALIGN (57); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/9e/fdc91a5a9b58822be407d06d32247f]
-Mar-03 14:41:31.259 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:31.259 [Task submitter] INFO  nextflow.Session - [6e/63d29f] Submitted process > ALIGN (71)
-Mar-03 14:41:31.734 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 79; name: ALIGN (66); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/6d/a127eeb019ad3a8419f1a25031e588]
-Mar-03 14:41:31.740 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:31.740 [Task submitter] INFO  nextflow.Session - [04/5f1db5] Submitted process > ALIGN (73)
-Mar-03 14:41:31.758 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 78; name: ALIGN (65); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/5e/866d51b3dc4af960b94916ed17faad]
-Mar-03 14:41:31.763 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:31.763 [Task submitter] INFO  nextflow.Session - [c5/7748a2] Submitted process > ALIGN (72)
-Mar-03 14:41:31.832 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 81; name: ALIGN (68); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/96/850974eb13af01753c7323cdfdf119]
-Mar-03 14:41:31.835 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:31.835 [Task submitter] INFO  nextflow.Session - [1d/d1dc57] Submitted process > ALIGN (76)
-Mar-03 14:41:31.874 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 77; name: ALIGN (64); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/75/8f82db08edb6bf8dbae508e650813e]
-Mar-03 14:41:31.884 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:31.885 [Task submitter] INFO  nextflow.Session - [95/3bf2af] Submitted process > ALIGN (77)
-Mar-03 14:41:31.972 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 82; name: ALIGN (69); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/1b/452002d10d1de5e1b25d6501e6e5fb]
-Mar-03 14:41:31.974 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:31.975 [Task submitter] INFO  nextflow.Session - [5a/be9217] Submitted process > ALIGN (75)
-Mar-03 14:41:32.035 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 87; name: ALIGN (74); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/dd/a47640b0e78785632bc153f43eaae1]
-Mar-03 14:41:32.041 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:32.041 [Task submitter] INFO  nextflow.Session - [f3/baff55] Submitted process > ALIGN (79)
-Mar-03 14:41:32.095 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 83; name: ALIGN (70); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/ee/48d31dfe31a37688dd9ff4b8c3ba0e]
-Mar-03 14:41:32.099 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:32.099 [Task submitter] INFO  nextflow.Session - [f7/d1b129] Submitted process > ALIGN (80)
-Mar-03 14:41:34.605 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 84; name: ALIGN (71); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/6e/63d29f8899e8445d693cbd1e917c9b]
-Mar-03 14:41:34.618 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:34.618 [Task submitter] INFO  nextflow.Session - [c6/9a0dc8] Submitted process > ALIGN (78)
-Mar-03 14:41:34.812 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 86; name: ALIGN (73); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/04/5f1db59165eacb048c646a29c51bd0]
-Mar-03 14:41:34.817 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:34.817 [Task submitter] INFO  nextflow.Session - [b7/6e982d] Submitted process > ALIGN (82)
-Mar-03 14:41:34.892 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 85; name: ALIGN (72); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/c5/7748a2953d10e5cd26c9614eaea06d]
-Mar-03 14:41:34.898 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:34.898 [Task submitter] INFO  nextflow.Session - [61/3cb59b] Submitted process > ALIGN (81)
-Mar-03 14:41:34.925 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 89; name: ALIGN (76); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/1d/d1dc57defe3af5eaf1e3cb714a3e27]
-Mar-03 14:41:34.929 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:34.929 [Task submitter] INFO  nextflow.Session - [2f/64664a] Submitted process > ALIGN (83)
-Mar-03 14:41:35.144 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 90; name: ALIGN (77); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/95/3bf2af7c8c373000e43636b4f3d285]
-Mar-03 14:41:35.146 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:35.146 [Task submitter] INFO  nextflow.Session - [5b/a57f24] Submitted process > PLOTTING (3)
-Mar-03 14:41:35.207 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 88; name: ALIGN (75); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/5a/be92177c16d82ad3f030987718bfd1]
-Mar-03 14:41:35.222 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:35.224 [Task submitter] INFO  nextflow.Session - [61/705ca9] Submitted process > BOXPLOT (3)
-Mar-03 14:41:35.273 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 92; name: ALIGN (79); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/f3/baff551bbc3554a2d4f557b14a1583]
-Mar-03 14:41:35.281 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:35.282 [Task submitter] INFO  nextflow.Session - [20/2360bf] Submitted process > FASTTREE (1)
-Mar-03 14:41:35.324 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 93; name: ALIGN (80); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/f7/d1b12965e524c6e238f71ae7f5fda6]
-Mar-03 14:41:35.328 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:35.329 [Task submitter] INFO  nextflow.Session - [b0/d15b77] Submitted process > FASTTREE (2)
-Mar-03 14:41:37.977 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 91; name: ALIGN (78); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/c6/9a0dc86de3789c7e896e06f9c20711]
-Mar-03 14:41:37.982 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:37.982 [Task submitter] INFO  nextflow.Session - [3c/2e5035] Submitted process > FASTTREE (3)
-Mar-03 14:41:38.130 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 95; name: ALIGN (82); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/b7/6e982dd71c5472604b0f49e3e66d27]
-Mar-03 14:41:38.134 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:38.134 [Task submitter] INFO  nextflow.Session - [4b/9a31b4] Submitted process > FASTTREE (4)
-Mar-03 14:41:38.291 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 96; name: ALIGN (83); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/2f/64664a64e56f4e75ac809410d54758]
-Mar-03 14:41:38.295 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:38.296 [Task submitter] INFO  nextflow.Session - [ba/74da8c] Submitted process > FASTTREE (5)
-Mar-03 14:41:38.365 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 94; name: ALIGN (81); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/61/3cb59bc5dcd17220e9ba9d6965f04e]
-Mar-03 14:41:38.378 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:38.378 [Task submitter] INFO  nextflow.Session - [b8/e68079] Submitted process > FASTTREE (6)
-Mar-03 14:41:39.985 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 99; name: FASTTREE (1); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/20/2360bf0ee41911ceddfb835879d46f]
-Mar-03 14:41:39.992 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:39.993 [Task submitter] INFO  nextflow.Session - [cc/6336ef] Submitted process > FASTTREE (7)
-Mar-03 14:41:40.072 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 100; name: FASTTREE (2); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/b0/d15b773b7436c62f1eb9e3f4a829b9]
-Mar-03 14:41:40.085 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:40.086 [Task submitter] INFO  nextflow.Session - [59/639457] Submitted process > FASTTREE (8)
-Mar-03 14:41:40.477 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 98; name: BOXPLOT (3); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/61/705ca9ef42825738dcf330a48ab8d7]
-Mar-03 14:41:40.482 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:40.483 [Task submitter] INFO  nextflow.Session - [b9/2e7e61] Submitted process > FASTTREE (9)
-Mar-03 14:41:42.607 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 101; name: FASTTREE (3); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/3c/2e50351fc6a769c8043a71e1122606]
-Mar-03 14:41:42.613 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:42.615 [Task submitter] INFO  nextflow.Session - [41/c0460f] Submitted process > FASTTREE (10)
-Mar-03 14:41:43.045 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 102; name: FASTTREE (4); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/4b/9a31b45f76f24452febb487a983ea1]
-Mar-03 14:41:43.050 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:43.050 [Task submitter] INFO  nextflow.Session - [43/a4d5f1] Submitted process > FASTTREE (11)
-Mar-03 14:41:43.444 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 103; name: FASTTREE (5); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/ba/74da8c0072cec4e188871663fa5dbe]
-Mar-03 14:41:43.459 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 104; name: FASTTREE (6); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/b8/e680798a90449ab1d2b1e476a6338a]
-Mar-03 14:41:43.460 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:43.461 [Task submitter] INFO  nextflow.Session - [2b/4eadd5] Submitted process > FASTTREE (13)
-Mar-03 14:41:43.462 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:43.462 [Task submitter] INFO  nextflow.Session - [44/a70ae2] Submitted process > FASTTREE (12)
-Mar-03 14:41:44.828 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 105; name: FASTTREE (7); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/cc/6336efebe33a49bc7f7a00c8070744]
-Mar-03 14:41:44.837 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:44.837 [Task submitter] INFO  nextflow.Session - [f4/5a0ba0] Submitted process > FASTTREE (14)
-Mar-03 14:41:44.903 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 106; name: FASTTREE (8); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/59/63945793fc270f1c7948c4377e444b]
-Mar-03 14:41:44.908 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:44.914 [Task submitter] INFO  nextflow.Session - [1b/bd7f40] Submitted process > FASTTREE (15)
-Mar-03 14:41:45.270 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 107; name: FASTTREE (9); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/b9/2e7e61fec2b7ae6e8c4b26e6b776d8]
-Mar-03 14:41:45.273 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:45.274 [Task submitter] INFO  nextflow.Session - [96/dd8535] Submitted process > FASTTREE (16)
-Mar-03 14:41:47.312 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 108; name: FASTTREE (10); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/41/c0460f416de4282ae553fe6c2f4dd6]
-Mar-03 14:41:47.320 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:47.320 [Task submitter] INFO  nextflow.Session - [bf/ce3d7e] Submitted process > FASTTREE (17)
-Mar-03 14:41:48.021 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 109; name: FASTTREE (11); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/43/a4d5f10cb589b50e147ae66f590b84]
-Mar-03 14:41:48.024 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:48.024 [Task submitter] INFO  nextflow.Session - [12/fcf00d] Submitted process > FASTTREE (18)
-Mar-03 14:41:48.034 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 97; name: PLOTTING (3); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/5b/a57f245ea341e90f34c6a8f30670dd]
-Mar-03 14:41:48.038 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:48.038 [Task submitter] INFO  nextflow.Session - [eb/b794e0] Submitted process > FASTTREE (19)
-Mar-03 14:41:48.149 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 111; name: FASTTREE (13); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/2b/4eadd5645d2920c5d2a4a01420f018]
-Mar-03 14:41:48.154 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:48.155 [Task submitter] INFO  nextflow.Session - [11/2b2571] Submitted process > FASTTREE (20)
-Mar-03 14:41:48.581 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 110; name: FASTTREE (12); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/44/a70ae286287ea8b446a57e5eee3942]
-Mar-03 14:41:48.587 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:48.588 [Task submitter] INFO  nextflow.Session - [29/f11b2b] Submitted process > FASTTREE (23)
-Mar-03 14:41:49.552 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 112; name: FASTTREE (14); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/f4/5a0ba0ce3069f438b0d6fdf716f16e]
-Mar-03 14:41:49.556 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:49.556 [Task submitter] INFO  nextflow.Session - [3d/a905f2] Submitted process > FASTTREE (22)
-Mar-03 14:41:49.767 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 113; name: FASTTREE (15); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/1b/bd7f409d3b112eb1e0535dff929f8b]
-Mar-03 14:41:49.774 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:49.774 [Task submitter] INFO  nextflow.Session - [55/b025bd] Submitted process > FASTTREE (21)
-Mar-03 14:41:50.036 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 114; name: FASTTREE (16); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/96/dd8535ea622eea776b263d7283b3e3]
-Mar-03 14:41:50.048 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:50.048 [Task submitter] INFO  nextflow.Session - [84/3b7502] Submitted process > FASTTREE (24)
-Mar-03 14:41:51.768 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 115; name: FASTTREE (17); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/bf/ce3d7ed1ffea4d76652f958bd44cce]
-Mar-03 14:41:51.772 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:51.772 [Task submitter] INFO  nextflow.Session - [bc/20b77e] Submitted process > FASTTREE (25)
-Mar-03 14:41:52.392 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 116; name: FASTTREE (18); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/12/fcf00d6216ef183e8efda075c691ef]
-Mar-03 14:41:52.397 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:52.397 [Task submitter] INFO  nextflow.Session - [3e/afbc1c] Submitted process > FASTTREE (26)
-Mar-03 14:41:52.628 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 117; name: FASTTREE (19); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/eb/b794e0cf61f2d0681cfe7985545423]
-Mar-03 14:41:52.633 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:52.634 [Task submitter] INFO  nextflow.Session - [39/a77f4c] Submitted process > FASTTREE (27)
-Mar-03 14:41:52.643 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 118; name: FASTTREE (20); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/11/2b2571a3742e3ef61e50a52687b7fd]
-Mar-03 14:41:52.649 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:52.649 [Task submitter] INFO  nextflow.Session - [67/4a2029] Submitted process > FASTTREE (28)
-Mar-03 14:41:53.082 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 121; name: FASTTREE (23); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/29/f11b2b945f6cc8c9bf04eff9d5eebe]
-Mar-03 14:41:53.088 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:53.088 [Task submitter] INFO  nextflow.Session - [9c/6f3622] Submitted process > FASTTREE (29)
-Mar-03 14:41:54.051 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 120; name: FASTTREE (22); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/3d/a905f25a0522ab03d315fd75fced3b]
-Mar-03 14:41:54.058 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 119; name: FASTTREE (21); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/55/b025bd3288ebe0845c2d71439879b0]
-Mar-03 14:41:54.076 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:54.077 [Task submitter] INFO  nextflow.Session - [03/e9d0c4] Submitted process > FASTTREE (30)
-Mar-03 14:41:54.089 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:54.089 [Task submitter] INFO  nextflow.Session - [be/dc980d] Submitted process > FASTTREE (31)
-Mar-03 14:41:54.538 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 122; name: FASTTREE (24); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/84/3b75026198bd197600ea2701a7c59b]
-Mar-03 14:41:54.543 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:54.543 [Task submitter] INFO  nextflow.Session - [1e/0412af] Submitted process > FASTTREE (32)
-Mar-03 14:41:56.314 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 123; name: FASTTREE (25); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/bc/20b77e3c48ac3021dd1790218da29c]
-Mar-03 14:41:56.319 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:56.319 [Task submitter] INFO  nextflow.Session - [3c/d434e0] Submitted process > FASTTREE (34)
-Mar-03 14:41:56.907 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 124; name: FASTTREE (26); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/3e/afbc1c196b52091a71468e065bb6e2]
-Mar-03 14:41:56.913 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:56.913 [Task submitter] INFO  nextflow.Session - [a0/67a38d] Submitted process > FASTTREE (33)
-Mar-03 14:41:57.020 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 125; name: FASTTREE (27); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/39/a77f4c075378d2d7aafb90e46c6a24]
-Mar-03 14:41:57.029 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:57.030 [Task submitter] INFO  nextflow.Session - [be/5f13a1] Submitted process > FASTTREE (35)
-Mar-03 14:41:57.149 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 126; name: FASTTREE (28); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/67/4a2029ad2b0fbcbb36440799eca55f]
-Mar-03 14:41:57.153 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:57.153 [Task submitter] INFO  nextflow.Session - [29/a3279d] Submitted process > FASTTREE (36)
-Mar-03 14:41:57.532 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 127; name: FASTTREE (29); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/9c/6f3622e33baf9702419bfd803ada6e]
-Mar-03 14:41:57.536 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:57.537 [Task submitter] INFO  nextflow.Session - [3c/195f7d] Submitted process > FASTTREE (37)
-Mar-03 14:41:58.306 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 128; name: FASTTREE (30); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/03/e9d0c4faac2c3292b789e92e1651c6]
-Mar-03 14:41:58.310 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:58.315 [Task submitter] INFO  nextflow.Session - [a7/dfa59a] Submitted process > FASTTREE (38)
-Mar-03 14:41:58.386 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 129; name: FASTTREE (31); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/be/dc980daea8458a8390c39a53dbbc01]
-Mar-03 14:41:58.391 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:58.391 [Task submitter] INFO  nextflow.Session - [ac/d28436] Submitted process > FASTTREE (39)
-Mar-03 14:41:59.094 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 130; name: FASTTREE (32); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/1e/0412afae2c5fff9181c0c7ba937550]
-Mar-03 14:41:59.098 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:41:59.099 [Task submitter] INFO  nextflow.Session - [aa/c47fe0] Submitted process > FASTTREE (40)
-Mar-03 14:42:00.533 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 132; name: FASTTREE (34); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/3c/d434e0f35f6f2d97aeb6899bf88af2]
-Mar-03 14:42:00.541 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:00.541 [Task submitter] INFO  nextflow.Session - [05/f54e46] Submitted process > FASTTREE (41)
-Mar-03 14:42:01.457 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 133; name: FASTTREE (35); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/be/5f13a1253af3c77a5e0ffd5cf0d781]
-Mar-03 14:42:01.461 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:01.461 [Task submitter] INFO  nextflow.Session - [b5/3d2420] Submitted process > FASTTREE (42)
-Mar-03 14:42:01.522 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 131; name: FASTTREE (33); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/a0/67a38dfeda1d868de2909d0a75ab49]
-Mar-03 14:42:01.526 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:01.527 [Task submitter] INFO  nextflow.Session - [98/3275ef] Submitted process > FASTTREE (43)
-Mar-03 14:42:01.633 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 134; name: FASTTREE (36); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/29/a3279d50516e220a60808692124567]
-Mar-03 14:42:01.636 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:01.637 [Task submitter] INFO  nextflow.Session - [ec/0014d7] Submitted process > FASTTREE (44)
-Mar-03 14:42:02.021 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 135; name: FASTTREE (37); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/3c/195f7d9434e8d46b012ff7445a9afa]
-Mar-03 14:42:02.026 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:02.027 [Task submitter] INFO  nextflow.Session - [cd/5ae9cc] Submitted process > FASTTREE (45)
-Mar-03 14:42:02.695 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 136; name: FASTTREE (38); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/a7/dfa59ac5934e10325cd45ca57680bc]
-Mar-03 14:42:02.700 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:02.700 [Task submitter] INFO  nextflow.Session - [12/c6d4c2] Submitted process > FASTTREE (46)
-Mar-03 14:42:02.946 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 137; name: FASTTREE (39); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/ac/d284369177b4d859a97e1e83a12426]
-Mar-03 14:42:02.950 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:02.950 [Task submitter] INFO  nextflow.Session - [9b/1b079b] Submitted process > FASTTREE (47)
-Mar-03 14:42:03.412 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 138; name: FASTTREE (40); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/aa/c47fe02929e167d5242d7157d83bb2]
-Mar-03 14:42:03.418 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:03.418 [Task submitter] INFO  nextflow.Session - [3f/d5fa18] Submitted process > FASTTREE (48)
-Mar-03 14:42:04.763 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 139; name: FASTTREE (41); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/05/f54e46b279fdc8c96df570b20cd1f9]
-Mar-03 14:42:04.769 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:04.769 [Task submitter] INFO  nextflow.Session - [f0/8accf7] Submitted process > FASTTREE (49)
-Mar-03 14:42:05.795 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 140; name: FASTTREE (42); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/b5/3d2420aa28be2d83c041e6f7eec4d4]
-Mar-03 14:42:05.803 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:05.803 [Task submitter] INFO  nextflow.Session - [b0/97681a] Submitted process > FASTTREE (50)
-Mar-03 14:42:05.808 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 141; name: FASTTREE (43); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/98/3275efe7453fdd802074f689b8a84b]
-Mar-03 14:42:05.813 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:05.814 [Task submitter] INFO  nextflow.Session - [a2/1ab387] Submitted process > FASTTREE (51)
-Mar-03 14:42:06.074 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 142; name: FASTTREE (44); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/ec/0014d7d842b23511591b8915fa7b97]
-Mar-03 14:42:06.084 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:06.084 [Task submitter] INFO  nextflow.Session - [10/3b39c6] Submitted process > FASTTREE (52)
-Mar-03 14:42:06.785 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 143; name: FASTTREE (45); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/cd/5ae9ccde6830e5847405a3a5a561a8]
-Mar-03 14:42:06.790 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:06.791 [Task submitter] INFO  nextflow.Session - [78/057d6f] Submitted process > FASTTREE (53)
-Mar-03 14:42:07.526 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 144; name: FASTTREE (46); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/12/c6d4c20456ee67ca1bb05085fc9dbc]
-Mar-03 14:42:07.530 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:07.531 [Task submitter] INFO  nextflow.Session - [a9/8b8266] Submitted process > FASTTREE (54)
-Mar-03 14:42:07.825 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 145; name: FASTTREE (47); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/9b/1b079b1329fd54743dfc43ef82cca5]
-Mar-03 14:42:07.840 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:07.840 [Task submitter] INFO  nextflow.Session - [26/e24185] Submitted process > FASTTREE (55)
-Mar-03 14:42:08.342 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 146; name: FASTTREE (48); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/3f/d5fa1818de101afb6cf12ad1033bc9]
-Mar-03 14:42:08.351 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:08.351 [Task submitter] INFO  nextflow.Session - [bf/0c913e] Submitted process > FASTTREE (56)
-Mar-03 14:42:10.050 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 147; name: FASTTREE (49); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/f0/8accf7ac2b15c5a9261cc63e5c4855]
-Mar-03 14:42:10.060 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:10.061 [Task submitter] INFO  nextflow.Session - [ba/b9c096] Submitted process > FASTTREE (57)
-Mar-03 14:42:10.956 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 148; name: FASTTREE (50); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/b0/97681aa03d52a9a8d8a206ceeaa568]
-Mar-03 14:42:10.967 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:10.967 [Task submitter] INFO  nextflow.Session - [46/10a1f0] Submitted process > FASTTREE (58)
-Mar-03 14:42:11.266 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 150; name: FASTTREE (52); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/10/3b39c631977848ebbf68c855f03ae3]
-Mar-03 14:42:11.277 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:11.277 [Task submitter] INFO  nextflow.Session - [0a/e5a84f] Submitted process > FASTTREE (59)
-Mar-03 14:42:11.295 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 149; name: FASTTREE (51); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/a2/1ab387a5882aa5e0a9dd64ff733f16]
-Mar-03 14:42:11.301 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:11.301 [Task submitter] INFO  nextflow.Session - [c1/a667be] Submitted process > FASTTREE (60)
-Mar-03 14:42:11.752 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 151; name: FASTTREE (53); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/78/057d6fbc51beb9d442843db3e03bb1]
-Mar-03 14:42:11.759 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:11.760 [Task submitter] INFO  nextflow.Session - [0e/7c2ddc] Submitted process > FASTTREE (61)
-Mar-03 14:42:12.480 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 152; name: FASTTREE (54); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/a9/8b8266d88f3adac90581d2ac50f324]
-Mar-03 14:42:12.484 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:12.485 [Task submitter] INFO  nextflow.Session - [97/9342e1] Submitted process > FASTTREE (62)
-Mar-03 14:42:12.670 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 153; name: FASTTREE (55); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/26/e24185bc6960acbcc3112bd8d2e32e]
-Mar-03 14:42:12.675 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:12.675 [Task submitter] INFO  nextflow.Session - [cf/11cefe] Submitted process > FASTTREE (63)
-Mar-03 14:42:13.236 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 154; name: FASTTREE (56); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/bf/0c913e88620bbd926f0461a9ba02ea]
-Mar-03 14:42:13.240 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:13.240 [Task submitter] INFO  nextflow.Session - [a3/00c393] Submitted process > FASTTREE (64)
-Mar-03 14:42:14.791 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 155; name: FASTTREE (57); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/ba/b9c096f654ecbbd7c5687c54c8cdd8]
-Mar-03 14:42:14.798 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:14.798 [Task submitter] INFO  nextflow.Session - [bd/6b230f] Submitted process > FASTTREE (65)
-Mar-03 14:42:15.792 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 156; name: FASTTREE (58); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/46/10a1f07049d8ebb44f111e9da536fd]
-Mar-03 14:42:15.796 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:15.796 [Task submitter] INFO  nextflow.Session - [a5/8e7887] Submitted process > FASTTREE (66)
-Mar-03 14:42:15.914 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 158; name: FASTTREE (60); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/c1/a667be4c5c38ee93e2db8f317c1452]
-Mar-03 14:42:15.917 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:15.917 [Task submitter] INFO  nextflow.Session - [8f/d18c3b] Submitted process > FASTTREE (67)
-Mar-03 14:42:15.942 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 157; name: FASTTREE (59); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/0a/e5a84f48aeeb45bf594c91a5d6b82e]
-Mar-03 14:42:15.946 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:15.946 [Task submitter] INFO  nextflow.Session - [1a/348cfb] Submitted process > FASTTREE (68)
-Mar-03 14:42:16.440 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 159; name: FASTTREE (61); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/0e/7c2ddc7f871b0e2d04b50a3c0c4065]
-Mar-03 14:42:16.445 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:16.445 [Task submitter] INFO  nextflow.Session - [22/9cb320] Submitted process > FASTTREE (69)
-Mar-03 14:42:17.106 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 160; name: FASTTREE (62); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/97/9342e1628a5f7a9bcbca09e262a1f9]
-Mar-03 14:42:17.110 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:17.110 [Task submitter] INFO  nextflow.Session - [09/6c8208] Submitted process > FASTTREE (70)
-Mar-03 14:42:17.373 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 161; name: FASTTREE (63); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/cf/11cefebb7a127baaad0d3d21197a98]
-Mar-03 14:42:17.390 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:17.391 [Task submitter] INFO  nextflow.Session - [0d/1d589c] Submitted process > FASTTREE (71)
-Mar-03 14:42:17.847 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 162; name: FASTTREE (64); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/a3/00c39352cb7ca8a7059d97502e37c5]
-Mar-03 14:42:17.854 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:17.855 [Task submitter] INFO  nextflow.Session - [a0/be5d42] Submitted process > FASTTREE (72)
-Mar-03 14:42:19.198 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 163; name: FASTTREE (65); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/bd/6b230f0d3d6bb9be22fc6b7ee6e15f]
-Mar-03 14:42:19.203 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:19.203 [Task submitter] INFO  nextflow.Session - [7c/c8123b] Submitted process > FASTTREE (73)
-Mar-03 14:42:20.394 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 164; name: FASTTREE (66); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/a5/8e7887a9d52f373434cba86e3d770e]
-Mar-03 14:42:20.397 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:20.397 [Task submitter] INFO  nextflow.Session - [74/741be7] Submitted process > FASTTREE (74)
-Mar-03 14:42:20.413 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 165; name: FASTTREE (67); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/8f/d18c3bcce279e3ac10c426bd06a29e]
-Mar-03 14:42:20.419 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:20.420 [Task submitter] INFO  nextflow.Session - [29/1cc732] Submitted process > FASTTREE (75)
-Mar-03 14:42:20.670 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 166; name: FASTTREE (68); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/1a/348cfb034add2fc433c68595a321f9]
-Mar-03 14:42:20.674 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:20.674 [Task submitter] INFO  nextflow.Session - [33/ff3a35] Submitted process > FASTTREE (76)
-Mar-03 14:42:21.311 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 167; name: FASTTREE (69); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/22/9cb3206b0ea1fea32a295b2d14bf54]
-Mar-03 14:42:21.319 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:21.319 [Task submitter] INFO  nextflow.Session - [cd/857f29] Submitted process > FASTTREE (77)
-Mar-03 14:42:21.910 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 168; name: FASTTREE (70); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/09/6c8208cca5628934ff7ebfedd1d455]
-Mar-03 14:42:21.914 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:21.914 [Task submitter] INFO  nextflow.Session - [41/88b9cd] Submitted process > FASTTREE (78)
-Mar-03 14:42:22.088 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 169; name: FASTTREE (71); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/0d/1d589ca81b09762b5512ba19391c18]
-Mar-03 14:42:22.095 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:22.095 [Task submitter] INFO  nextflow.Session - [ae/b6fa1f] Submitted process > FASTTREE (79)
-Mar-03 14:42:22.645 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 170; name: FASTTREE (72); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/a0/be5d4291bd341c86ee5d2c2950a5f0]
-Mar-03 14:42:22.649 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:22.650 [Task submitter] INFO  nextflow.Session - [68/3cac61] Submitted process > FASTTREE (80)
-Mar-03 14:42:23.902 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 171; name: FASTTREE (73); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/7c/c8123b7cc9a5357c28af4dcab0f30e]
-Mar-03 14:42:23.907 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:23.907 [Task submitter] INFO  nextflow.Session - [5e/ad7a40] Submitted process > FASTTREE (81)
-Mar-03 14:42:25.365 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 173; name: FASTTREE (75); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/29/1cc7327c7af1dfe37fe0ca315abaaa]
-Mar-03 14:42:25.371 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:25.371 [Task submitter] INFO  nextflow.Session - [4d/27cde7] Submitted process > FASTTREE (82)
-Mar-03 14:42:25.429 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 172; name: FASTTREE (74); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/74/741be7043345b577fcd413e45468d5]
-Mar-03 14:42:25.434 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Mar-03 14:42:25.434 [Task submitter] INFO  nextflow.Session - [51/0ed131] Submitted process > FASTTREE (83)
-Mar-03 14:42:25.543 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 174; name: FASTTREE (76); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/33/ff3a3542552a5bba23838a9d64af7b]
-Mar-03 14:42:26.186 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 175; name: FASTTREE (77); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/cd/857f290ae5c98b5f9f151b5cf6db16]
-Mar-03 14:42:26.442 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 176; name: FASTTREE (78); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/41/88b9cd167628bf41f81592bd6088de]
-Mar-03 14:42:26.797 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 177; name: FASTTREE (79); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/ae/b6fa1f21076df40799d131f861c713]
-Mar-03 14:42:26.928 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 178; name: FASTTREE (80); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/68/3cac616dc5ad488a4e96e29591dfcd]
-Mar-03 14:42:27.662 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 179; name: FASTTREE (81); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/5e/ad7a40b9e03df40bde626be308906f]
-Mar-03 14:42:28.494 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 180; name: FASTTREE (82); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/4d/27cde78bf1a66c0c6793b291359d2c]
-Mar-03 14:42:28.529 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 181; name: FASTTREE (83); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/51/0ed131995cdfd9ab45464aa7bfedf8]
-Mar-03 14:42:28.530 [main] DEBUG nextflow.Session - Session await > all processes finished
-Mar-03 14:42:28.636 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
-Mar-03 14:42:28.636 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Mar-03 14:42:28.644 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
-Mar-03 14:42:28.647 [main] INFO  nextflow.Nextflow - 
+Mar-03 16:06:38.805 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Mar-03 16:06:38.805 [main] DEBUG nextflow.Session - Session await
+Mar-03 16:06:38.805 [PathVisitor-2] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /Volumes/Seagate/monotrac/nextflow/isolate_fasta/; pattern: *.fas; options: [:]
+Mar-03 16:06:38.869 [Actor Thread 2] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/opt/anaconda3/envs/medaka; path=/opt/anaconda3/envs/medaka
+Mar-03 16:06:38.869 [Actor Thread 11] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/opt/anaconda3/envs/monotrac; path=/opt/anaconda3/envs/monotrac
+Mar-03 16:06:38.936 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [05/62583c] Cached process > MEDAKAVAR (2)
+Mar-03 16:06:38.936 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [8f/530ff1] Cached process > FASTQC (1)
+Mar-03 16:06:38.936 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [83/c2180b] Cached process > FASTQC (3)
+Mar-03 16:06:38.936 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [78/b0b067] Cached process > MEDAKAVAR (1)
+Mar-03 16:06:38.943 [Actor Thread 8] INFO  nextflow.processor.TaskProcessor - [93/0bfad1] Cached process > MEDAKAVAR (3)
+Mar-03 16:06:38.947 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [ee/f8b6c4] Cached process > FASTQC (2)
+Mar-03 16:06:38.963 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [aa/358dac] Cached process > MOSDEPTH (2)
+Mar-03 16:06:38.976 [Actor Thread 1] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/opt/anaconda3/envs/mafft; path=/opt/anaconda3/envs/mafft
+Mar-03 16:06:38.977 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [00/9ad4d2] Cached process > MOSDEPTH (1)
+Mar-03 16:06:38.989 [Actor Thread 14] INFO  nextflow.processor.TaskProcessor - [b9/aea3df] Cached process > MOSDEPTH (3)
+Mar-03 16:06:39.020 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [3e/a9a380] Cached process > ALIGN
+Mar-03 16:06:39.029 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [d9/eae60e] Cached process > PLOTTING (1)
+Mar-03 16:06:39.029 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [0e/bc9c39] Cached process > BOXPLOT (1)
+Mar-03 16:06:39.039 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [b0/65ff60] Cached process > BOXPLOT (3)
+Mar-03 16:06:39.044 [Actor Thread 16] INFO  nextflow.processor.TaskProcessor - [15/27aa33] Cached process > BOXPLOT (2)
+Mar-03 16:06:39.073 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [88/3f7297] Cached process > PLOTTING (3)
+Mar-03 16:06:39.086 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [e4/b3e347] Cached process > PLOTTING (2)
+Mar-03 16:06:39.101 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [c8/9f2a32] Cached process > FASTTREE
+Mar-03 16:06:39.102 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-03 16:06:39.103 [Task submitter] INFO  nextflow.Session - [8c/6aa7bb] Submitted process > COMBINEFILES (1)
+Mar-03 16:06:39.107 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-03 16:06:39.108 [Task submitter] INFO  nextflow.Session - [c1/0de268] Submitted process > COMBINEFILES (2)
+Mar-03 16:06:39.130 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-03 16:06:39.131 [Task submitter] INFO  nextflow.Session - [04/643c07] Submitted process > COMBINEFILES (3)
+Mar-03 16:06:43.534 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: COMBINEFILES (2); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/c1/0de26899537f8d1a72edd384900d08]
+Mar-03 16:06:43.556 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Mar-03 16:06:43.557 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: COMBINEFILES (3); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/04/643c075462302575200c8be73f8260]
+Mar-03 16:06:43.638 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: COMBINEFILES (1); status: COMPLETED; exit: 0; error: -; workDir: /Volumes/Seagate/monotrac/nextflow/work/8c/6aa7bbfb8c2e8c15effb09f0256f76]
+Mar-03 16:06:43.640 [main] DEBUG nextflow.Session - Session await > all processes finished
+Mar-03 16:06:43.742 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Mar-03 16:06:43.742 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Mar-03 16:06:43.744 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Mar-03 16:06:43.745 [main] INFO  nextflow.Nextflow - 
 Done!
-Mar-03 14:42:28.652 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=181; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=18m 38s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=8; peakCpus=8; peakMemory=0; ]
-Mar-03 14:42:28.701 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
-Mar-03 14:42:28.746 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
-Mar-03 14:42:28.746 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+Mar-03 16:06:43.751 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=3; failedCount=0; ignoredCount=0; cachedCount=17; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=13.3s; failedDuration=0ms; cachedDuration=8m 34s;loadCpus=0; loadMemory=0; peakRunning=3; peakCpus=3; peakMemory=0; ]
+Mar-03 16:06:43.957 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Mar-03 16:06:43.983 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Mar-03 16:06:43.984 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

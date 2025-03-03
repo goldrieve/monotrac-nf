@@ -3,13 +3,13 @@ process BOXPLOT{
     publishDir "${params.outdir}/Plots"
 
     input:
-    path summary
+    path combined_csv
 
     output:
     path "plot_1.png"
 
     script:
     """
-    python $projectDir/bin/boxplot.py ${summary}
+    python $projectDir/bin/boxplot.py 
     """
 }

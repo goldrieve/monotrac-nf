@@ -39,17 +39,13 @@ ch_reads = ch_samplesheet.splitCsv(header:true).map {
 }
 
 include { MEDAKAVAR } from './modules/medakavar.nf'
-
 include { MOSDEPTH } from './modules/mosdepth.nf'
-
 include { PLOTTING } from './modules/plotting.nf'
-
 include { BOXPLOT } from './modules/boxplot.nf'
-
 include { ALIGN } from './modules/align.nf'
 isolates_fasta_files = Channel.fromPath("${params.isolates}/*.fas").collect()
-
 include { FASTTREE } from './modules/fasttree.nf'
+include { COMBINEFILES } from './modules/combineFiles.nf'
 
 
 workflow {
@@ -59,8 +55,9 @@ workflow {
         medakavar_ch = MEDAKAVAR(ch_reads, params.reference_1, params.depth)
         mosdepth_ch = MOSDEPTH(medakavar_ch.consensus)
         plotting_ch = PLOTTING(mosdepth_ch.global)
+        combinefiles_ch = COMBINEFILES((mosdepth_ch.summary).collect())
+        boxplot_ch = BOXPLOT(combinefiles_ch)
         align_ch = ALIGN((medakavar_ch.fasta).collect(), isolates_fasta_files)
-        boxplot_ch = BOXPLOT(mosdepth_ch.summary)
         fasttree_ch = FASTTREE(align_ch)
     }  
 
