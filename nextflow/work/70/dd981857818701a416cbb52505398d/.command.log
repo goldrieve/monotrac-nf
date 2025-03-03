@@ -1,0 +1,213 @@
+TF_CPP_MIN_LOG_LEVEL is set to '3'
+Attempting to automatically select model version.
+WARNING: Failed to detect a model version, will use default: 'r1041_e82_400bps_sup_v5.0.0'
+Checking program versions
+This is medaka 1.12.1
+Program    Version    Required   Pass     
+bcftools   1.11       1.11       True     
+bgzip      1.21       1.11       True     
+minimap2   2.11       2.11       True     
+samtools   1.11       1.11       True     
+tabix      1.21       1.11       True     
+[13:57:57 - MdlStrTF] Successfully removed temporary files from /var/folders/vs/4d0w8drx4zdg1jl70nymtyt00000gn/T/tmp6ooaa8tx.
+[13:57:58 - MdlStrTF] Successfully removed temporary files from /var/folders/vs/4d0w8drx4zdg1jl70nymtyt00000gn/T/tmp96eomlx8.
+Aligning basecalls to draft
+Using the existing fai index file /Volumes/Seagate/monotrac/nextflow/References/targets.fasta.fai
+Using the existing mmi index file /Volumes/Seagate/monotrac/nextflow/References/targets.fasta.map-ont.mmi
+[M::main::0.030*0.67] loaded/built the index for 20 target sequence(s)
+[M::mm_mapopt_update::0.031*0.68] mid_occ = 2
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 20
+[M::mm_idx_stat::0.031*0.68] distinct minimizers: 4818 (100.00% are singletons); average occurrences: 1.000; average spacing: 5.410
+[M::worker_pipeline::3.675*0.63] mapped 15532 sequences
+[M::main] Version: 2.11-r797
+[M::main] CMD: minimap2 -x map-ont --secondary=no -L --MD -A 2 -B 4 -O 4,24 -E 2,1 -t 1 -a /Volumes/Seagate/monotrac/nextflow/References/targets.fasta.map-ont.mmi /Volumes/Seagate/monotrac/nextflow/Raw_reads/ERR9695747.fq.gz
+[M::main] Real time: 3.677 sec; CPU: 2.313 sec
+Running medaka consensus
+[13:58:06 - Predict] Setting tensorflow inter/intra-op threads to 1/1.
+[13:58:06 - Predict] Processing region(s): Tb927.1.3230:0-2148 Tb927.10.13980:0-627 Tb927.10.14170:0-939 Tb927.10.15300:0-3465 Tb927.10.1820:0-795 Tb927.10.2810:0-1017 Tb927.10.4720:0-1083 Tb927.11.1940:0-1395 Tb927.11.3980:0-1557 Tb927.3.4350:0-2325 Tb927.4.980:0-1119 Tb927.5.1220:0-567 Tb927.6.1100:0-1479 Tb927.6.2630:0-1320 Tb927.6.3660:0-831 Tb927.6.5000:0-1185 Tb927.7.6560:0-684 Tb927.8.3480:0-1827 Tb927.8.3810:0-1173 Tb927.9.10660:0-528
+[13:58:06 - Predict] Using model: /opt/anaconda3/envs/medaka/lib/python3.8/site-packages/medaka/data/r1041_e82_400bps_sup_v5.0.0_model.tar.gz.
+[13:58:06 - Predict] Using minimum mapQ threshold of 1 for read filtering.
+[13:58:06 - BAMFile] Creating pool of 16 BAM file sets.
+[13:58:06 - Predict] Processing 20 short region(s).
+[13:58:06 - MdlStrTF] Model <keras.src.engine.sequential.Sequential object at 0x7f99b1fe3f70>
+[13:58:06 - MdlStrTF] loading weights from /var/folders/vs/4d0w8drx4zdg1jl70nymtyt00000gn/T/tmph2ughq7l/model/variables/variables (using expect partial)
+[13:58:06 - Sampler] Initializing sampler for consensus of region Tb927.1.3230:0-2148.
+[13:58:06 - Sampler] Initializing sampler for consensus of region Tb927.10.13980:0-627.
+[13:58:06 - PWorker] Running inference for 0.0M draft bases.
+[13:58:07 - Feature] Pileup counts do not span requested region, requested Tb927.1.3230:0-2148, received 0-2146.
+[13:58:07 - Feature] Processed Tb927.10.13980:0.0-626.0 (median depth 125.0)
+[13:58:07 - Sampler] Took 0.18s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.10.14170:0-939.
+[13:58:07 - Feature] Processed Tb927.1.3230:0.0-2146.0 (median depth 134.0)
+[13:58:07 - Sampler] Took 0.19s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.10.15300:0-3465.
+[13:58:07 - Feature] Processed Tb927.10.14170:0.0-938.0 (median depth 248.0)
+[13:58:07 - Sampler] Took 0.14s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.10.1820:0-795.
+[13:58:07 - Feature] Processed Tb927.10.15300:0.0-3464.0 (median depth 124.0)
+[13:58:07 - Sampler] Took 0.13s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.10.2810:0-1017.
+[13:58:07 - Feature] Processed Tb927.10.1820:0.0-794.0 (median depth 143.0)
+[13:58:07 - Sampler] Took 0.08s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.10.4720:0-1083.
+[13:58:07 - Feature] Processed Tb927.10.2810:0.0-1016.0 (median depth 138.0)
+[13:58:07 - Sampler] Took 0.08s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.11.1940:0-1395.
+[13:58:07 - Feature] Processed Tb927.10.4720:0.0-1082.0 (median depth 118.0)
+[13:58:07 - Sampler] Took 0.09s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.11.3980:0-1557.
+[13:58:07 - Feature] Processed Tb927.11.1940:0.0-1394.0 (median depth 135.0)
+[13:58:07 - Sampler] Took 0.09s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.3.4350:0-2325.
+[13:58:07 - Feature] Processed Tb927.11.3980:0.0-1556.0 (median depth 118.0)
+[13:58:07 - Sampler] Took 0.09s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.4.980:0-1119.
+[13:58:07 - Feature] Processed Tb927.3.4350:0.0-2324.0 (median depth 131.0)
+[13:58:07 - Sampler] Took 0.10s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.5.1220:0-567.
+[13:58:07 - Feature] Processed Tb927.4.980:0.0-1118.0 (median depth 137.0)
+[13:58:07 - Sampler] Took 0.01s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.6.1100:0-1479.
+[13:58:07 - Feature] Processed Tb927.5.1220:0.0-566.0 (median depth 164.0)
+[13:58:07 - Sampler] Took 0.02s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.6.2630:0-1320.
+[13:58:07 - Feature] Processed Tb927.6.1100:0.0-1478.0 (median depth 122.0)
+[13:58:07 - Sampler] Took 0.04s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.6.3660:0-831.
+[13:58:07 - Feature] Processed Tb927.6.3660:0.0-830.0 (median depth 139.0)
+[13:58:07 - Sampler] Took 0.03s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.6.5000:0-1185.
+[13:58:07 - Feature] Processed Tb927.6.5000:0.0-1184.0 (median depth 102.0)
+[13:58:07 - Sampler] Took 0.01s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.7.6560:0-684.
+[13:58:07 - Feature] Processed Tb927.6.2630:0.0-1319.0 (median depth 146.0)
+[13:58:07 - Sampler] Took 0.07s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.8.3480:0-1827.
+[13:58:07 - Feature] Processed Tb927.7.6560:0.0-683.0 (median depth 158.0)
+[13:58:07 - Sampler] Took 0.10s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.8.3810:0-1173.
+[13:58:07 - Feature] Processed Tb927.8.3480:0.0-1826.0 (median depth 162.0)
+[13:58:07 - Sampler] Took 0.11s to make features.
+[13:58:07 - Sampler] Initializing sampler for consensus of region Tb927.9.10660:0-528.
+[13:58:07 - Feature] Processed Tb927.8.3810:0.0-1172.0 (median depth 123.0)
+[13:58:07 - Sampler] Took 0.03s to make features.
+[13:58:07 - Feature] Processed Tb927.9.10660:0.0-527.0 (median depth 138.0)
+[13:58:07 - Sampler] Took 0.02s to make features.
+[13:58:26 - PWorker] Batches in cache: 8.
+[13:58:26 - PWorker] 7.0% Done (0.0/0.0 Mbases) in 19.8s
+[13:58:35 - PWorker] Batches in cache: 8.
+[13:58:58 - PWorker] Batches in cache: 8.
+[13:58:58 - PWorker] 20.6% Done (0.0/0.0 Mbases) in 51.1s
+[13:59:03 - PWorker] Batches in cache: 8.
+[13:59:10 - PWorker] Batches in cache: 8.
+[13:59:10 - PWorker] 24.1% Done (0.0/0.0 Mbases) in 63.6s
+[13:59:18 - PWorker] Batches in cache: 8.
+[13:59:28 - PWorker] Batches in cache: 8.
+[13:59:28 - PWorker] 30.0% Done (0.0/0.0 Mbases) in 81.9s
+[13:59:39 - PWorker] Batches in cache: 8.
+[13:59:39 - PWorker] 34.1% Done (0.0/0.0 Mbases) in 93.0s
+[13:59:55 - PWorker] Batches in cache: 8.
+[13:59:55 - PWorker] 41.2% Done (0.0/0.0 Mbases) in 108.2s
+[14:00:02 - PWorker] Batches in cache: 8.
+[14:00:06 - PWorker] 44.1% Done (0.0/0.0 Mbases) in 119.2s
+[14:00:15 - PWorker] Batches in cache: 8.
+[14:00:20 - PWorker] Batches in cache: 7.
+[14:00:20 - PWorker] 49.4% Done (0.0/0.0 Mbases) in 134.0s
+[14:00:27 - PWorker] Batches in cache: 6.
+[14:00:36 - PWorker] Batches in cache: 5.
+[14:00:36 - PWorker] 55.3% Done (0.0/0.0 Mbases) in 149.7s
+[14:00:54 - PWorker] Batches in cache: 3.
+[14:00:54 - PWorker] 61.6% Done (0.0/0.0 Mbases) in 167.1s
+[14:01:01 - PWorker] Batches in cache: 2.
+[14:01:05 - PWorker] 64.6% Done (0.0/0.0 Mbases) in 178.5s
+[14:01:05 - PWorker] Processed 20 batches
+[14:01:05 - PWorker] All done, 0 remainder regions.
+[14:01:05 - Predict] Finished processing all regions.
+[14:01:05 - MdlStrTF] Successfully removed temporary files from /var/folders/vs/4d0w8drx4zdg1jl70nymtyt00000gn/T/tmph2ughq7l.
+[14:01:07 - DataIndx] Loaded 1/1 (100.00%) sample files.
+[14:01:07 - Stitcher] Stitching Tb927.3.4350:0-2325
+[14:01:08 - Stitcher] Stitching Tb927.8.3810:0-1173
+[14:01:08 - Stitcher] Stitching Tb927.10.1820:0-795
+[14:01:08 - Stitcher] Stitching Tb927.6.3660:0-831
+[14:01:08 - Stitcher] Stitching Tb927.11.1940:0-1395
+[14:01:08 - Stitcher] Stitching Tb927.6.2630:0-1320
+[14:01:08 - Stitcher] Stitching Tb927.11.3980:0-1557
+[14:01:08 - Stitcher] Stitching Tb927.6.5000:0-1185
+[14:01:08 - Stitcher] Stitching Tb927.6.1100:0-1479
+[14:01:08 - Stitcher] Stitching Tb927.10.14170:0-939
+[14:01:08 - Stitcher] Stitching Tb927.4.980:0-1119
+[14:01:08 - Stitcher] Stitching Tb927.10.4720:0-1083
+[14:01:08 - Stitcher] Stitching Tb927.7.6560:0-684
+[14:01:08 - Stitcher] Stitching Tb927.9.10660:0-528
+[14:01:08 - Stitcher] Stitching Tb927.10.15300:0-3465
+[14:01:08 - Stitcher] Stitching Tb927.10.13980:0-627
+[14:01:08 - Stitcher] Stitching Tb927.1.3230:0-2148
+[14:01:08 - Stitcher] Stitching Tb927.5.1220:0-567
+[14:01:08 - Stitcher] Stitching Tb927.8.3480:0-1827
+[14:01:08 - Stitcher] Stitching Tb927.10.2810:0-1017
+Polished assembly written to ERR9695747_consensus/consensus.fasta, have a nice day.
+Calling variant
+[14:01:09 - DataIndx] Loaded 1/1 (100.00%) sample files.
+[14:01:09 - Variants] Processing Tb927.1.3230:0-.
+[14:01:09 - Variants] Processing Tb927.10.13980:0-.
+[14:01:09 - Variants] Processing Tb927.10.14170:0-.
+[14:01:09 - Variants] Processing Tb927.10.15300:0-.
+[14:01:09 - Variants] Processing Tb927.10.1820:0-.
+[14:01:09 - Variants] Processing Tb927.10.2810:0-.
+[14:01:09 - Variants] Processing Tb927.10.4720:0-.
+[14:01:09 - Variants] Processing Tb927.11.1940:0-.
+[14:01:09 - Variants] Processing Tb927.11.3980:0-.
+[14:01:09 - Variants] Processing Tb927.3.4350:0-.
+[14:01:09 - Variants] Processing Tb927.4.980:0-.
+[14:01:09 - Variants] Processing Tb927.5.1220:0-.
+[14:01:09 - Variants] Processing Tb927.6.1100:0-.
+[14:01:09 - Variants] Processing Tb927.6.2630:0-.
+[14:01:09 - Variants] Processing Tb927.6.3660:0-.
+[14:01:09 - Variants] Processing Tb927.6.5000:0-.
+[14:01:09 - Variants] Processing Tb927.7.6560:0-.
+[14:01:09 - Variants] Processing Tb927.8.3480:0-.
+[14:01:09 - Variants] Processing Tb927.8.3810:0-.
+[14:01:09 - Variants] Processing Tb927.9.10660:0-.
+[14:01:10 - Annotate] Getting chrom coordinates
+[14:01:10 - Annotate] Processing chunk with coordinates: Tb927.1.3230:358-2011
+[14:01:10 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:10 - Annotate] Processing chunk with coordinates: Tb927.10.13980:38-415
+[14:01:10 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:10 - Annotate] Processing chunk with coordinates: Tb927.10.14170:96-896
+[14:01:10 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:10 - Annotate] Processing chunk with coordinates: Tb927.10.15300:8-3298
+[14:01:10 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:11 - Annotate] Processing chunk with coordinates: Tb927.10.1820:110-735
+[14:01:11 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:11 - Annotate] Processing chunk with coordinates: Tb927.10.2810:3-1008
+[14:01:11 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:11 - Annotate] Processing chunk with coordinates: Tb927.10.4720:135-1052
+[14:01:11 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:11 - Annotate] Processing chunk with coordinates: Tb927.11.1940:326-336
+[14:01:11 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:11 - Annotate] Processing chunk with coordinates: Tb927.11.3980:221-1058
+[14:01:11 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:11 - Annotate] Processing chunk with coordinates: Tb927.3.4350:212-2180
+[14:01:11 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:11 - Annotate] Processing chunk with coordinates: Tb927.4.980:29-57
+[14:01:11 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:11 - Annotate] Processing chunk with coordinates: Tb927.5.1220:43-435
+[14:01:11 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:11 - Annotate] Processing chunk with coordinates: Tb927.6.1100:38-1215
+[14:01:11 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:11 - Annotate] Processing chunk with coordinates: Tb927.6.2630:288-1307
+[14:01:11 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:11 - Annotate] Processing chunk with coordinates: Tb927.6.3660:331-715
+[14:01:11 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:11 - Annotate] Processing chunk with coordinates: Tb927.6.5000:116-1068
+[14:01:11 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:11 - Annotate] Processing chunk with coordinates: Tb927.7.6560:73-641
+[14:01:11 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:11 - Annotate] Processing chunk with coordinates: Tb927.8.3480:6-1424
+[14:01:11 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:11 - Annotate] Processing chunk with coordinates: Tb927.8.3810:113-606
+[14:01:11 - BAMFile] Creating pool of 16 BAM file sets.
+[14:01:12 - Annotate] Processing chunk with coordinates: Tb927.9.10660:7-487
+[14:01:12 - BAMFile] Creating pool of 16 BAM file sets.
+Note: the --sample option not given, applying all records regardless of the genotype
+Applied 198 variants

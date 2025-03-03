@@ -9,6 +9,7 @@ params.outdir = "$projectDir/output"
 params.help = ""
 params.mode = "full"
 params.depth = "10"
+params.isolates = "$projectDir/isolate_fasta/*.fas"
 
 if (params.help) {
     help = """mono-trac.nf: A pipeline for analysing mono-trac data
@@ -47,6 +48,8 @@ include { BOXPLOT } from './modules/boxplot.nf'
 
 include { ALIGN } from './modules/align.nf'
 
+include { FASTTREE } from './modules/fasttree.nf'
+
 
 workflow {
     // Running the first fastqc process
@@ -57,6 +60,7 @@ workflow {
         plotting_ch = PLOTTING(mosdepth_ch.global)
         align_ch = ALIGN((medakavar_ch.fasta).collect())
         boxplot_ch = BOXPLOT(mosdepth_ch.summary)
+        fasttree_ch = FASTTREE(align_ch)
     }  
 
     else {

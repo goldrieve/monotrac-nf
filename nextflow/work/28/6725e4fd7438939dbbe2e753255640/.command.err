@@ -1,0 +1,24 @@
+FastTree Version 2.1.11 Double precision (No SSE3)
+Alignment: aligned.fas
+Nucleotide distances: Jukes-Cantor Joins: balanced Support: SH-like 1000
+Search: Normal +NNI +SPR (2 rounds range 10) +ML-NNI opt-each=1
+TopHits: 1.00*sqrtN close=default refresh=0.80
+ML Model: Generalized Time-Reversible, CAT approximation with 20 rate categories
+Initial topology in 0.00 seconds
+Refining topology: 6 rounds ME-NNIs, 2 rounds ME-SPRs, 3 rounds ML-NNIs
+Total branch-length 0.007 after 0.00 sec
+ML-NNI round 1: LogLk = -36203.191 NNIs 0 max delta 0.00 Time 0.01
+      0.10 seconds: Optimizing GTR model, step 11 of 12
+GTR Frequencies: 0.2486 0.2307 0.2848 0.2359
+GTR rates(ac ag at cg ct gt) 0.9175 4.9567 0.5722 0.8900 5.6586 1.0000
+Switched to using 20 rate categories (CAT approximation)
+Rate categories were divided by 0.625 so that average rate = 1.0
+CAT-based log-likelihoods may not be comparable across runs
+ML-NNI round 2: LogLk = -35989.754 NNIs 0 max delta 0.00 Time 0.15
+Turning off heuristics for final round of ML NNIs (converged)
+ML-NNI round 3: LogLk = -35989.754 NNIs 0 max delta 0.00 Time 0.15 (final)
+Optimize all lengths: LogLk = -35989.754 Time 0.16
+      0.37 seconds: Site likelihoods with rate category 1 of 20
+      0.48 seconds: Optimizing alpha round 2
+Gamma(20) LogLk = -36046.465 alpha = 9.988 rescaling lengths by 1.008
+Total time: 0.53 seconds Unique: 3/3 Bad splits: 0/0
