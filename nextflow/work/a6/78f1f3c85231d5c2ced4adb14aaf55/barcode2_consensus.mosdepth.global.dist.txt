@@ -1,0 +1,1 @@
+/Volumes/Seagate/monotrac/nextflow/work/67/f39d1ec8f33c26322ad78a14457d18/barcode2_consensus.mosdepth.global.dist.txt

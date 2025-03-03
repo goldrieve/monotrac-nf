@@ -37,15 +37,26 @@ ch_reads = ch_samplesheet.splitCsv(header:true).map {
     file(it['read'])
 }
 
-include { MINIMAP } from './modules/minimap2.nf'
-
 include { MEDAKAVAR } from './modules/medakavar.nf'
+
+include { MOSDEPTH } from './modules/mosdepth.nf'
+
+include { PLOTTING } from './modules/plotting.nf'
+
+include { BOXPLOT } from './modules/boxplot.nf'
+
+include { ALIGN } from './modules/align.nf'
+
 
 workflow {
     // Running the first fastqc process
     if (params.mode == "full") {
         fastqc_ch = FASTQC(ch_reads)
         medakavar_ch = MEDAKAVAR(ch_reads, params.reference_1, params.depth)
+        mosdepth_ch = MOSDEPTH(medakavar_ch.consensus)
+        plotting_ch = PLOTTING(mosdepth_ch.global)
+        align_ch = ALIGN((medakavar_ch.fasta).collect())
+        boxplot_ch = BOXPLOT(mosdepth_ch.summary)
     }  
 
     else {

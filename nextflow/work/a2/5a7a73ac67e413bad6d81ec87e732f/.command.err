@@ -1,0 +1,2 @@
+bgzf.nim(51)             open
+Error: unhandled exception: error opening Mosdepth/ERR9695747_consensus.per-base.bed.gz [IOError]

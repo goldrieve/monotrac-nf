@@ -1,0 +1,2 @@
+bgzf.nim(51)             open
+Error: unhandled exception: error opening Mosdepth/barcode1_consensus.per-base.bed.gz [IOError]

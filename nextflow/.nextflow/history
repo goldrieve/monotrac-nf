@@ -50,3 +50,71 @@
 2025-02-27 14:56:57	1.7s	maniac_pauling	OK	173527de218d8295afe27dc5af78df14	6c87e19a-cbaf-4ac3-9d90-989260bad59b	nextflow run main.nf -resume
 2025-02-27 14:57:12	22.7s	fervent_kalam	OK	173527de218d8295afe27dc5af78df14	6c87e19a-cbaf-4ac3-9d90-989260bad59b	nextflow run main.nf -resume
 2025-02-27 15:01:24	22.8s	distracted_curry	OK	7bbc59006311b55959655fc698de0822	6c87e19a-cbaf-4ac3-9d90-989260bad59b	nextflow run main.nf -resume
+2025-02-27 16:27:27	3m 16s	evil_boltzmann	OK	7bbc59006311b55959655fc698de0822	2278cd88-9b55-4874-ab6b-d5b796fc9625	nextflow run main.nf
+2025-02-28 09:51:57	-	boring_minsky	-	e57a588572975dc10aa0ef607d15088e	07567391-369b-425c-8f84-cad2d8acaafb	nextflow run main.nf
+2025-02-28 10:26:59	24s	friendly_mcclintock	ERR	8d8840fc89e6ab8c56ecccb54c2edf96	2ddbef63-15b6-443d-95be-f2278522746d	nextflow run main.nf
+2025-02-28 10:32:14	24.9s	nasty_brown	ERR	8d8840fc89e6ab8c56ecccb54c2edf96	3cf603a0-7e8c-4b2d-8522-35409cc5b1cf	nextflow run main.nf
+2025-02-28 10:35:56	18.1s	jovial_cori	ERR	8d8840fc89e6ab8c56ecccb54c2edf96	3cf603a0-7e8c-4b2d-8522-35409cc5b1cf	nextflow run main.nf -resume
+2025-02-28 10:38:28	-	jolly_mendel	-	8d8840fc89e6ab8c56ecccb54c2edf96	3cf603a0-7e8c-4b2d-8522-35409cc5b1cf	nextflow run main.nf -resume
+2025-02-28 10:38:54	-	elated_meitner	-	e57a588572975dc10aa0ef607d15088e	3cf603a0-7e8c-4b2d-8522-35409cc5b1cf	nextflow run main.nf -resume
+2025-02-28 10:40:32	17.7s	nasty_mcclintock	ERR	e57a588572975dc10aa0ef607d15088e	3cf603a0-7e8c-4b2d-8522-35409cc5b1cf	nextflow run main.nf -resume
+2025-02-28 10:43:20	21.9s	distraught_fermi	ERR	c5960f96cb45ff4500aa449f99f64e87	c7a0eedb-1321-4926-9e21-7641b4225b90	nextflow run main.nf
+2025-02-28 10:45:46	3m 24s	soggy_austin	OK	c5960f96cb45ff4500aa449f99f64e87	2e2030de-e37b-45dd-a43b-a33b2cb9f555	nextflow run main.nf
+2025-02-28 10:49:50	1.6s	prickly_heisenberg	OK	c5960f96cb45ff4500aa449f99f64e87	2e2030de-e37b-45dd-a43b-a33b2cb9f555	nextflow run main.nf -resume
+2025-02-28 10:50:14	2.2s	loving_rutherford	OK	c5960f96cb45ff4500aa449f99f64e87	2e2030de-e37b-45dd-a43b-a33b2cb9f555	nextflow run main.nf -resume
+2025-02-28 10:50:52	-	sleepy_feynman	-	e57a588572975dc10aa0ef607d15088e	2e2030de-e37b-45dd-a43b-a33b2cb9f555	nextflow run main.nf -resume
+2025-02-28 10:51:05	2h 43m 28s	cheeky_engelbart	ERR	8d8840fc89e6ab8c56ecccb54c2edf96	2e2030de-e37b-45dd-a43b-a33b2cb9f555	nextflow run main.nf -resume
+2025-02-28 10:54:53	-	insane_yonath	-	8d8840fc89e6ab8c56ecccb54c2edf96	2e2030de-e37b-45dd-a43b-a33b2cb9f555	nextflow run main.nf -resume
+2025-02-28 10:55:27	3.9s	berserk_leibniz	ERR	8d8840fc89e6ab8c56ecccb54c2edf96	2e2030de-e37b-45dd-a43b-a33b2cb9f555	nextflow run main.nf -resume
+2025-02-28 10:58:21	3.2s	zen_koch	ERR	ad0f855ebec46452a399b31a12dbccb4	2e2030de-e37b-45dd-a43b-a33b2cb9f555	nextflow run main.nf -resume
+2025-02-28 10:59:39	3.3s	trusting_planck	ERR	ad0f855ebec46452a399b31a12dbccb4	2e2030de-e37b-45dd-a43b-a33b2cb9f555	nextflow run main.nf -resume
+2025-02-28 11:01:27	4.4s	drunk_wing	OK	ad0f855ebec46452a399b31a12dbccb4	2e2030de-e37b-45dd-a43b-a33b2cb9f555	nextflow run main.nf -resume
+2025-02-28 11:03:41	-	distracted_heyrovsky	-	ad0f855ebec46452a399b31a12dbccb4	2e2030de-e37b-45dd-a43b-a33b2cb9f555	nextflow run main.nf -resume
+2025-02-28 11:04:07	1.7s	gloomy_yalow	OK	ad0f855ebec46452a399b31a12dbccb4	2e2030de-e37b-45dd-a43b-a33b2cb9f555	nextflow run main.nf -resume
+2025-02-28 11:13:33	-	wise_booth	-	0b09d2a8345f9dbbd2530a04abefd7cd	2e2030de-e37b-45dd-a43b-a33b2cb9f555	nextflow run main.nf -resume
+2025-02-28 11:14:09	3.1s	wise_fermi	ERR	7adf4f27a447516ffc9d4529029054fc	2e2030de-e37b-45dd-a43b-a33b2cb9f555	nextflow run main.nf -resume
+2025-02-28 11:15:52	3.6s	curious_lattes	ERR	7adf4f27a447516ffc9d4529029054fc	2e2030de-e37b-45dd-a43b-a33b2cb9f555	nextflow run main.nf -resume
+2025-02-28 11:18:23	8.1s	insane_lovelace	ERR	7adf4f27a447516ffc9d4529029054fc	2e2030de-e37b-45dd-a43b-a33b2cb9f555	nextflow run main.nf -resume
+2025-02-28 11:23:20	-	romantic_crick	-	901f9289e4ccada203d55e397bcec5ee	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf
+2025-02-28 11:23:45	3m 22s	gloomy_gautier	OK	d92900e6afd9833e827c24a175a8cd58	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 11:34:26	2.6s	romantic_murdock	OK	d92900e6afd9833e827c24a175a8cd58	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 11:36:10	1.4s	cranky_venter	OK	d92900e6afd9833e827c24a175a8cd58	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 11:36:48	9.9s	determined_davinci	ERR	7adf4f27a447516ffc9d4529029054fc	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 11:38:49	8.5s	pedantic_shannon	ERR	7adf4f27a447516ffc9d4529029054fc	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 11:39:28	9.2s	lethal_coulomb	ERR	7adf4f27a447516ffc9d4529029054fc	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 11:41:19	9.7s	deadly_snyder	ERR	7adf4f27a447516ffc9d4529029054fc	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 11:44:32	11s	ridiculous_volta	ERR	7adf4f27a447516ffc9d4529029054fc	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 11:50:31	11.4s	romantic_brown	ERR	7adf4f27a447516ffc9d4529029054fc	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 11:51:38	11.8s	kickass_hoover	OK	7adf4f27a447516ffc9d4529029054fc	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 12:01:58	1.9s	mighty_shaw	ERR	a5e2e4650aad8d70343cd5bf0d4cf9e1	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 12:02:59	5.5s	cranky_sanger	ERR	a5e2e4650aad8d70343cd5bf0d4cf9e1	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 13:03:05	1.6s	nasty_lovelace	OK	4aca573fc04f6a06543307b19bdb532d	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 13:10:42	3m 31s	sad_wright	OK	76493cc996e4dfaa335553d9d261e082	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 13:16:35	14.6s	hungry_keller	OK	76493cc996e4dfaa335553d9d261e082	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 13:18:26	2.7s	nice_panini	ERR	554244f04b5a6af612a7b74bbca428bf	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 13:21:58	25.1s	sad_caravaggio	OK	554244f04b5a6af612a7b74bbca428bf	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-02-28 13:27:20	7.3s	scruffy_volhard	OK	554244f04b5a6af612a7b74bbca428bf	34835ff7-b398-498a-b8d5-893b32bcc25d	nextflow run main.nf -resume
+2025-03-03 09:52:06	3m 36s	drunk_rutherford	OK	554244f04b5a6af612a7b74bbca428bf	d7d6e4ac-4a15-4fa3-aacd-624da37ce5ec	nextflow run main.nf
+2025-03-03 09:58:40	2.1s	tiny_kirch	OK	554244f04b5a6af612a7b74bbca428bf	d7d6e4ac-4a15-4fa3-aacd-624da37ce5ec	nextflow run main.nf -resume
+2025-03-03 09:59:58	3m 34s	sick_bernard	OK	554244f04b5a6af612a7b74bbca428bf	55ac655e-f479-4960-99a1-a22ecd7d3e06	nextflow run main.nf
+2025-03-03 10:06:05	3m 35s	maniac_mestorf	OK	554244f04b5a6af612a7b74bbca428bf	541184a5-1bc6-44b0-850b-104bfae498a2	nextflow run main.nf
+2025-03-03 10:10:56	-	lonely_lumiere	-	554244f04b5a6af612a7b74bbca428bf	512b9db3-e134-415c-b07c-c0c77fa83670	nextflow run main.nf
+2025-03-03 10:11:52	3m 36s	berserk_swartz	OK	c49b1ccc8caa7664d34ca16b5cd06a2f	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf
+2025-03-03 10:18:09	6.8s	kickass_fermi	ERR	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 10:43:45	1.5s	deadly_montalcini	ERR	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 10:44:55	5.8s	magical_agnesi	ERR	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 10:47:06	6.9s	modest_bhabha	ERR	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 10:48:43	5.9s	distraught_kowalevski	ERR	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 10:51:41	5.9s	cheeky_thompson	ERR	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 10:52:30	4.8s	amazing_hopper	ERR	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 10:52:52	4.6s	clever_liskov	ERR	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 10:54:16	6s	pedantic_hawking	ERR	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 10:56:46	7.5s	focused_booth	ERR	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 10:58:14	5.2s	berserk_dalembert	ERR	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 11:00:51	6.5s	extravagant_maxwell	ERR	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 11:06:20	6.5s	festering_colden	ERR	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 11:07:56	6s	crazy_jennings	OK	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 11:24:26	2.6s	agitated_aryabhata	ERR	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 11:25:44	1.7s	elated_solvay	OK	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 11:35:10	2.2s	adoring_boltzmann	OK	7a3b3acd493ebd09c5ed6dd3027c390b	9cba3128-9049-4523-bfe5-7f038f21b5f9	nextflow run main.nf -resume
+2025-03-03 11:42:34	3m 30s	sharp_yalow	OK	7a3b3acd493ebd09c5ed6dd3027c390b	2b846960-200b-404c-9226-33b1344e382e	nextflow run main.nf

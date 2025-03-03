@@ -10,14 +10,15 @@ process MEDAKAVAR {
     val depth
 
     output:
-    path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.consensus.fasta"
+    path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.fas", emit: fasta
     path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.annotated.vcf.gz"
     path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.vcf"
-    path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus"
+    path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus", emit: consensus
+    
 
     script:
     """
-    medaka_consensus -i ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")} -d ${reference} -o ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus
+    medaka_consensus -i ${reads} -d ${reference} -o ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus
     echo "Calling variant"
     medaka variant ${reference} ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/consensus_probs.hdf ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.vcf
     medaka tools annotate --dpsp ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.vcf ${reference} ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/calls_to_draft.bam ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.annotated.unfiltered.vcf 
@@ -32,7 +33,7 @@ process MEDAKAVAR {
     bcftools index ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.annotated.vcf.gz
     bcftools consensus -f ${reference} ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.annotated.vcf.gz \
         -i 'FILTER="PASS"' \
-        -o ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.consensus.fasta
+        -o ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.fas
     """
 }
  
