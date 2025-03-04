@@ -3,16 +3,21 @@ import matplotlib.pyplot as plt
 import pandas as pd 
 import seaborn as sns 
 import csv
+import sys
 
 csv_dir = '.'
 output2_file = 'combined_raw.csv'
 dataframes = []
 
-for csv_file in os.listdir(csv_dir):
-    if csv_file.endswith('.mosdepth.global.dist.txt'):
-        file_path = os.path.join(csv_dir, csv_file)
+for file_path in sys.argv[1:]:
+    if file_path.endswith('.mosdepth.global.dist.txt'):
+
+
         df = pd.read_csv(file_path, names=['GeneID', 'Coverage', 'Location'], sep='\t')
-        df['source_file'] = os.path.splitext(csv_file)[0].split('.')[0]
+
+        file_name = os.path.basename(file_path)
+        df['source_file'] = os.path.splitext(file_path)[0].split('.')[0]
+
         dataframes.append(df)
 
 combined_df = pd.concat(dataframes, axis=0)

@@ -46,6 +46,8 @@ include { ALIGN } from './modules/align.nf'
 isolates_fasta_files = Channel.fromPath("${params.isolates}/*.fas").collect()
 include { FASTTREE } from './modules/fasttree.nf'
 include { COMBINEFILES } from './modules/combineFiles.nf'
+include { RAWCOMBINE } from './modules/rawCombine.nf'
+include { LINEPLOT } from './modules/lineplot.nf'
 
 
 workflow {
@@ -57,6 +59,8 @@ workflow {
         plotting_ch = PLOTTING(mosdepth_ch.global)
         combinefiles_ch = COMBINEFILES((mosdepth_ch.summary).collect())
         boxplot_ch = BOXPLOT(combinefiles_ch)
+        rawcombine_ch = RAWCOMBINE((mosdepth_ch.global).collect())
+        lineplot_ch = LINEPLOT(rawcombine_ch)
         align_ch = ALIGN((medakavar_ch.fasta).collect(), isolates_fasta_files)
         fasttree_ch = FASTTREE(align_ch)
     }  
