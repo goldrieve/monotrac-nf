@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/Volumes/Seagate/monotrac/nextflow/bin/combineFiles.py", line 29, in <module>
-    combined_df = pd.concat(dataframes, axis=0)
-  File "/opt/anaconda3/envs/medaka/lib/python3.8/site-packages/pandas/core/reshape/concat.py", line 372, in concat
-    op = _Concatenator(
-  File "/opt/anaconda3/envs/medaka/lib/python3.8/site-packages/pandas/core/reshape/concat.py", line 429, in __init__
-    raise ValueError("No objects to concatenate")
-ValueError: No objects to concatenate

@@ -1,3 +1,0 @@
-#!/bin/bash -ue
-cat /Volumes/Seagate/monotrac/nextflow/work/9d/9f2a03c2fce3643c6f9517583610c4/barcode2_consensus/barcode2.fas > concatenated.fas
-mafft --auto concatenated.fas > aligned.fas

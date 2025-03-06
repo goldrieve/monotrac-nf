@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/Volumes/Seagate/monotrac/nextflow/bin/boxplot.py", line 20, in <module>
-    if os.path.exist(file_path) and file_path.endswith('.summary.txt'):
-AttributeError: module 'posixpath' has no attribute 'exist'

@@ -1,4 +1,0 @@
-Processing file: ./ERR9695747_consensus.mosdepth.summary.txt
-Columns in ERR9695747_consensus.mosdepth.summary.txt: ['chrom', 'length', 'bases', 'mean', 'min', 'max']
-Warning: 'source_file' column missing in ERR9695747_consensus.mosdepth.summary.txt. Adding it.
-Combined data saved to combined_data.csv

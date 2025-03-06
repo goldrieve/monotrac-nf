@@ -1,2 +1,9 @@
+./nextflow/data/kraken/monotrac_db
+./.git
 V1_analysis/
 nextflow/Raw_Reads/
+nextflow/work/
+nextflow/output/
+nextflow/.nextflow*
+nextflow/.nextflow/
+nextflow/.DS_Store

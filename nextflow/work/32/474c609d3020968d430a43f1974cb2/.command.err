@@ -1,3 +1,0 @@
-[E::idx_find_and_load] Could not retrieve index file for 'calls_to_draft.bam'
-index not found for:calls_to_draft.bam. No such file or directory
-[mosdepth] error alignment file must be indexed

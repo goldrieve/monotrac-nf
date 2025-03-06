@@ -1,3 +1,0 @@
-2025-02-26 14:56:51	4s	jovial_cray	ERR	908adcf7dd6882a14d91f688e3ea63c1	f3b9578f-08a1-4e9d-8211-3e66f6d60e29	nextflow run main.nf
-2025-02-26 14:57:41	6.3s	elegant_gutenberg	OK	908adcf7dd6882a14d91f688e3ea63c1	bcf610a9-bd08-4311-9e34-76a7b86cad5d	nextflow run main.nf
-2025-02-26 14:58:56	6.1s	peaceful_miescher	OK	908adcf7dd6882a14d91f688e3ea63c1	b12b2bf7-548f-42ef-8891-59c34780bc1a	nextflow run main.nf
