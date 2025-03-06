@@ -1,4 +1,4 @@
-./nextflow/data/kraken/monotrac_db
+nextflow/data/kraken/
 ./.git
 V1_analysis/
 nextflow/Raw_Reads/
