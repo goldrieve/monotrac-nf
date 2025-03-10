@@ -1,8 +1,7 @@
 nextflow.enable.dsl = 2
 
 params.samplesheet = "$projectDir/data/samplesheet.csv"
-params.reference_1 = "$projectDir/data/References/targets_sequence2.fasta"
-
+params.reference_1 = "$projectDir/data/References/padded_targets_positive.fasta"
 params.cores = "4"
 params.outdir = "$projectDir/output"
 params.help = ""
@@ -10,6 +9,7 @@ params.mode = "full"
 params.depth = "10"
 params.isolates = "$projectDir/data/isolate_fasta"
 params.kraken_db = "$projectDir/data/kraken/monotrac_db"
+params.orf = "$projectDir/data/References/orf.bed"
 
 if (params.help) {
     help = """mono-trac.nf: A pipeline for analysing mono-trac data
@@ -30,6 +30,7 @@ if (params.help) {
     exit(0)
 }
 
+include { PORECHOP } from './modules/porechop.nf'
 include { FASTQC } from './modules/fastqc'
 
 ch_samplesheet = Channel.fromPath(params.samplesheet)
@@ -54,9 +55,10 @@ include { MULTIQC } from './modules/multiqc.nf'
 workflow {
     // Running the first fastqc process
     if (params.mode == "full") {
-        kraken_ch = KRAKEN(ch_reads, params.kraken_db)
-        fastqc_ch = FASTQC(ch_reads)
-        medakavar_ch = MEDAKAVAR(ch_reads, params.reference_1, params.depth)
+        porechop_ch = PORECHOP(ch_reads)
+        kraken_ch = KRAKEN(porechop_ch, params.kraken_db)
+        fastqc_ch = FASTQC(porechop_ch)
+        medakavar_ch = MEDAKAVAR(porechop_ch, params.reference_1, params.depth)
         mosdepth_ch = MOSDEPTH(medakavar_ch.consensus)
         plotting_ch = PLOTTING(mosdepth_ch.global)
         combinefiles_ch = COMBINEFILES((mosdepth_ch.summary).collect())

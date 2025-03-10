@@ -8,14 +8,14 @@
 
 
 
-for sample in /Volumes/Seagate/monotrack/427_Orthologs/Tb927*
+for sample in /Volumes/Seagate/monotrac/nextflow/427_testing/427_Orthologs/Tb927*
  
     do
     base=$(basename "$sample")
-    dir="/Volumes/Seagate/monotrack/427_Orthologs"
+    dir="/Volumes/Seagate/monotrac/nextflow/427_testing/427_Orthologs"
     input_dir="$dir/Inputs"
     align_dir="$dir/Test_aligns"
 
-    cat $dir/${base} $dir/Consensus_genes/${base}.fasta > $input_dir/${base}.input.fasta
+    cat $dir/${base} $dir/OG_genes/${base} > $input_dir/${base}.input.fasta
     mafft --auto $input_dir/${base}.input.fasta > $align_dir/${base}.aligned 
 done
