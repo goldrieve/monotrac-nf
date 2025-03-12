@@ -8,12 +8,13 @@ process MEDAKAVAR {
     path reads
     path reference
     val depth
+    path orf
 
     output:
-    path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.fas", emit: fasta
-    path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.annotated.vcf.gz"
+    path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.filtered.vcf.gz"
     path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.vcf"
     path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus", emit: consensus
+    path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_CDS/${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_CDS.fas", emit: fasta
     
 
     script:
@@ -27,13 +28,15 @@ process MEDAKAVAR {
     | bcftools filter \
         -e 'INFO/DP < ${depth}' \
         -s LOW_DEPTH \
-        -Oz -o ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.annotated.vcf.gz
+        -Oz | bcftools view -f PASS -O z -o ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.filtered.vcf.gz
  
 
-    bcftools index ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.annotated.vcf.gz
-    bcftools consensus -f ${reference} ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.annotated.vcf.gz \
-        -i 'FILTER="PASS"' \
-        -o ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.fas
+    bcftools index ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.filtered.vcf.gz
+    
+    python $projectDir/bin/vcf2fasta/vcf2fasta.py --fasta ${reference} --vcf ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.filtered.vcf.gz \
+    --gff ${orf} --feat CDS --out ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}
+
+    python $projectDir/bin/concatfas.py ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_CDS
     """
 }
  

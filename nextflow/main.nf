@@ -9,7 +9,7 @@ params.mode = "full"
 params.depth = "10"
 params.isolates = "$projectDir/data/isolate_fasta"
 params.kraken_db = "$projectDir/data/kraken/monotrac_db"
-params.orf = "$projectDir/data/References/orf.bed"
+params.orf = "$projectDir/data/References/orf.gff"
 
 if (params.help) {
     help = """mono-trac.nf: A pipeline for analysing mono-trac data
@@ -50,6 +50,7 @@ include { COMBINEFILES } from './modules/combineFiles.nf'
 include { RAWCOMBINE } from './modules/rawCombine.nf'
 include { LINEPLOT } from './modules/lineplot.nf'
 include { MULTIQC } from './modules/multiqc.nf'
+include { TRANSEQ } from './modules/transeq.nf'
 
 
 workflow {
@@ -58,7 +59,7 @@ workflow {
         porechop_ch = PORECHOP(ch_reads)
         kraken_ch = KRAKEN(porechop_ch, params.kraken_db)
         fastqc_ch = FASTQC(porechop_ch)
-        medakavar_ch = MEDAKAVAR(porechop_ch, params.reference_1, params.depth)
+        medakavar_ch = MEDAKAVAR(porechop_ch, params.reference_1, params.depth, params.orf)
         mosdepth_ch = MOSDEPTH(medakavar_ch.consensus)
         plotting_ch = PLOTTING(mosdepth_ch.global)
         combinefiles_ch = COMBINEFILES((mosdepth_ch.summary).collect())
@@ -68,6 +69,7 @@ workflow {
         align_ch = ALIGN((medakavar_ch.fasta).collect(), isolates_fasta_files)
         fasttree_ch = FASTTREE(align_ch)
         multiqc_ch = MULTIQC((kraken_ch).collect(), (fastqc_ch.zip).collect(), (mosdepth_ch.global).collect()) 
+        transeq_ch = TRANSEQ(medakavar_ch.fasta)
     }  
 
     else {

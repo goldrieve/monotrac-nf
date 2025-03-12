@@ -1,4 +1,2 @@
 sample,read
-barcode_2,/Volumes/Seagate/monotrac/nextflow/Raw_reads/barcode2.fq.gz
-barcode_3,/Volumes/Seagate/monotrac/nextflow/Raw_reads/barcode3.fq.gz
 ERR13332583,/Volumes/Seagate/monotrac/nextflow/Raw_reads/ERR13332583.fq.gz
