@@ -6,10 +6,13 @@ process TRANSEQ {
     path dna
 
     output:
-    path "${dna.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.fas"
+    path "${dna.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_AA.fas", emit: amino_acid_seq
 
     script:
     """
-    transeq -sequence ${dna} -outseq ${dna.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.fas
+    transeq -sequence ${dna} -outseq ${dna.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.temp.fas
+    sed 's/_1\$//' ${dna.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.temp.fas > ${dna.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.temp2.fas
+    sed 's/*\$//' ${dna.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.temp2.fas > ${dna.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_AA.fas
+    echo 'has this saved?'
     """
 }

@@ -51,6 +51,7 @@ include { RAWCOMBINE } from './modules/rawCombine.nf'
 include { LINEPLOT } from './modules/lineplot.nf'
 include { MULTIQC } from './modules/multiqc.nf'
 include { TRANSEQ } from './modules/transeq.nf'
+include { AACOUNT } from './modules/AAcount.nf'
 
 
 workflow {
@@ -70,6 +71,7 @@ workflow {
         fasttree_ch = FASTTREE(align_ch)
         multiqc_ch = MULTIQC((kraken_ch).collect(), (fastqc_ch.zip).collect(), (mosdepth_ch.global).collect()) 
         transeq_ch = TRANSEQ(medakavar_ch.fasta)
+        aacount_ch = AACOUNT(transeq_ch.amino_acid_seq)
     }  
 
     else {
