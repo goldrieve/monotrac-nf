@@ -28,8 +28,11 @@ process MEDAKAVAR {
     | bcftools filter \
         -e 'INFO/DP < ${depth}' \
         -s LOW_DEPTH \
-        -Oz | bcftools view -f PASS -O z -o ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.filtered.vcf.gz
+        -Oz | bcftools view -f PASS -O z -o ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/filtered.vcf.gz
  
+    zgrep '^#' $projectDir/data/References/blank.vcf.gz > ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.filtered.vcf 
+    zgrep -v '^#' ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/filtered.vcf.gz >> ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.filtered.vcf
+    bgzip ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.filtered.vcf
 
     bcftools index ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.filtered.vcf.gz
     
