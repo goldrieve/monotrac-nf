@@ -10,8 +10,6 @@ process TRANSEQ {
 
     script:
     """
-    transeq -sequence ${dna} -outseq ${dna.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.temp.fas
-    sed 's/_1\$//' ${dna.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.temp.fas > ${dna.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.temp2.fas
-    sed 's/*\$//' ${dna.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.temp2.fas > ${dna.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_AA.fas
+    transeq -sequence ${dna} -outseq ${dna.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_AA.fas
     """
 }
