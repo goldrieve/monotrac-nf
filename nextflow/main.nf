@@ -11,6 +11,7 @@ params.isolates = "$projectDir/data/isolate_fasta"
 params.kraken_db = "$projectDir/data/kraken/monotrac_db"
 params.orf = "$projectDir/data/References/orf.gff"
 
+
 if (params.help) {
     help = """mono-trac.nf: A pipeline for analysing mono-trac data
              |
@@ -53,6 +54,7 @@ include { MULTIQC } from './modules/multiqc.nf'
 include { TRANSEQ } from './modules/transeq.nf'
 include { AACOUNT } from './modules/AAcount.nf'
 include { COMBINECSV } from './modules/combinecsv.nf'
+include { PREDICT } from './modules/predict.nf'
 
 
 workflow {
@@ -74,6 +76,7 @@ workflow {
         transeq_ch = TRANSEQ(medakavar_ch.fasta)
         aacount_ch = AACOUNT(transeq_ch.amino_acid_seq)
         combinecsv_ch = COMBINECSV((aacount_ch).collect())
+        predict_ch = PREDICT(aacount_ch)
     }  
 
     else {
