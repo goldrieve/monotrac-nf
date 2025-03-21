@@ -10,6 +10,7 @@ params.depth = "10"
 params.isolates = "$projectDir/data/isolate_fasta"
 params.kraken_db = "$projectDir/data/kraken/monotrac_db"
 params.orf = "$projectDir/data/References/orf.gff"
+params.ml = "$projectDir/data/ml.pkl"
 
 
 if (params.help) {
@@ -76,7 +77,7 @@ workflow {
         transeq_ch = TRANSEQ(medakavar_ch.fasta)
         aacount_ch = AACOUNT(transeq_ch.amino_acid_seq)
         combinecsv_ch = COMBINECSV((aacount_ch).collect())
-        predict_ch = PREDICT(aacount_ch)
+        predict_ch = PREDICT(aacount_ch, params.ml)
     }  
 
     else {

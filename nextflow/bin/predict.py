@@ -3,7 +3,10 @@ import pandas as pd
 import joblib 
 import os 
 
-model = joblib.load('$./data/ml.pkl')  #this is the part that it errored out on yeterday 
+script_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(script_dir, "../data/ml.pkl")
+
+model = joblib.load(model_path)  
 
 expected_columns = model.feature_names_in_
 

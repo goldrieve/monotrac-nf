@@ -4,12 +4,13 @@ process PREDICT{
 
     input:
     path csv 
+    path "data/ml.pkl"
 
     output:
-    path "${csv.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.txt"
+    path "predictions_${csv.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.txt"
 
     script:
     """
-    python $projectDir/bin/predict.py ${csv.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_counts.csv
+    python $projectDir/bin/predict.py ${csv.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.csv
     """
 }
