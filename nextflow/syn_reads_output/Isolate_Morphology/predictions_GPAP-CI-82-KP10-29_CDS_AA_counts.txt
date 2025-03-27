@@ -1,0 +1,1 @@
+/Volumes/Seagate/monotrac/nextflow/work/96/6efa91e5fa0d8b7c6684ffee1341ed/predictions_GPAP-CI-82-KP10-29_CDS_AA_counts.txt

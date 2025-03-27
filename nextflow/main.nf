@@ -14,15 +14,15 @@ params.ml = "$projectDir/data/ml.pkl"
 
 
 if (params.help) {
-    help = """mono-trac.nf: A pipeline for analysing mono-trac data
+    help = """main.nf: A pipeline for analysing mono-trac data
              |
              |Arguments:
              |
-             |  --reference Location of assemblies
+             |  --reference Location of reference file.
              |                [default: ${params.reference}]
-             |  --cores  Define number of cores Trinity and other tools will use.
+             |  --cores  Define number of cores the tools will use.
              |                [default: ${params.cores}]
-             |  --outdir        VSGSeq output directory. 
+             |  --outdir        pipeline output directory. 
              |                [default: ${params.outdir}]
              |  --samplesheet  Define the path to the samplesheet.
              |                [default: ${params.samplesheet}]
@@ -40,6 +40,7 @@ ch_samplesheet = Channel.fromPath(params.samplesheet)
 ch_reads = ch_samplesheet.splitCsv(header:true).map {
     file(it['read'])
 }
+
 include { KRAKEN } from './modules/kraken2.nf'
 include { MEDAKAVAR } from './modules/medakavar.nf'
 include { MOSDEPTH } from './modules/mosdepth.nf'

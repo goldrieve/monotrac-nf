@@ -1,0 +1,1 @@
+/Volumes/Seagate/monotrac/nextflow/work/3d/281070fd68dca3d3c6a5afae88da1a/predictions_Pakwa_CDS_AA_counts.txt

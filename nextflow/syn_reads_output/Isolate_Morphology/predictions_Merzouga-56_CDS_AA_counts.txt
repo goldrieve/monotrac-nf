@@ -1,0 +1,1 @@
+/Volumes/Seagate/monotrac/nextflow/work/6e/f6c79e82433f37d664fd9ac8528777/predictions_Merzouga-56_CDS_AA_counts.txt

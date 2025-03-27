@@ -1,0 +1,1 @@
+/Volumes/Seagate/monotrac/nextflow/work/38/a1f874a836586ae03d2be6cd4f688b/predictions_MCAP-CI-91-BALEA-2_CDS_AA_counts.txt

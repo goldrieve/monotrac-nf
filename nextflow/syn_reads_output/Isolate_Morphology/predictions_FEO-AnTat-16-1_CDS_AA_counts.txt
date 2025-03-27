@@ -1,0 +1,1 @@
+/Volumes/Seagate/monotrac/nextflow/work/83/afb82a6417d76537f3ee7197bd8142/predictions_FEO-AnTat-16-1_CDS_AA_counts.txt

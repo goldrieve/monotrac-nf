@@ -1,0 +1,1 @@
+/Volumes/Seagate/monotrac/nextflow/work/98/9206ccccf05452fd3c9f2be1171a0f/predictions_STIB900_CDS_AA_counts.txt

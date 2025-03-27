@@ -1,0 +1,1 @@
+/Volumes/Seagate/monotrac/nextflow/work/b4/e71623b244ed11c31859cf683d039a/predictions_AGAL-CI-78-TCH312_CDS_AA_counts.txt
