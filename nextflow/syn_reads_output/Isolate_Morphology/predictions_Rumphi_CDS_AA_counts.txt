@@ -1,0 +1,1 @@
+/Volumes/Seagate/monotrac/nextflow/work/4b/298f2303be2ee706ca0896779a99ff/predictions_Rumphi_CDS_AA_counts.txt

@@ -1,0 +1,1 @@
+/Volumes/Seagate/monotrac/nextflow/work/e7/f15d7ae77df52075314abf0da8e547/predictions_Alfort_CDS_AA_counts.txt

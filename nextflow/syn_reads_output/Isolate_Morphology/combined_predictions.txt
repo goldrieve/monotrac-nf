@@ -1,0 +1,332 @@
+Prediction from LIGO:
+Pleomorphic
+
+
+Prediction from MHOM-SD-82-MUSIKIA-cloneA:
+Pleomorphic
+
+
+Prediction from Dodola_943:
+Monomorphic
+
+
+Prediction from LOGRA:
+Pleomorphic
+
+
+Prediction from American-Strain:
+Monomorphic
+
+
+Prediction from Alfort:
+Monomorphic
+
+
+Prediction from ABBA:
+Pleomorphic
+
+
+Prediction from GPAP-CI-82-KP10-29:
+Pleomorphic
+
+
+Prediction from 57AT:
+Pleomorphic
+
+
+Prediction from BoTat-1-1:
+Monomorphic
+
+
+Prediction from 280104:
+Monomorphic
+
+
+Prediction from Nabe:
+Pleomorphic
+
+
+Prediction from Philippines:
+Monomorphic
+
+
+Prediction from STIB247:
+Pleomorphic
+
+
+Prediction from EATRO2340:
+Pleomorphic
+
+
+Prediction from NDMI:
+Pleomorphic
+
+
+Prediction from STIB-816:
+Monomorphic
+
+
+Prediction from MCAM-ET-2013-MU-02:
+Monomorphic
+
+
+Prediction from MSUS-CI-82-TSW62:
+Pleomorphic
+
+
+Prediction from SVP:
+Monomorphic
+
+
+Prediction from Canadian-Strain:
+Monomorphic
+
+
+Prediction from 927:
+Monomorphic
+
+
+Prediction from MCAM-ET-2013-MU-04:
+Monomorphic
+
+
+Prediction from MBO-NG-74-R10:
+Pleomorphic
+
+
+Prediction from ATCC-30019:
+Monomorphic
+
+
+Prediction from ATCC30019:
+Monomorphic
+
+
+Prediction from AnTat-12-1S:
+Pleomorphic
+
+
+Prediction from MCAM-ET-2013-MU-01:
+Monomorphic
+
+
+Prediction from LiTat-1-5-P9:
+Pleomorphic
+
+
+Prediction from HAMBURG:
+Monomorphic
+
+
+Prediction from 940:
+Monomorphic
+
+
+Prediction from RoTat_1_2:
+Monomorphic
+
+
+Prediction from Te-Ap-N-D1:
+Monomorphic
+
+
+Prediction from OVI:
+Monomorphic
+
+
+Prediction from MCAM-ET-2013-MU-05:
+Monomorphic
+
+
+Prediction from Zagora-I-17:
+Monomorphic
+
+
+Prediction from E28:
+Monomorphic
+
+
+Prediction from STIB805:
+Monomorphic
+
+
+Prediction from MHOM-ZM-83-TRPZ-349:
+Pleomorphic
+
+
+Prediction from MCAM-ET-2013-MU-09:
+Monomorphic
+
+
+Prediction from 108AT:
+Pleomorphic
+
+
+Prediction from MU09:
+Monomorphic
+
+
+Prediction from MCAP-CI-91-BALEA-2:
+Pleomorphic
+
+
+Prediction from MU10:
+Monomorphic
+
+
+Prediction from MBA:
+Pleomorphic
+
+
+Prediction from STIB900:
+Pleomorphic
+
+
+Prediction from IVMt1:
+Pleomorphic
+
+
+Prediction from 340AT:
+Pleomorphic
+
+
+Prediction from Jua:
+Pleomorphic
+
+
+Prediction from MCAM-ET-2013-MU-14:
+Monomorphic
+
+
+Prediction from NKOUA:
+Pleomorphic
+
+
+Prediction from AnTat-3-3:
+Monomorphic
+
+
+Prediction from UPA_PO:
+Pleomorphic
+
+
+Prediction from 15BT-relapse:
+Pleomorphic
+
+
+Prediction from STIB818:
+Monomorphic
+
+
+Prediction from MBOT-GM-77-GB2:
+Pleomorphic
+
+
+Prediction from 108BT:
+Pleomorphic
+
+
+Prediction from Colombia:
+Monomorphic
+
+
+Prediction from Pakwa:
+Pleomorphic
+
+
+Prediction from MHOM-SD-82-BIYAMINA:
+Monomorphic
+
+
+Prediction from Merzouga-56:
+Monomorphic
+
+
+Prediction from 348BT:
+Pleomorphic
+
+
+Prediction from BIM-AnTat-8-1-P8:
+Pleomorphic
+
+
+Prediction from MCAM-ET-2013-MU-17:
+Monomorphic
+
+
+Prediction from Kenya:
+Monomorphic
+
+
+Prediction from STIB-851:
+Pleomorphic
+
+
+Prediction from Kazakstan:
+Monomorphic
+
+
+Prediction from Bosendja:
+Pleomorphic
+
+
+Prediction from ROUPO-VAVOUA--80-MURAZ-14:
+Pleomorphic
+
+
+Prediction from MSUS-CI-78-TSW382:
+Pleomorphic
+
+
+Prediction from MHOM-ZM-80-TRPZ-23:
+Pleomorphic
+
+
+Prediction from AGAL-CI-78-TCH312:
+Pleomorphic
+
+
+Prediction from OUSOU:
+Pleomorphic
+
+
+Prediction from MSUS-CI-83-TSW-11:
+Pleomorphic
+
+
+Prediction from GMOM-ZM-83-TRPZ-317:
+Monomorphic
+
+
+Prediction from MSUS-CI-78-TSW-157:
+Pleomorphic
+
+
+Prediction from FEO-AnTat-16-1:
+Pleomorphic
+
+
+Prediction from STIB386:
+Pleomorphic
+
+
+Prediction from AnTat-3-1:
+Monomorphic
+
+
+Prediction from FEO:
+Pleomorphic
+
+
+Prediction from Rumphi:
+Pleomorphic
+
+
+Prediction from ATCC-30023:
+Monomorphic
+
+
+Prediction from EATRO3:
+Pleomorphic
+
+

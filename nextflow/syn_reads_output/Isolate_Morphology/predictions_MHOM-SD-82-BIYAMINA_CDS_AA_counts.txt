@@ -1,0 +1,1 @@
+/Volumes/Seagate/monotrac/nextflow/work/56/264166c575f0393d3be7963b4ab8a1/predictions_MHOM-SD-82-BIYAMINA_CDS_AA_counts.txt

@@ -1,0 +1,1 @@
+/Volumes/Seagate/monotrac/nextflow/work/40/678d4561a211eb207f612e11c21e10/STIB900_consensus.mosdepth.global.dist.txt

@@ -1,0 +1,1 @@
+/Volumes/Seagate/monotrac/nextflow/work/05/5dad66ed7cfb181d770ac21ba3d311/predictions_MBOT-GM-77-GB2_CDS_AA_counts.txt

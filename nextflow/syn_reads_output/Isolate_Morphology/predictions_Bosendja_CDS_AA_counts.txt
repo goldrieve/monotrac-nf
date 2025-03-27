@@ -1,0 +1,1 @@
+/Volumes/Seagate/monotrac/nextflow/work/0c/75f1b78d8e34934bf39b73ae854e6d/predictions_Bosendja_CDS_AA_counts.txt

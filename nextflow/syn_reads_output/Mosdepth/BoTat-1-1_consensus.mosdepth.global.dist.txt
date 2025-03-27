@@ -1,0 +1,1 @@
+/Volumes/Seagate/monotrac/nextflow/work/20/2273ff4eeecc0e3fe5ccbc12800165/BoTat-1-1_consensus.mosdepth.global.dist.txt

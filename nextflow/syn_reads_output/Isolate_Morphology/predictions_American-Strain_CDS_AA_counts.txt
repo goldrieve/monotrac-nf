@@ -1,0 +1,1 @@
+/Volumes/Seagate/monotrac/nextflow/work/5d/62b60dfc7c841ab2ee9ca9a2fb5a13/predictions_American-Strain_CDS_AA_counts.txt
