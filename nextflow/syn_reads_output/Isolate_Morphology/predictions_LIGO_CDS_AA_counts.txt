@@ -1,1 +1,0 @@
-/Volumes/Seagate/monotrac/nextflow/work/97/cf7d0bc427436fc0e9c2ee4eebcb73/predictions_LIGO_CDS_AA_counts.txt

@@ -57,6 +57,7 @@ include { TRANSEQ } from './modules/transeq.nf'
 include { AACOUNT } from './modules/AAcount.nf'
 include { COMBINECSV } from './modules/combinecsv.nf'
 include { PREDICT } from './modules/predict.nf'
+include { FINAL } from './modules/final.nf'
 
 
 workflow {
@@ -79,6 +80,7 @@ workflow {
         aacount_ch = AACOUNT(transeq_ch.amino_acid_seq)
         combinecsv_ch = COMBINECSV((aacount_ch).collect())
         predict_ch = PREDICT(aacount_ch, params.ml)
+        final_ch = FINAL((predict_ch).collect())
     }  
 
     else {

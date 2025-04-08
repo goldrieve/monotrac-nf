@@ -1,1 +1,0 @@
-/Volumes/Seagate/monotrac/nextflow/work/4e/0aaa31f799451a67cef9d440950ac0/predictions_MCAM-ET-2013-MU-01_CDS_AA_counts.txt

@@ -1,1 +1,0 @@
-/Volumes/Seagate/monotrac/nextflow/work/4f/87675ef9633ae09799e871951ae5fe/predictions_Dodola_943_CDS_AA_counts.txt

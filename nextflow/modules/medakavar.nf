@@ -29,12 +29,18 @@ process MEDAKAVAR {
         -e 'INFO/DP < ${depth}' \
         -s LOW_DEPTH \
         -Oz | bcftools view -f PASS -O z -o ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/filtered.vcf.gz
+
+    echo "The variants have been filtered based on the depth of coverage"
  
     zgrep '^#' $projectDir/data/References/blank.vcf.gz > ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.filtered.vcf 
     zgrep -v '^#' ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/filtered.vcf.gz >> ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.filtered.vcf
     bgzip ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.filtered.vcf
 
+    echo "a blank vcf header has been added to account for missing genes"
+
     bcftools index ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.filtered.vcf.gz
+
+    echo "The filtered vcf has been indexed"
     
     python $projectDir/bin/vcf2fasta/vcf2fasta.py --fasta ${reference} --vcf ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.filtered.vcf.gz \
     --gff ${orf} --feat CDS --out ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}
@@ -42,5 +48,4 @@ process MEDAKAVAR {
     python $projectDir/bin/concatfas.py ${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_CDS
     """
 }
- 
  

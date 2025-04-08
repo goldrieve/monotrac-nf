@@ -1,1 +1,0 @@
-/Volumes/Seagate/monotrac/nextflow/work/16/a9ecf23866af025fce699750e3b46a/predictions_MSUS-CI-78-TSW-157_CDS_AA_counts.txt

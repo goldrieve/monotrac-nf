@@ -1,1 +1,0 @@
-/Volumes/Seagate/monotrac/nextflow/work/12/ceba048e1d335b1175448a887aeafd/AnTat-12-1S_consensus.mosdepth.global.dist.txt

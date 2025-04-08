@@ -1,1 +1,0 @@
-/Volumes/Seagate/monotrac/nextflow/work/03/d011f8c64def7a05041a1e505c5874/predictions_MHOM-ZM-80-TRPZ-23_CDS_AA_counts.txt

@@ -9,4 +9,4 @@ def split_fasta(input_fasta):
                 SeqIO.write(record, output_file, "fasta")
 
 # Replace 'name in brackets' with the actual filename
-split_fasta("ERR9695747_CDS.fas")
+split_fasta("SRR24321267_CDS.fas")

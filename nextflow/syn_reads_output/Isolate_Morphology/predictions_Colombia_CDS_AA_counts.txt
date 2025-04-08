@@ -1,1 +1,0 @@
-/Volumes/Seagate/monotrac/nextflow/work/42/4963be4c1b06e7ba07c00d05104a06/predictions_Colombia_CDS_AA_counts.txt

@@ -1,1 +1,0 @@
-/Volumes/Seagate/monotrac/nextflow/work/54/a14b07b9c91030759b800a48507bc3/predictions_GMOM-ZM-83-TRPZ-317_CDS_AA_counts.txt

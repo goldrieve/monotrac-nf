@@ -1,1 +1,0 @@
-/Volumes/Seagate/monotrac/nextflow/work/0d/5820012b6a2e5a0022b58da0c4a882/predictions_ATCC-30023_CDS_AA_counts.txt

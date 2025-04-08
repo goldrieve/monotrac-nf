@@ -10,5 +10,5 @@ for sample in /Volumes/Seagate/monotrac/nextflow/isolate_fasta_testing/split_out
     
 
     cat $dir/split_output/OG_isolate_fas/${base} $dir/split_output/SR_isolate_fas/${base} > $dir/combined/${base}.input.fasta
-    mafft --auto $dir/combined/${base}.input.fasta > aligned/${base}.aligned 
+    mafft --auto $dir/combined/${base}.input.fasta > aligned/${base} 
 done

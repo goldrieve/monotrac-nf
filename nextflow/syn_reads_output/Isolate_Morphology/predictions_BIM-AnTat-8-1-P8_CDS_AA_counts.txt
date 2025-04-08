@@ -1,1 +1,0 @@
-/Volumes/Seagate/monotrac/nextflow/work/24/ddac71d0f923debda7052b61fdb545/predictions_BIM-AnTat-8-1-P8_CDS_AA_counts.txt

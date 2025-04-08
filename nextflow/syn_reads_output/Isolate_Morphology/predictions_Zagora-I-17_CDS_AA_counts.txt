@@ -1,1 +1,0 @@
-/Volumes/Seagate/monotrac/nextflow/work/a7/8e756ed74177f2283f5a986dcc9ec9/predictions_Zagora-I-17_CDS_AA_counts.txt

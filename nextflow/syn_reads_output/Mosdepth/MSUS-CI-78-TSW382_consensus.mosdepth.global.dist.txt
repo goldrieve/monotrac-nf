@@ -1,1 +1,0 @@
-/Volumes/Seagate/monotrac/nextflow/work/59/7a415ca47bee1d2278ed6e2879e8ef/MSUS-CI-78-TSW382_consensus.mosdepth.global.dist.txt
