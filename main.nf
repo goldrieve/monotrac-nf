@@ -51,7 +51,6 @@ include { FINAL } from './modules/final.nf'
 
 
 workflow {
-    // Running the first fastqc process
     if (params.mode == "full") {
         Channel
             .fromPath(params.samplesheet)
