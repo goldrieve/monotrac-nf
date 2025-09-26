@@ -32,3 +32,4 @@ synthetic_reads/
 VB_syn_reads/
 OG_raw_reads/
 syn_reads/
+.nextflow.log*
