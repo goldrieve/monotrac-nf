@@ -1,4 +1,4 @@
 sample,read
-108AT,/Volumes/Seagate/monotrac/syn_reads/108AT.fq.gz
-108BT,/Volumes/Seagate/monotrac/syn_reads/108BT.fq.gz
-15BT-relapse,/Volumes/Seagate/monotrac/syn_reads/15BT-relapse.fq.gz
+108AT,data/syn_reads/108AT.fq.gz
+108BT,data/syn_reads/108BT.fq.gz
+15BT-relapse,data/syn_reads/15BT-relapse.fq.gz

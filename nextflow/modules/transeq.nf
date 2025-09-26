@@ -1,5 +1,4 @@
 process TRANSEQ { 
-    conda "/opt/anaconda3/envs/medaka"
     publishDir "${params.outdir}/Protein_seqs"
 
     input:

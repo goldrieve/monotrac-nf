@@ -1,7 +1,6 @@
 // mosdepth module - calculates the depth of the reads 
 
 process MOSDEPTH{ 
-    conda "/opt/anaconda3/envs/monotrac"
     publishDir "${params.outdir}/Mosdepth"
 
     input:

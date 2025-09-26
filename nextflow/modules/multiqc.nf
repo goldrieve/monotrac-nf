@@ -1,9 +1,7 @@
 process MULTIQC { 
-    conda "/opt/anaconda3/envs/mafft"
     publishDir "${params.outdir}/MultiQC"
 
     input:
-    path (kraken)
     path (fastqc)
     path (mosdepth_global) 
 
@@ -12,6 +10,6 @@ process MULTIQC {
 
     script:
     """
-    multiqc ${kraken} ${fastqc} ${mosdepth_global} 
+    multiqc ${fastqc} ${mosdepth_global} 
     """
 }

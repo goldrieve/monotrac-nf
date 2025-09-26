@@ -1,5 +1,4 @@
 process RAWCOMBINE { 
-    conda "/opt/anaconda3/envs/medaka"
     publishDir "${params.outdir}/Plots"
 
     input:

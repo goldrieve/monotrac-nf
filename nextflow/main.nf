@@ -8,7 +8,6 @@ params.help = ""
 params.mode = "full"
 params.depth = "10"
 params.isolates = "$projectDir/data/isolate_fasta"
-params.kraken_db = "$projectDir/data/kraken/monotrac_db"
 params.orf = "$projectDir/data/References/orf.gff"
 params.ml = "$projectDir/data/ml.pkl"
 
@@ -32,16 +31,7 @@ if (params.help) {
     exit(0)
 }
 
-include { PORECHOP } from './modules/porechop.nf'
 include { FASTQC } from './modules/fastqc'
-
-ch_samplesheet = Channel.fromPath(params.samplesheet)
-
-ch_reads = ch_samplesheet.splitCsv(header:true).map {
-    file(it['read'])
-}
-
-include { KRAKEN } from './modules/kraken2.nf'
 include { MEDAKAVAR } from './modules/medakavar.nf'
 include { MOSDEPTH } from './modules/mosdepth.nf'
 include { PLOTTING } from './modules/plotting.nf'
@@ -63,10 +53,14 @@ include { FINAL } from './modules/final.nf'
 workflow {
     // Running the first fastqc process
     if (params.mode == "full") {
-        porechop_ch = PORECHOP(ch_reads)
-        kraken_ch = KRAKEN(porechop_ch, params.kraken_db)
-        fastqc_ch = FASTQC(porechop_ch)
-        medakavar_ch = MEDAKAVAR(porechop_ch, params.reference_1, params.depth, params.orf)
+        Channel
+            .fromPath(params.samplesheet)
+            .splitCsv(header: true)
+            .map { row -> [row.sample, file(row.read)] }
+            .set { sample_ch }
+
+        fastqc_ch = FASTQC(sample_ch)
+        medakavar_ch = MEDAKAVAR(sample_ch, params.reference_1, params.depth, params.orf)
         mosdepth_ch = MOSDEPTH(medakavar_ch.consensus)
         plotting_ch = PLOTTING(mosdepth_ch.global)
         combinefiles_ch = COMBINEFILES((mosdepth_ch.summary).collect())
@@ -75,7 +69,7 @@ workflow {
         lineplot_ch = LINEPLOT(rawcombine_ch)
         align_ch = ALIGN((medakavar_ch.fasta).collect(), isolates_fasta_files)
         fasttree_ch = FASTTREE(align_ch)
-        multiqc_ch = MULTIQC((kraken_ch).collect(), (fastqc_ch.zip).collect(), (mosdepth_ch.global).collect()) 
+        multiqc_ch = MULTIQC((fastqc_ch.zip).collect(), (mosdepth_ch.global).collect()) 
         transeq_ch = TRANSEQ(medakavar_ch.fasta)
         aacount_ch = AACOUNT(transeq_ch.amino_acid_seq)
         combinecsv_ch = COMBINECSV((aacount_ch).collect())

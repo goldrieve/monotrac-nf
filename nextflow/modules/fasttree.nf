@@ -1,5 +1,4 @@
 process FASTTREE {
-    conda "/opt/anaconda3/envs/mafft"
     publishDir "${params.outdir}/Plots"
 
     input:

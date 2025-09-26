@@ -1,5 +1,4 @@
 process ALIGN {
-    conda "/opt/anaconda3/envs/mafft"
     publishDir "${params.outdir}/Aligned"
     
     input:

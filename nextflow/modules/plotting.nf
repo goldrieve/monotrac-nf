@@ -1,6 +1,5 @@
  
 process PLOTTING{
-    conda "/opt/anaconda3/envs/medaka"
     publishDir "${params.outdir}/Plots/Depth_plots"
 
     input:

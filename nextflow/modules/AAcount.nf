@@ -1,5 +1,4 @@
 process AACOUNT {
-    conda "/opt/anaconda3/envs/medaka"
     publishDir "${params.outdir}/AA_Counts"
 
     input: 

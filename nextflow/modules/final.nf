@@ -1,5 +1,4 @@
 process FINAL { 
-    conda "/opt/anaconda3/envs/medaka"
     publishDir "${params.outdir}/Isolate_Morphology"
 
     input:
