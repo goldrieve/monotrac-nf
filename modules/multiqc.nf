@@ -1,4 +1,5 @@
-process MULTIQC { 
+process MULTIQC {
+    tag "Running multiQC"
     publishDir "${params.outdir}/MultiQC"
 
     input:

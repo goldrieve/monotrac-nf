@@ -1,14 +1,15 @@
 process COMBINECSV {
+    tag "Generating AA combined csv"
     publishDir "${params.outdir}/."
 
     input:
-    path csvfiles 
+    path (csvfiles) 
 
     output:
     path "combined.csv"
 
     script:
     """
-    python ${projectDir}/bin/combinecsv.py ${csvfiles.join(' ')}
+    python combinecsv.py ${csvfiles.join(' ')}
     """
 }

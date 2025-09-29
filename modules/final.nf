@@ -1,5 +1,6 @@
-process FINAL { 
-    publishDir "${params.outdir}/Isolate_Morphology"
+process FINAL {
+    tag "Summary"
+    publishDir "${params.outdir}/Isolate_Phenotype"
 
     input:
     path input_files 
@@ -9,6 +10,6 @@ process FINAL {
 
     script:
     """
-    python $projectDir/bin/final.py ${input_files.join(' ')} combined_prediction.csv
+    python final.py ${input_files.join(' ')} combined_prediction.csv
     """
 }

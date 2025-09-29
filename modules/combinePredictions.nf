@@ -1,4 +1,5 @@
 process FINAL{
+    tag "Combining predictions"
     publishDir "${params.outdir}/Isolate_Morphology"
 
     input: 
@@ -9,6 +10,6 @@ process FINAL{
 
     script:
     """
-    python $projectDir/bin/finaloutput.py "${predictions.join(' ')}" "final_predictions.csv" 
+    python finaloutput.py "${predictions.join(' ')}" "final_predictions.csv" 
     """
 }

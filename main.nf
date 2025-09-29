@@ -105,7 +105,7 @@ workflow monotrac {
             MEDAKAVAR.out.fasta
             )
         AACOUNT(
-            TRANSEQ.out.amino_acid_seq
+            TRANSEQ.out
             )
         COMBINECSV(
             (AACOUNT.out).collect()

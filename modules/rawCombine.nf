@@ -1,14 +1,15 @@
-process RAWCOMBINE { 
+process RAWCOMBINE {
+    tag "Combining mosdepth results"
     publishDir "${params.outdir}/Plots"
 
     input:
-    path raw
+    path (raw)
 
     output:
     path "combined_raw.csv"
 
     script:
     """
-    python $projectDir/bin/rawCombine.py ${raw.join(' ')}
+    python rawCombine.py ${raw.join(' ')}
     """
 }

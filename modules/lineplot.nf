@@ -1,14 +1,15 @@
 process LINEPLOT {
+    tag "Plotting depth"
     publishDir "${params.outdir}/Plots"
 
     input:
-    path raw_csv
+    path (raw_csv)
 
     output:
-    path "plot_2.png"
+    path "depth.png"
 
     script:
     """
-    python $projectDir/bin/lineplot.py 
+    python lineplot.py 
     """
 }

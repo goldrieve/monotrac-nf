@@ -24,7 +24,7 @@ for input_files in sys.argv[1:]:
 
         predictions = model.predict(data)
 
-        output_files = f"predictions_{os.path.basename(input_files).replace('.csv', '.txt')}"
+        output_files = f"{os.path.basename(input_files).replace('.csv', '_prediction.txt')}"
         print(f"\n Prediction for {input_files} (from {output_files}):\n")
         print("\n".join(predictions)) 
 

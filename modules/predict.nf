@@ -1,15 +1,16 @@
-process PREDICT{ 
+process PREDICT{
+    tag "$sample"
     publishDir "${params.outdir}/Isolate_Morphology"
 
     input:
-    path csv 
+    tuple val (sample), path (csv) 
     path "data/ml.pkl"
 
     output:
-    path "predictions_${csv.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.txt"
+    path "${sample}_prediction.txt"
 
     script:
     """
-    python $projectDir/bin/predict.py ${csv.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.csv
+    python predict.py ${sample}.csv
     """
 }

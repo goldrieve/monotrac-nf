@@ -1,4 +1,5 @@
 process FASTQC {
+    tag "$sample"
     publishDir "${params.outdir}/Fastqc"
     
     input:

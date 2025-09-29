@@ -17,5 +17,5 @@ g = sns.FacetGrid(plot_data, col='GeneID', hue='source_file', height=4, aspect=1
 g.map_dataframe(sns.lineplot, x='Location', y='Coverage')
 g.add_legend()
 output_dir2="."
-filename2="plot_2.png"
+filename2="depth.png"
 plt.savefig(os.path.join(output_dir2, filename2), dpi=300, bbox_inches='tight')
