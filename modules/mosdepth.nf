@@ -1,14 +1,15 @@
 // mosdepth module - calculates the depth of the reads 
 
-process MOSDEPTH{ 
+process MOSDEPTH{
+    tag "$sample"
     publishDir "${params.outdir}/Mosdepth"
 
     input:
-    path bam
+    tuple val (sample), path (bam)
 
     output:
-    path "${bam.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.mosdepth.global.dist.txt", emit: global
-    path "${bam.baseName.replaceAll(/\.fq(\.gz)?$/, "")}.mosdepth.summary.txt", emit: summary
+    tuple val (sample), path ("${sample}.mosdepth.global.dist.txt"), emit: global
+    tuple val (sample), path ("${sample}.mosdepth.summary.txt"), emit: summary
     
     script:
     """

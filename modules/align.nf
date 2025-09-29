@@ -1,9 +1,10 @@
 process ALIGN {
+    tag "Aligning FASTA"
     publishDir "${params.outdir}/Aligned"
     
     input:
     path (fastas)
-    path isolates_fasta_files
+    path (isolates_fasta_files)
 
     output:
     path "aligned.fas"

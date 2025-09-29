@@ -1,6 +1,7 @@
  // module for running medaka variant on the raw reads 
  
 process MEDAKAVAR {
+    tag "$sample"
     publishDir "${params.outdir}/Consensus/${reads}"
 
     input:
@@ -10,10 +11,10 @@ process MEDAKAVAR {
     path orf
 
     output:
-    path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.filtered.vcf.gz"
-    path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus/medaka.vcf"
-    path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_consensus", emit: consensus
-    path "${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_CDS/${reads.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_CDS.fas", emit: fasta
+    tuple val (sample), path ("${sample}_consensus/medaka.filtered.vcf.gz")
+    tuple val (sample), path ("${sample}_consensus/medaka.vcf")
+    tuple val (sample), path ("${sample}_consensus"), emit: consensus
+    tuple val (sample), path ("${sample}_CDS/${sample}_CDS.fas"), emit: fasta
     
 
     script:
@@ -41,10 +42,10 @@ process MEDAKAVAR {
 
     echo "The filtered vcf has been indexed"
     
-    python $projectDir/bin/vcf2fasta/vcf2fasta.py --fasta ${reference} --vcf ${sample}_consensus/medaka.filtered.vcf.gz \
+    python vcf2fasta.py --fasta ${reference} --vcf ${sample}_consensus/medaka.filtered.vcf.gz \
     --gff ${orf} --feat CDS --out ${sample}
 
-    python $projectDir/bin/concatfas.py ${sample}_consensus/${sample}_CDS
+    python concatfas.py ${sample}_consensus/${sample}_CDS
     """
 }
  

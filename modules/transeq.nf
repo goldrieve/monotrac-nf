@@ -1,14 +1,15 @@
-process TRANSEQ { 
+process TRANSEQ {
+    tag "$sample"
     publishDir "${params.outdir}/Protein_seqs"
 
     input:
-    path dna
+    tuple val (sample), path (dna)
 
     output:
-    path "${dna.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_AA.fas", emit: amino_acid_seq
+    tuple val (sample), path ("${sample}_AA.fas")
 
     script:
     """
-    transeq -sequence ${dna} -outseq ${dna.baseName.replaceAll(/\.fq(\.gz)?$/, "")}_AA.fas
+    transeq -sequence ${dna} -outseq ${sample}_AA.fas
     """
 }

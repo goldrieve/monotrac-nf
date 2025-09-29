@@ -1,8 +1,9 @@
-process COMBINEFILES { 
+process COMBINEFILES {
+    tag "$sample"
     publishDir "${params.outdir}/Plots"
 
     input:
-    path summary
+    tuple val (sample), path (summary)
 
     output:
     path "combined_data.csv"
@@ -10,6 +11,6 @@ process COMBINEFILES {
     script:
     """
     echo "Summary files: ${summary}" 
-    python $projectDir/bin/combineFiles.py ${summary.join(' ')}
+    python combineFiles.py ${summary.join(' ')}
     """
 }

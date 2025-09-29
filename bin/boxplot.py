@@ -15,7 +15,7 @@ plt.xlabel('Genes')
 plt.ylabel('Average coverage')
 plt.legend(title="Isolate", bbox_to_anchor=(1, 1))
 output_dir="."
-filename="plot_1.png"
+filename="boxplot.png"
 plt.savefig(os.path.join(output_dir, filename), dpi=300, bbox_inches='tight')
 
 

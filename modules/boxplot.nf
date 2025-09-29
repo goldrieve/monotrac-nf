@@ -1,14 +1,15 @@
 process BOXPLOT{
+    tag "Creating boxplot"
     publishDir "${params.outdir}/Plots"
 
     input:
-    path combined_csv
+    path (combined_csv)
 
     output:
-    path "plot_1.png"
+    path "boxplot.png"
 
     script:
     """
-    python $projectDir/bin/boxplot.py 
+    python boxplot.py 
     """
 }

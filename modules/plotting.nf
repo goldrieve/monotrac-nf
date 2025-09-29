@@ -1,15 +1,16 @@
  
 process PLOTTING{
+    tag "$sample"
     publishDir "${params.outdir}/Plots/Depth_plots"
 
     input:
-    path global
+    tuple val (sample), path (global)
 
     output:
-    path "${global.baseName.replaceAll(/\.mosdepth\.global\.dist\.txt$/, '')}.png"
+    path "${sample}.png"
 
     script:
     """
-    python $projectDir/bin/depth_plots.py ${global}
+    python depth_plots.py ${global}
     """
 }

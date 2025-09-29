@@ -1,14 +1,15 @@
 process FASTTREE {
+    tag "Generating tree"
     publishDir "${params.outdir}/Plots"
 
     input:
-    path mafft
+    path (mafft)
 
     output:
     path "tree.nwk" 
 
     script:
     """
-    FastTree -nt -gtr -gamma aligned.fas > tree.nwk
+    FastTree -nt -gtr -gamma $mafft > tree.nwk
     """
 }
