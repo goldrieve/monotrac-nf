@@ -8,8 +8,10 @@ dependencies:
   - mafft
   - fastqc
   - fasttree
-  - medaka
   - mosdepth
   - multiqc
   - emboss
   - nextflow
+  - clair3
+  - minimap2
+  - bcftools 

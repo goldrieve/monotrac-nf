@@ -3,15 +3,17 @@ nextflow.enable.dsl = 2
 
 /* Define variables */
 params.samplesheet = "$projectDir/data/samplesheet.csv"
-params.reference_1 = "$projectDir/data/References/padded_targets_positive.fasta"
+params.reference = "$projectDir/data/references/padded_targets_positive.fasta"
 params.cores = "4"
 params.outdir = "$projectDir/output"
 params.help = false
 params.mode = "full"
 params.depth = "10"
 params.isolates = "$projectDir/data/isolate_fasta"
-params.orf = "$projectDir/data/References/orf.gff"
+params.orf = "$projectDir/data/references/orf.gff"
 params.ml = "$projectDir/data/ml.pkl"
+params.vcf = "$projectDir/data/references/blank.vcf.gz"
+params.model = "$projectDir/data/model/r1041_e82_400bps_hac_v520"
 
 /* Print help message if --help is passed */
 workflow help {
@@ -37,7 +39,8 @@ workflow help {
 
 /* set modules */
 include { FASTQC } from './modules/fastqc'
-include { MEDAKAVAR } from './modules/medakavar.nf'
+include { VAR_CALL } from './modules/var_call.nf'
+include { CREATE_VCF } from './modules/create_vcf.nf'
 include { MOSDEPTH } from './modules/mosdepth.nf'
 include { PLOTTING } from './modules/plotting.nf'
 include { BOXPLOT } from './modules/boxplot.nf'
@@ -65,14 +68,20 @@ workflow monotrac {
         FASTQC(
             sample_ch
             )
-        MEDAKAVAR(
+        VAR_CALL(
             sample_ch,
-            params.reference_1,
+            params.reference,
+            params.model
+            )
+        CREATE_VCF(
+            VAR_CALL.out,
+            params.reference,
             params.depth,
-            params.orf
+            params.orf,
+            params.vcf
             )
         MOSDEPTH(
-            MEDAKAVAR.out.consensus
+            CREATE_VCF.out.consensus
             )
         PLOTTING(
             MOSDEPTH.out.global
@@ -91,7 +100,7 @@ workflow monotrac {
             )
         isolates_fasta_files = Channel.fromPath("${params.isolates}/*.fas").collect()
         ALIGN(
-            (MEDAKAVAR.out.fasta).collect(),
+            (CREATE_VCF.out.fasta).collect(),
             isolates_fasta_files
             )
         FASTTREE(
@@ -102,7 +111,7 @@ workflow monotrac {
             (MOSDEPTH.out.global).collect()
             ) 
         TRANSEQ(
-            MEDAKAVAR.out.fasta
+            CREATE_VCF.out.fasta
             )
         AACOUNT(
             TRANSEQ.out

@@ -1,4 +1,2 @@
 sample,read
-108AT,data/syn_reads/108AT.fq.gz
-108BT,data/syn_reads/108BT.fq.gz
-15BT-relapse,data/syn_reads/15BT-relapse.fq.gz
+reads,data/references/reads.fastq.gz
