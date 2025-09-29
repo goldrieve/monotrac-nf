@@ -1,16 +1,16 @@
 process PREDICT{
     tag "$sample"
-    publishDir "${params.outdir}/Isolate_Morphology"
+    publishDir "${params.outdir}/predictions"
 
     input:
     tuple val (sample), path (csv) 
-    path "data/ml.pkl"
+    path pkl
 
     output:
     path "${sample}_prediction.txt"
 
     script:
     """
-    python predict.py ${sample}.csv
+    predict.py $csv
     """
 }

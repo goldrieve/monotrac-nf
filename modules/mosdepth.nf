@@ -2,10 +2,10 @@
 
 process MOSDEPTH{
     tag "$sample"
-    publishDir "${params.outdir}/Mosdepth"
+    publishDir "${params.outdir}/mosdepth"
 
     input:
-    tuple val (sample), path (bam)
+    tuple val (sample), path (index), path (bam)
 
     output:
     tuple val (sample), path ("${sample}.mosdepth.global.dist.txt"), emit: global
@@ -13,6 +13,6 @@ process MOSDEPTH{
     
     script:
     """
-    mosdepth ${bam} ${bam}/calls_to_draft.bam
+    mosdepth ${sample} ${bam}
     """
 }

@@ -3,15 +3,17 @@ nextflow.enable.dsl = 2
 
 /* Define variables */
 params.samplesheet = "$projectDir/data/samplesheet.csv"
-params.reference_1 = "$projectDir/data/References/padded_targets_positive.fasta"
+params.reference = "$projectDir/data/references/padded_targets_positive.fasta"
 params.cores = "4"
 params.outdir = "$projectDir/output"
 params.help = false
 params.mode = "full"
 params.depth = "10"
 params.isolates = "$projectDir/data/isolate_fasta"
-params.orf = "$projectDir/data/References/orf.gff"
-params.ml = "$projectDir/data/ml.pkl"
+params.orf = "$projectDir/data/references/orf.gff"
+params.pkl = "$projectDir/data/machine_learning/ml.pkl"
+params.vcf = "$projectDir/data/references/blank.vcf.gz"
+params.model = "$projectDir/data/model/r1041_e82_400bps_hac_v520"
 
 /* Print help message if --help is passed */
 workflow help {
@@ -37,21 +39,22 @@ workflow help {
 
 /* set modules */
 include { FASTQC } from './modules/fastqc'
-include { MEDAKAVAR } from './modules/medakavar.nf'
-include { MOSDEPTH } from './modules/mosdepth.nf'
-include { PLOTTING } from './modules/plotting.nf'
-include { BOXPLOT } from './modules/boxplot.nf'
-include { ALIGN } from './modules/align.nf'
-include { FASTTREE } from './modules/fasttree.nf'
-include { COMBINEFILES } from './modules/combineFiles.nf'
-include { RAWCOMBINE } from './modules/rawCombine.nf'
-include { LINEPLOT } from './modules/lineplot.nf'
-include { MULTIQC } from './modules/multiqc.nf'
-include { TRANSEQ } from './modules/transeq.nf'
-include { AACOUNT } from './modules/AAcount.nf'
-include { COMBINECSV } from './modules/combinecsv.nf'
-include { PREDICT } from './modules/predict.nf'
-include { FINAL } from './modules/final.nf'
+include { VAR_CALL } from './modules/var_call'
+include { CREATE_VCF } from './modules/create_vcf'
+include { MOSDEPTH } from './modules/mosdepth'
+include { PLOTTING } from './modules/plotting'
+include { BOXPLOT } from './modules/boxplot'
+include { ALIGN } from './modules/align'
+include { FASTTREE } from './modules/fasttree'
+include { COMBINEFILES } from './modules/combineFiles'
+include { RAWCOMBINE } from './modules/rawCombine'
+include { LINEPLOT } from './modules/lineplot'
+include { MULTIQC } from './modules/multiqc'
+include { TRANSEQ } from './modules/transeq'
+include { AACOUNT } from './modules/AAcount'
+include { COMBINECSV } from './modules/combinecsv'
+include { PREDICT } from './modules/predict'
+include { FINAL } from './modules/final'
 
 /* MONOTRAC workflow */
 workflow monotrac {
@@ -65,14 +68,20 @@ workflow monotrac {
         FASTQC(
             sample_ch
             )
-        MEDAKAVAR(
+        VAR_CALL(
             sample_ch,
-            params.reference_1,
+            params.reference,
+            params.model
+            )
+        CREATE_VCF(
+            VAR_CALL.out.vcf,
+            params.reference,
             params.depth,
-            params.orf
+            params.orf,
+            params.vcf
             )
         MOSDEPTH(
-            MEDAKAVAR.out.consensus
+            VAR_CALL.out.bam
             )
         PLOTTING(
             MOSDEPTH.out.global
@@ -91,7 +100,7 @@ workflow monotrac {
             )
         isolates_fasta_files = Channel.fromPath("${params.isolates}/*.fas").collect()
         ALIGN(
-            (MEDAKAVAR.out.fasta).collect(),
+            (CREATE_VCF.out.fasta).collect(),
             isolates_fasta_files
             )
         FASTTREE(
@@ -102,7 +111,7 @@ workflow monotrac {
             (MOSDEPTH.out.global).collect()
             ) 
         TRANSEQ(
-            MEDAKAVAR.out.fasta
+            CREATE_VCF.out.fasta
             )
         AACOUNT(
             TRANSEQ.out
@@ -110,8 +119,9 @@ workflow monotrac {
         COMBINECSV(
             (AACOUNT.out).collect()
             )
-        PREDICT(AACOUNT.out,
-            params.ml
+        PREDICT(
+            AACOUNT.out,
+            params.pkl
             )
         FINAL(
             (PREDICT.out).collect()
