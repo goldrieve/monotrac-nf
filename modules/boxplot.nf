@@ -1,6 +1,6 @@
 process BOXPLOT{
     tag "Creating boxplot"
-    publishDir "${params.outdir}/Plots"
+    publishDir "${params.outdir}/plots/depth_plots"
 
     input:
     path (combined_csv)
@@ -10,6 +10,6 @@ process BOXPLOT{
 
     script:
     """
-    python boxplot.py 
+    boxplot.py 
     """
 }

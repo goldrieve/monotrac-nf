@@ -1,6 +1,6 @@
 process FASTTREE {
     tag "Generating tree"
-    publishDir "${params.outdir}/Plots"
+    publishDir "${params.outdir}/tree"
 
     input:
     path (mafft)

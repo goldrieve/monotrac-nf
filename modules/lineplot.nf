@@ -1,6 +1,6 @@
 process LINEPLOT {
     tag "Plotting depth"
-    publishDir "${params.outdir}/Plots"
+    publishDir "${params.outdir}/plots/depth"
 
     input:
     path (raw_csv)
@@ -10,6 +10,6 @@ process LINEPLOT {
 
     script:
     """
-    python lineplot.py 
+    lineplot.py 
     """
 }

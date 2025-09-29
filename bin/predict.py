@@ -1,10 +1,12 @@
+#!/usr/bin/env python
+
 import sys 
 import pandas as pd 
 import joblib 
 import os 
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(script_dir, "../data/ml.pkl")
+model_path = os.path.join("ml.pkl")
 
 model = joblib.load(model_path)  
 
@@ -24,7 +26,7 @@ for input_files in sys.argv[1:]:
 
         predictions = model.predict(data)
 
-        output_files = f"{os.path.basename(input_files).replace('.csv', '_prediction.txt')}"
+        output_files = f"{os.path.basename(input_files).replace('_AA_counts.csv', '_prediction.txt')}"
         print(f"\n Prediction for {input_files} (from {output_files}):\n")
         print("\n".join(predictions)) 
 

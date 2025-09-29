@@ -8,7 +8,8 @@ process VAR_CALL {
     path model
 
     output:
-    tuple val (sample), path ("${sample}_unfiltered.vcf")
+    tuple val (sample), path ("${sample}_unfiltered.vcf"), emit: vcf
+    tuple val (sample), path ("${sample}.bam.bai"), path ("${sample}.bam"), emit: bam
     
     script:
     """

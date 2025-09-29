@@ -1,6 +1,6 @@
 process TRANSEQ {
     tag "$sample"
-    publishDir "${params.outdir}/Protein_seqs"
+    publishDir "${params.outdir}/aa_seqs"
 
     input:
     tuple val (sample), path (dna)

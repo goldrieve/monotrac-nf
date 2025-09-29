@@ -1,4 +1,4 @@
-print("Starting script execution...")
+#!/usr/bin/env python
 
 import os
 import glob

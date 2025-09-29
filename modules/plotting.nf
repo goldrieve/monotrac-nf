@@ -1,16 +1,16 @@
  
 process PLOTTING{
     tag "$sample"
-    publishDir "${params.outdir}/Plots/Depth_plots"
+    publishDir "${params.outdir}/plots/depth_plots"
 
     input:
     tuple val (sample), path (global)
 
     output:
-    path "${sample}.png"
+    path "${sample}.mosdepth.global.dist.png"
 
     script:
     """
-    python depth_plots.py ${global}
+    depth_plots.py ${global}
     """
 }

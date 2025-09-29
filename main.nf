@@ -11,7 +11,7 @@ params.mode = "full"
 params.depth = "10"
 params.isolates = "$projectDir/data/isolate_fasta"
 params.orf = "$projectDir/data/references/orf.gff"
-params.ml = "$projectDir/data/ml.pkl"
+params.pkl = "$projectDir/data/machine_learning/ml.pkl"
 params.vcf = "$projectDir/data/references/blank.vcf.gz"
 params.model = "$projectDir/data/model/r1041_e82_400bps_hac_v520"
 
@@ -74,14 +74,14 @@ workflow monotrac {
             params.model
             )
         CREATE_VCF(
-            VAR_CALL.out,
+            VAR_CALL.out.vcf,
             params.reference,
             params.depth,
             params.orf,
             params.vcf
             )
         MOSDEPTH(
-            CREATE_VCF.out.consensus
+            VAR_CALL.out.bam
             )
         PLOTTING(
             MOSDEPTH.out.global
@@ -119,8 +119,9 @@ workflow monotrac {
         COMBINECSV(
             (AACOUNT.out).collect()
             )
-        PREDICT(AACOUNT.out,
-            params.ml
+        PREDICT(
+            AACOUNT.out,
+            params.pkl
             )
         FINAL(
             (PREDICT.out).collect()

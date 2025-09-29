@@ -1,10 +1,10 @@
 process MULTIQC {
     tag "Running multiQC"
-    publishDir "${params.outdir}/MultiQC"
+    publishDir "${params.outdir}/multiqc"
 
     input:
-    path (fastqc)
-    path (mosdepth_global) 
+    tuple val (sample), path (fastqc)
+    tuple val (samples), path (mosdepth_global) 
 
     output:
     path "multiqc_report.html"
