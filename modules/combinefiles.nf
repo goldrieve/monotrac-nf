@@ -1,4 +1,4 @@
-process COMBINEFILES {
+process COMBINE_FILES {
     tag "Combining files"
 
     input:

@@ -1,4 +1,4 @@
-process RAWCOMBINE {
+process RAW_COMBINE {
     tag "Combining mosdepth results"
 
     input:

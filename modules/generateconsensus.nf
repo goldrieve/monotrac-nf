@@ -1,5 +1,5 @@
         
-process CREATE_VCF {
+process GENERATE_CONSENSUS {
     tag "$sample"
     publishDir "${params.outdir}/consensus"
 

@@ -1,4 +1,4 @@
-process COMBINECSV {
+process COMBINE_CSV {
     tag "Generating AA combined csv"
     publishDir "${params.outdir}/combined_csv"
 

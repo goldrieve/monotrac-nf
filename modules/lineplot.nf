@@ -1,4 +1,4 @@
-process LINEPLOT {
+process LINE_PLOT {
     tag "Plotting depth"
     publishDir "${params.outdir}/plots/depth"
 

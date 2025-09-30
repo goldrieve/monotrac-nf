@@ -1,4 +1,4 @@
-process AACOUNT {
+process AA_COUNT {
     tag "$sample"
     publishDir "${params.outdir}/aa_counts"
 
