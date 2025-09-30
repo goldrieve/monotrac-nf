@@ -43,12 +43,8 @@ include { VAR_CALL } from './modules/varcall'
 include { GENERATE_CONSENSUS } from './modules/generateconsensus'
 include { MOSDEPTH } from './modules/mosdepth'
 include { PLOTTING } from './modules/plotting'
-include { BOXPLOT } from './modules/boxplot'
 include { ALIGN } from './modules/align'
 include { FASTTREE } from './modules/fasttree'
-include { COMBINE_FILES } from './modules/combinefiles'
-include { RAW_COMBINE } from './modules/rawcombine'
-include { LINE_PLOT } from './modules/lineplot'
 include { MULTIQC } from './modules/multiqc'
 include { TRANSEQ } from './modules/transeq'
 include { AA_COUNT } from './modules/aacount'
@@ -84,19 +80,8 @@ workflow monotrac {
             VAR_CALL.out.bam
             )
         PLOTTING(
-            MOSDEPTH.out.sample_global
-            )
-        COMBINE_FILES(
-            (MOSDEPTH.out.summary).collect()
-            )
-        BOXPLOT(
-            COMBINE_FILES.out
-            )
-        RAW_COMBINE(
-            (MOSDEPTH.out.global).collect()
-            )
-        LINE_PLOT(
-            RAW_COMBINE.out
+            MOSDEPTH.out.sample_global,
+            (MOSDEPTH.out.summary).collect(),
             )
         isolates_fasta_files = Channel.fromPath("${params.isolates}/*.fas").collect()
         ALIGN(
