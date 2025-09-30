@@ -3,7 +3,7 @@ process COMBINECSV {
     publishDir "${params.outdir}/combined_csv"
 
     input:
-    tuple val (sample), path (csvfiles) 
+    path (csvfiles) 
 
     output:
     path "combined.csv"

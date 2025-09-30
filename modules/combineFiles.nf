@@ -1,8 +1,8 @@
 process COMBINEFILES {
-    tag "$sample"
+    tag "Combining files"
 
     input:
-    tuple val (sample), path (summary)
+    path (summary)
 
     output:
     path "combined_data.csv"

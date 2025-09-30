@@ -84,7 +84,7 @@ workflow monotrac {
             VAR_CALL.out.bam
             )
         PLOTTING(
-            MOSDEPTH.out.global
+            MOSDEPTH.out.sample_global
             )
         COMBINEFILES(
             (MOSDEPTH.out.summary).collect()
@@ -111,16 +111,16 @@ workflow monotrac {
             (MOSDEPTH.out.global).collect()
             ) 
         TRANSEQ(
-            CREATE_VCF.out.fasta
+            CREATE_VCF.out.sample_fasta
             )
         AACOUNT(
             TRANSEQ.out
             )
         COMBINECSV(
-            (AACOUNT.out).collect()
+            (AACOUNT.out.counts).collect()
             )
         PREDICT(
-            AACOUNT.out,
+            AACOUNT.out.sample_counts,
             params.pkl
             )
         FINAL(
