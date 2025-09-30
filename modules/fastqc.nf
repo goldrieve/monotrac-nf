@@ -6,8 +6,8 @@ process FASTQC {
     tuple val (sample), path (reads)
 
     output:
-    tuple val (sample), path ("${sample}_fastqc.html")
-    tuple val (sample), path ("${sample}_fastqc.zip"), emit: zip
+    path ("${sample}_fastqc.html")
+    path ("${sample}_fastqc.zip"), emit: zip
 
     script:
     """

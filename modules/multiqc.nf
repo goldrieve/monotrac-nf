@@ -3,8 +3,8 @@ process MULTIQC {
     publishDir "${params.outdir}/multiqc"
 
     input:
-    tuple val (sample), path (fastqc)
-    tuple val (samples), path (mosdepth_global) 
+    path (fastqc)
+    path (mosdepth_global) 
 
     output:
     path "multiqc_report.html"

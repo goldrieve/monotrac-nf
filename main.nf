@@ -39,20 +39,16 @@ workflow help {
 
 /* set modules */
 include { FASTQC } from './modules/fastqc'
-include { VAR_CALL } from './modules/var_call'
-include { CREATE_VCF } from './modules/create_vcf'
+include { VAR_CALL } from './modules/varcall'
+include { GENERATE_CONSENSUS } from './modules/generateconsensus'
 include { MOSDEPTH } from './modules/mosdepth'
 include { PLOTTING } from './modules/plotting'
-include { BOXPLOT } from './modules/boxplot'
 include { ALIGN } from './modules/align'
 include { FASTTREE } from './modules/fasttree'
-include { COMBINEFILES } from './modules/combineFiles'
-include { RAWCOMBINE } from './modules/rawCombine'
-include { LINEPLOT } from './modules/lineplot'
 include { MULTIQC } from './modules/multiqc'
 include { TRANSEQ } from './modules/transeq'
-include { AACOUNT } from './modules/AAcount'
-include { COMBINECSV } from './modules/combinecsv'
+include { AA_COUNT } from './modules/aacount'
+include { COMBINE_CSV } from './modules/combinecsv'
 include { PREDICT } from './modules/predict'
 include { FINAL } from './modules/final'
 
@@ -73,7 +69,7 @@ workflow monotrac {
             params.reference,
             params.model
             )
-        CREATE_VCF(
+        GENERATE_CONSENSUS(
             VAR_CALL.out.vcf,
             params.reference,
             params.depth,
@@ -84,23 +80,12 @@ workflow monotrac {
             VAR_CALL.out.bam
             )
         PLOTTING(
-            MOSDEPTH.out.global
-            )
-        COMBINEFILES(
-            (MOSDEPTH.out.summary).collect()
-            )
-        BOXPLOT(
-            COMBINEFILES.out
-            )
-        RAWCOMBINE(
-            (MOSDEPTH.out.global).collect()
-            )
-        LINEPLOT(
-            RAWCOMBINE.out
+            MOSDEPTH.out.sample_global,
+            (MOSDEPTH.out.summary).collect(),
             )
         isolates_fasta_files = Channel.fromPath("${params.isolates}/*.fas").collect()
         ALIGN(
-            (CREATE_VCF.out.fasta).collect(),
+            (GENERATE_CONSENSUS.out.fasta).collect(),
             isolates_fasta_files
             )
         FASTTREE(
@@ -111,16 +96,16 @@ workflow monotrac {
             (MOSDEPTH.out.global).collect()
             ) 
         TRANSEQ(
-            CREATE_VCF.out.fasta
+            GENERATE_CONSENSUS.out.sample_fasta
             )
-        AACOUNT(
+        AA_COUNT(
             TRANSEQ.out
             )
-        COMBINECSV(
-            (AACOUNT.out).collect()
+        COMBINE_CSV(
+            (AA_COUNT.out.counts).collect()
             )
         PREDICT(
-            AACOUNT.out,
+            AA_COUNT.out.sample_counts,
             params.pkl
             )
         FINAL(

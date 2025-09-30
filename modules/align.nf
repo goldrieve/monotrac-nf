@@ -3,7 +3,7 @@ process ALIGN {
     publishDir "${params.outdir}/alignments"
     
     input:
-    tuple val (sample), path (fastas)
+    path (fastas)
     path (isolates_fasta_files)
 
     output:

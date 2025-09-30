@@ -8,8 +8,9 @@ process MOSDEPTH{
     tuple val (sample), path (index), path (bam)
 
     output:
-    tuple val (sample), path ("${sample}.mosdepth.global.dist.txt"), emit: global
-    tuple val (sample), path ("${sample}.mosdepth.summary.txt"), emit: summary
+    path ("${sample}.mosdepth.global.dist.txt"), emit: global
+    tuple val (sample), path ("${sample}.mosdepth.global.dist.txt"), emit: sample_global
+    path ("${sample}.mosdepth.summary.txt"), emit: summary
     
     script:
     """

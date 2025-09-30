@@ -1,5 +1,5 @@
         
-process CREATE_VCF {
+process GENERATE_CONSENSUS {
     tag "$sample"
     publishDir "${params.outdir}/consensus"
 
@@ -12,7 +12,8 @@ process CREATE_VCF {
 
     output:
     tuple val (sample), path ("${sample}_final_filtered.vcf.gz")
-    tuple val (sample), path ("${sample}*.fas"), emit: fasta
+    path ("${sample}*.fas"), emit: fasta
+    tuple val (sample), path ("${sample}*.fas"), emit: sample_fasta
     
     script:
     """

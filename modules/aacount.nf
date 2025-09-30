@@ -1,4 +1,4 @@
-process AACOUNT {
+process AA_COUNT {
     tag "$sample"
     publishDir "${params.outdir}/aa_counts"
 
@@ -6,7 +6,8 @@ process AACOUNT {
     tuple val (sample), path (amino_acid) 
 
     output:
-    tuple val (sample), path ("${sample}_AA_counts.csv")
+    path ("${sample}_AA_counts.csv"), emit: counts
+    tuple val (sample), path ("${sample}_AA_counts.csv"), emit: sample_counts
 
     script:
     """
