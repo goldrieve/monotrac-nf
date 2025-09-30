@@ -6,7 +6,6 @@ process GENERATE_CONSENSUS {
     input:
     tuple val (sample), path (unfiltered)
     path reference
-    val depth
     path orf
     path vcf
 
@@ -24,6 +23,6 @@ process GENERATE_CONSENSUS {
     bgzip ${sample}_final_filtered.vcf 
 
     bcftools index ${sample}_final_filtered.vcf.gz
-    cat ${reference} | grep -v ^\$ | bcftools consensus -H I ${sample}_final_filtered.vcf.gz > ${sample}_consensus.fas 
+    cat ${reference} | grep -v ^\$ | bcftools consensus -R ${orf} -H I ${sample}_final_filtered.vcf.gz > ${sample}_consensus.fas 
     """
 }

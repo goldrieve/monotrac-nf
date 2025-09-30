@@ -72,7 +72,6 @@ workflow monotrac {
         GENERATE_CONSENSUS(
             VAR_CALL.out.vcf,
             params.reference,
-            params.depth,
             params.orf,
             params.vcf
             )
