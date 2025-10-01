@@ -37,7 +37,7 @@ gene_order = [
 # Step 1: Concatenate all gene sequences from each isolate into a single sequence
 with open(concatenated_fasta, 'w') as outfile:
     for fasta_file in fasta_files:
-        if fasta_file.endswith('.fasta') or fasta_file.endswith('.fas'):
+        if fasta_file.endswith('.fasta') or fasta_file.endswith('.fas') or fasta_file.endswith('.fa'):
             concatenated_sequence = ''
             records_dict = SeqIO.to_dict(SeqIO.parse(fasta_file, 'fasta'))
             
