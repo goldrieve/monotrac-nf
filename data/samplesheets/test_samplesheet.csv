@@ -1,3 +1,3 @@
 sample,read
-108AT,data/syn_reads/108AT.fq.gz
-Alfort,data/syn_reads/Alfort.fq.gz
+108AT_test,data/syn_reads/108AT.fq.gz
+Alfort_test,data/syn_reads/Alfort.fq.gz
