@@ -8,11 +8,12 @@ params.cores = "4"
 params.outdir = "$projectDir/output"
 params.help = false
 params.mode = "full"
-params.depth = "10"
+params.depth = "20"
+params.mpq = "5"
 params.isolates = "$projectDir/data/isolate_fasta"
 params.orf = "$projectDir/data/references/orf.bed"
 params.pkl = "$projectDir/data/machine_learning/ml.pkl"
-params.vcf = "$projectDir/data/references/blank.vcf.gz"
+params.blank = "$projectDir/data/references/blank.vcf.gz"
 params.model = "$projectDir/data/model/r1041_e82_400bps_hac_v520"
 
 /* Print help message if --help is passed */
@@ -67,13 +68,15 @@ workflow monotrac {
         VAR_CALL(
             sample_ch,
             params.reference,
-            params.model
+            params.model,
+            params.depth,
+            params.mpq,
+            params.blank
             )
         GENERATE_CONSENSUS(
             VAR_CALL.out.vcf,
             params.reference,
-            params.orf,
-            params.vcf
+            params.orf
             )
         MOSDEPTH(
             VAR_CALL.out.bam

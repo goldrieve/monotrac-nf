@@ -4,26 +4,18 @@ process GENERATE_CONSENSUS {
     publishDir "${params.outdir}/consensus"
 
     input:
-    tuple val (sample), path (unfiltered)
+    tuple val (sample), path (vcf), path (index)
     path reference
     path orf
-    path vcf
 
     output:
-    tuple val (sample), path ("${sample}*vcf.gz")
     path ("${sample}*_padded.fa")
-    path ("${sample}*_consensus.fa"), emit: fasta
-    tuple val (sample), path ("${sample}*_consensus.fa"), emit: sample_fasta
+    path ("${sample}*.fa"), emit: fasta
+    tuple val (sample), path ("${sample}*.fa"), emit: sample_fasta
     
     script:
     """
-    bcftools view -f PASS -O z -o ${sample}_filtered.vcf.gz $unfiltered
- 
-    zgrep '^#' ${vcf} > ${sample}_final_filtered.vcf 
-    zgrep -v '^#' ${sample}_filtered.vcf.gz >> ${sample}_final_filtered.vcf 
-    bgzip ${sample}_final_filtered.vcf
-    bcftools index ${sample}_final_filtered.vcf.gz
-    cat ${reference} | grep -v ^\$ | bcftools consensus -H I ${sample}_final_filtered.vcf.gz > ${sample}_padded.fa
-    bedtools getfasta -fi ${sample}_padded.fa -bed ${orf} -fo - | sed 's/:.*\$//' > ${sample}_consensus.fa
+    cat ${reference} | grep -v ^\$ | bcftools consensus -H I ${sample}_final.vcf.gz > ${sample}_padded.fa
+    bedtools getfasta -fi ${sample}_padded.fa -bed ${orf} -fo - | sed 's/:.*\$//' > ${sample}.fa
     """
 }
