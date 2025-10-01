@@ -24,6 +24,6 @@ process GENERATE_CONSENSUS {
     bgzip ${sample}_final_filtered.vcf
     bcftools index ${sample}_final_filtered.vcf.gz
     cat ${reference} | grep -v ^\$ | bcftools consensus -H I ${sample}_final_filtered.vcf.gz > ${sample}_padded.fa
-    bedtools getfasta -fi ${sample}_padded.fa -bed ${orf} -fo ${sample}_consensus.fa
+    bedtools getfasta -fi ${sample}_padded.fa -bed ${orf} -fo - | sed 's/:.*\$//' > ${sample}_consensus.fa
     """
 }
