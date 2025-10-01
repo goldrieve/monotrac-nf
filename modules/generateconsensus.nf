@@ -10,9 +10,10 @@ process GENERATE_CONSENSUS {
     path vcf
 
     output:
-    tuple val (sample), path ("${sample}_final_filtered.vcf.gz")
-    path ("${sample}*.fas"), emit: fasta
-    tuple val (sample), path ("${sample}*.fas"), emit: sample_fasta
+    tuple val (sample), path ("${sample}*vcf.gz")
+    path ("${sample}*_padded.fa")
+    path ("${sample}*_consensus.fa"), emit: fasta
+    tuple val (sample), path ("${sample}*_consensus.fa"), emit: sample_fasta
     
     script:
     """
@@ -20,9 +21,9 @@ process GENERATE_CONSENSUS {
  
     zgrep '^#' ${vcf} > ${sample}_final_filtered.vcf 
     zgrep -v '^#' ${sample}_filtered.vcf.gz >> ${sample}_final_filtered.vcf 
-    bgzip ${sample}_final_filtered.vcf 
-
+    bgzip ${sample}_final_filtered.vcf
     bcftools index ${sample}_final_filtered.vcf.gz
-    cat ${reference} | grep -v ^\$ | bcftools consensus -R ${orf} -H I ${sample}_final_filtered.vcf.gz > ${sample}_consensus.fas 
+    cat ${reference} | grep -v ^\$ | bcftools consensus -H I ${sample}_final_filtered.vcf.gz > ${sample}_padded.fa
+    bedtools getfasta -fi ${sample}_padded.fa -bed ${orf} -fo ${sample}_consensus.fa
     """
 }
