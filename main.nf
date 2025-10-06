@@ -94,7 +94,7 @@ workflow monotrac {
             ALIGN.out
             )
         MULTIQC(
-            (FASTQC.out.zip).collect(),
+            (FASTQC.out.dir).collect(),
             (MOSDEPTH.out.global).collect()
             ) 
         TRANSEQ(

@@ -1,0 +1,26 @@
+nextflow_process {
+
+    name "Test Process FASTQC"
+    script "main.nf"
+    process "FASTQC"
+
+    test("Should run fastqc") {
+
+        when {
+            params {
+            }
+            process {
+                """
+                input[0] = ["SVP_test", file("${projectDir}/data/syn_reads/SVP.fq.gz")]  
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert snapshot(process.out.stats).match()
+        }
+
+    }
+
+}

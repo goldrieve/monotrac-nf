@@ -3,3 +3,4 @@ output/
 .nextflow*
 .nextflow/
 .DS_Store
+.nf-test

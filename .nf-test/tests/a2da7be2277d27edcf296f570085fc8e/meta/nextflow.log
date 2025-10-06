@@ -1,0 +1,85 @@
+Oct-06 08:43:40.931 [main] DEBUG nextflow.cli.Launcher - $> nextflow -quiet -log /home/guyoldrieve/git/monotrac-nf/.nf-test/tests/a2da7be2277d27edcf296f570085fc8e/meta/nextflow.log run /home/guyoldrieve/git/monotrac-nf/.nf-test-a2da7be2277d27edcf296f570085fc8e.nf -c /home/guyoldrieve/git/monotrac-nf/nextflow.config -c /home/guyoldrieve/git/monotrac-nf/tests/nextflow.config -params-file /home/guyoldrieve/git/monotrac-nf/.nf-test/tests/a2da7be2277d27edcf296f570085fc8e/meta/params.json -ansi-log false -profile docker -with-trace /home/guyoldrieve/git/monotrac-nf/.nf-test/tests/a2da7be2277d27edcf296f570085fc8e/meta/trace.csv -w /home/guyoldrieve/git/monotrac-nf/.nf-test/tests/a2da7be2277d27edcf296f570085fc8e/work
+Oct-06 08:43:41.009 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.7
+Oct-06 08:43:41.033 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/guyoldrieve/.nextflow/plugins; core-plugins: nf-amazon@2.15.0-patch1,nf-azure@1.16.0-patch1,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4-patch1,nf-wave@1.12.1
+Oct-06 08:43:41.066 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Oct-06 08:43:41.067 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Oct-06 08:43:41.072 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Oct-06 08:43:41.090 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Oct-06 08:43:41.118 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/guyoldrieve/git/monotrac-nf/nextflow.config
+Oct-06 08:43:41.126 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/guyoldrieve/git/monotrac-nf/nextflow.config
+Oct-06 08:43:41.126 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/guyoldrieve/git/monotrac-nf/tests/nextflow.config
+Oct-06 08:43:41.128 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/guyoldrieve/git/monotrac-nf/nextflow.config
+Oct-06 08:43:41.129 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/guyoldrieve/git/monotrac-nf/nextflow.config
+Oct-06 08:43:41.129 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/guyoldrieve/git/monotrac-nf/tests/nextflow.config
+Oct-06 08:43:41.163 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/guyoldrieve/.nextflow/secrets/store.json
+Oct-06 08:43:41.167 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@7d151a] - activable => nextflow.secret.LocalSecretsProvider@7d151a
+Oct-06 08:43:41.197 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Oct-06 08:43:41.665 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Oct-06 08:43:41.677 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Oct-06 08:43:41.783 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [docker]
+Oct-06 08:43:41.818 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Oct-06 08:43:41.836 [main] INFO  nextflow.cli.CmdRun - Launching `/home/guyoldrieve/git/monotrac-nf/.nf-test-a2da7be2277d27edcf296f570085fc8e.nf` [insane_euclid] DSL2 - revision: 4c6bba6181
+Oct-06 08:43:41.838 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Oct-06 08:43:41.838 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Oct-06 08:43:41.903 [main] DEBUG nextflow.Session - Session UUID: 9d530277-910a-4e2a-b67c-9b35b33fc656
+Oct-06 08:43:41.904 [main] DEBUG nextflow.Session - Run name: insane_euclid
+Oct-06 08:43:41.904 [main] DEBUG nextflow.Session - Executor pool size: 4
+Oct-06 08:43:41.914 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Oct-06 08:43:41.921 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=12; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Oct-06 08:43:41.946 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.7 build 5955
+  Created: 08-09-2025 13:29 UTC 
+  System: Linux 6.14.0-1014-aws
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 17.0.14+1-b1367.22
+  Encoding: UTF-8 (UTF-8)
+  Process: 48649@ranch-1006 [192.168.4.9]
+  CPUs: 4 - Mem: 30.7 GB (1.2 GB) - Swap: 0 (0)
+Oct-06 08:43:41.977 [main] DEBUG nextflow.Session - Work-dir: /home/guyoldrieve/git/monotrac-nf/.nf-test/tests/a2da7be2277d27edcf296f570085fc8e/work [ext2/ext3]
+Oct-06 08:43:42.025 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Oct-06 08:43:42.036 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Oct-06 08:43:42.046 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Oct-06 08:43:42.101 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Oct-06 08:43:42.112 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 5; maxThreads: 1000
+Oct-06 08:43:42.218 [main] DEBUG nextflow.Session - Session start
+Oct-06 08:43:42.223 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/guyoldrieve/git/monotrac-nf/.nf-test/tests/a2da7be2277d27edcf296f570085fc8e/meta/trace.csv
+Oct-06 08:43:42.639 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Oct-06 08:43:43.566 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-06 08:43:43.566 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-06 08:43:43.572 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Oct-06 08:43:43.579 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=30.7 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+Oct-06 08:43:43.582 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Oct-06 08:43:43.628 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FASTQC': maxForks=0; fair=false; array=0
+Oct-06 08:43:43.701 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC, PLOTTING, AA_COUNT, TRANSEQ, COMBINE_CSV, MULTIQC, FASTTREE, FINAL, ALIGN, MOSDEPTH, PREDICT, VAR_CALL, GENERATE_CONSENSUS
+Oct-06 08:43:43.702 [main] DEBUG nextflow.Session - Igniting dataflow network (1)
+Oct-06 08:43:43.703 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTQC
+Oct-06 08:43:43.705 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_df5b7a66d4e08213: /home/guyoldrieve/git/monotrac-nf/modules/final.nf
+  Script_27172e476f1efd42: /home/guyoldrieve/git/monotrac-nf/modules/mosdepth.nf
+  Script_53f1c8c3194a8f65: /home/guyoldrieve/git/monotrac-nf/modules/fasttree.nf
+  Script_fd9fc371a47e42c6: /home/guyoldrieve/git/monotrac-nf/modules/combinecsv.nf
+  Script_c2d24414defd3a12: /home/guyoldrieve/git/monotrac-nf/modules/plotting.nf
+  Script_a0e53312cb90797a: /home/guyoldrieve/git/monotrac-nf/modules/aacount.nf
+  Script_ba0d08e504715264: /home/guyoldrieve/git/monotrac-nf/modules/transeq.nf
+  Script_617a0ddaf034464b: /home/guyoldrieve/git/monotrac-nf/modules/multiqc.nf
+  Script_8b142735edb5c2b2: /home/guyoldrieve/git/monotrac-nf/modules/fastqc.nf
+  Script_2518de1615a84d3d: /home/guyoldrieve/git/monotrac-nf/modules/predict.nf
+  Script_23dd911e24fe6e1c: /home/guyoldrieve/git/monotrac-nf/modules/generateconsensus.nf
+  Script_4e7ef660b0f6a918: /home/guyoldrieve/git/monotrac-nf/modules/varcall.nf
+  Script_4d6baff72afa257f: /home/guyoldrieve/git/monotrac-nf/.nf-test-a2da7be2277d27edcf296f570085fc8e.nf
+  Script_d6fe1137320490cb: /home/guyoldrieve/git/monotrac-nf/main.nf
+  Script_678f14108d501e7a: /home/guyoldrieve/git/monotrac-nf/modules/align.nf
+Oct-06 08:43:43.705 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Oct-06 08:43:43.705 [main] DEBUG nextflow.Session - Session await
+Oct-06 08:43:43.891 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-06 08:43:43.894 [Task submitter] INFO  nextflow.Session - [14/38a951] Submitted process > FASTQC (SVP_test)
+Oct-06 08:43:47.760 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: FASTQC (SVP_test); status: COMPLETED; exit: 0; error: -; workDir: /home/guyoldrieve/git/monotrac-nf/.nf-test/tests/a2da7be2277d27edcf296f570085fc8e/work/14/38a9514126e7c98981c04fceb12f72]
+Oct-06 08:43:47.761 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=12; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Oct-06 08:43:47.810 [main] DEBUG nextflow.Session - Session await > all processes finished
+Oct-06 08:43:47.859 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Oct-06 08:43:47.860 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Oct-06 08:43:47.862 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Oct-06 08:43:47.877 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=3.2s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Oct-06 08:43:47.877 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Oct-06 08:43:47.886 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Oct-06 08:43:47.951 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Oct-06 08:43:47.951 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
