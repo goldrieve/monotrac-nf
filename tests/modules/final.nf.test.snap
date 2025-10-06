@@ -1,0 +1,16 @@
+{
+    "Should combine predictions": {
+        "content": [
+            {
+                "0": [
+                    "combined_prediction.csv:md5,188ba0906d35114030f45662a7093568"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.2",
+            "nextflow": "25.04.7"
+        },
+        "timestamp": "2025-10-06T14:31:02.752931409"
+    }
+}

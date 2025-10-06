@@ -1,0 +1,46 @@
+{
+    "Should generate consensus": {
+        "content": [
+            {
+                "0": [
+                    "SVP_test_padded.fa:md5,aec96a081fb6459ab1fc42691494b517"
+                ],
+                "1": [
+                    [
+                        "SVP_test.fa:md5,582c369fb8df7e9333691d4dd15f5eca",
+                        "SVP_test_padded.fa:md5,aec96a081fb6459ab1fc42691494b517"
+                    ]
+                ],
+                "2": [
+                    [
+                        "SVP_test",
+                        [
+                            "SVP_test.fa:md5,582c369fb8df7e9333691d4dd15f5eca",
+                            "SVP_test_padded.fa:md5,aec96a081fb6459ab1fc42691494b517"
+                        ]
+                    ]
+                ],
+                "fasta": [
+                    [
+                        "SVP_test.fa:md5,582c369fb8df7e9333691d4dd15f5eca",
+                        "SVP_test_padded.fa:md5,aec96a081fb6459ab1fc42691494b517"
+                    ]
+                ],
+                "sample_fasta": [
+                    [
+                        "SVP_test",
+                        [
+                            "SVP_test.fa:md5,582c369fb8df7e9333691d4dd15f5eca",
+                            "SVP_test_padded.fa:md5,aec96a081fb6459ab1fc42691494b517"
+                        ]
+                    ]
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.2",
+            "nextflow": "25.04.7"
+        },
+        "timestamp": "2025-10-06T14:43:31.575868921"
+    }
+}

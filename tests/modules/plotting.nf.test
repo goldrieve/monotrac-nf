@@ -1,0 +1,26 @@
+nextflow_process {
+
+    name "Test Process PLOTTING"
+    script "main.nf"
+    process "PLOTTING"
+
+    test("Should generate plots") {
+
+        when {
+            params {
+            }
+            process {
+                """
+                input[0] = ["SVP_test", file("${projectDir}/tests/data/SVP_test.mosdepth.global.dist.txt")] 
+                input[1] = file("${projectDir}/tests/data/SVP_test.mosdepth.summary.txt")
+                """
+            }
+        }
+
+        then {
+            assert process.success
+        }
+
+    }
+
+}

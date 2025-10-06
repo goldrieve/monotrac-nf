@@ -1,5 +1,3 @@
-// mosdepth module - calculates the depth of the reads 
-
 process MOSDEPTH{
     tag "$sample"
     publishDir "${params.outdir}/mosdepth"

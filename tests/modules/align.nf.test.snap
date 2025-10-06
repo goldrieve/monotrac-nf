@@ -1,0 +1,16 @@
+{
+    "Should run alignment": {
+        "content": [
+            {
+                "0": [
+                    "aligned.fas:md5,860dedda87c4b1bb78f081ac1ebf5273"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.2",
+            "nextflow": "25.04.7"
+        },
+        "timestamp": "2025-10-06T11:04:01.717546648"
+    }
+}

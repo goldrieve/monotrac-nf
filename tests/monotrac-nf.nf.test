@@ -1,0 +1,26 @@
+nextflow_workflow {
+
+  name "Test Workflow monotrac"
+  script "main.nf"
+  workflow "monotrac"
+
+  test("Should integrate all modules") {
+
+    setup {
+      def testSamplesheet = file("${outputDir}/test_samplesheet.csv")
+      testSamplesheet.text = "sample,read\nSVP_test,${projectDir}/tests/data/SVP.fq.gz"
+    }
+
+    when {
+      params {
+        samplesheet = "${outputDir}/test_samplesheet.csv"
+        outdir = "${outputDir}"
+      }
+    }
+
+    then {
+      assert workflow.success
+      assert snapshot(workflow.out).match()
+    }
+  }
+}

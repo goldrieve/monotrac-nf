@@ -1,0 +1,26 @@
+nextflow_process {
+
+    name "Test Process PREDICT"
+    script "main.nf"
+    process "PREDICT"
+
+    test("Should predict outbreak potential - pleomorphic") {
+
+        when {
+            params {
+                pkl = "${projectDir}/data/machine_learning/ml.pkl"
+            }
+            process {
+                """
+                input[0] = ["108AT_test", file("${projectDir}/tests/data/108AT_test_AA_counts.csv")]
+                input[1] = params.pkl
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert snapshot(process.out).match()
+        }
+    }
+}

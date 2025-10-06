@@ -1,0 +1,22 @@
+nextflow_process {
+
+    name "Test Process COMBINE_CSV"
+    script "main.nf"
+    process "COMBINE_CSV"
+
+    test("Should combine AA count csvs") {
+
+        when {
+            process {
+                """
+                input[0] = file("${projectDir}/tests/data/SVP_test_AA_counts.csv")
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert snapshot(process.out).match()
+        }
+    }
+}

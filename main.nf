@@ -8,8 +8,8 @@ params.cores = "4"
 params.outdir = "$projectDir/output"
 params.help = false
 params.mode = "full"
-params.depth = "20"
-params.mpq = "5"
+params.depth = "5"
+params.mpq = "2"
 params.isolates = "$projectDir/data/isolate_fasta"
 params.orf = "$projectDir/data/references/orf.bed"
 params.pkl = "$projectDir/data/machine_learning/ml.pkl"
@@ -65,6 +65,7 @@ workflow monotrac {
         FASTQC(
             sample_ch
             )
+
         VAR_CALL(
             sample_ch,
             params.reference,
@@ -73,46 +74,61 @@ workflow monotrac {
             params.mpq,
             params.blank
             )
+
         GENERATE_CONSENSUS(
             VAR_CALL.out.vcf,
             params.reference,
             params.orf
             )
+
         MOSDEPTH(
             VAR_CALL.out.bam
             )
+
         PLOTTING(
             MOSDEPTH.out.sample_global,
             (MOSDEPTH.out.summary).collect(),
             )
+
         isolates_fasta_files = Channel.fromPath("${params.isolates}/*.fas").collect()
+
         ALIGN(
             (GENERATE_CONSENSUS.out.fasta).collect(),
             isolates_fasta_files
             )
+
         FASTTREE(
             ALIGN.out
             )
+
         MULTIQC(
             (FASTQC.out.dir).collect(),
             (MOSDEPTH.out.global).collect()
-            ) 
+            )
+
         TRANSEQ(
             GENERATE_CONSENSUS.out.sample_fasta
             )
+
         AA_COUNT(
             TRANSEQ.out
             )
+            
         COMBINE_CSV(
             (AA_COUNT.out.counts).collect()
             )
+
         PREDICT(
             AA_COUNT.out.sample_counts,
             params.pkl
             )
+
         FINAL(
             (PREDICT.out).collect()
             )
+
+        emit: 
+            FINAL = FINAL.out
 }
 
 workflow {
