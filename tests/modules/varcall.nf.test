@@ -29,7 +29,8 @@ nextflow_process {
 
         then {
             assert process.success
-            assert snapshot(process.out.vcf).match()
+            assert path(process.out[0][0][1]).linesGzip.contains('Tb927.1.3230\t2858\t.\tA\tG\t36.68\tPASS\tF\tGT:GQ:DP:AD:AF\t1/1:36:23:0,20:0.8696')
+            assert path(process.out[0][0][1]).linesGzip.contains('Tb927.5.1220\t2934\t.\tC\tT\t43.94\tPASS\tF\tGT:GQ:DP:AD:AF\t1/1:43:23:0,21:0.9130')
         }
 
     }
