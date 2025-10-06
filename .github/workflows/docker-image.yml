@@ -28,4 +28,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: aphacsubot/btb-seq:master
+        tags: goldrieve/monotrac-nf:latest

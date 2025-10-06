@@ -1,4 +1,4 @@
-name: btb-seq CI
+name: monotrac-nf CI
 
 on: [push, pull_request]
 
