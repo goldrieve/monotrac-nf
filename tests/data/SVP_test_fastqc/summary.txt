@@ -1,0 +1,10 @@
+PASS	Basic Statistics	SVP.fq.gz
+PASS	Per base sequence quality	SVP.fq.gz
+PASS	Per sequence quality scores	SVP.fq.gz
+FAIL	Per base sequence content	SVP.fq.gz
+FAIL	Per sequence GC content	SVP.fq.gz
+PASS	Per base N content	SVP.fq.gz
+WARN	Sequence Length Distribution	SVP.fq.gz
+PASS	Sequence Duplication Levels	SVP.fq.gz
+FAIL	Overrepresented sequences	SVP.fq.gz
+PASS	Adapter Content	SVP.fq.gz

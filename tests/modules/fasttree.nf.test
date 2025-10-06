@@ -1,0 +1,22 @@
+nextflow_process {
+
+    name "Test Process FASTTREE"
+    script "main.nf"
+    process "FASTTREE"
+
+    test("Should run tree generation") {
+
+        when {
+            process {
+                """
+                input[0] = file("${projectDir}/tests/data/aligned.fas")
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert snapshot(process.out).match()
+        }
+    }
+}

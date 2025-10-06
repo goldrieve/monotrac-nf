@@ -1,0 +1,22 @@
+nextflow_process {
+
+    name "Test Process MULTIQC"
+    script "main.nf"
+    process "MULTIQC"
+
+    test("Should run multiqc") {
+
+        when {
+            process {
+                """
+                input[0] = file("${projectDir}/tests/data/SVP_test_fastqc")
+                input[1] = file("${projectDir}/tests/data/SVP_test.mosdepth.global.dist.txt")
+                """
+            }
+        }
+
+        then {
+            assert process.success
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "Should run tree generation": {
+        "content": [
+            {
+                "0": [
+                    "tree.nwk:md5,30c06057ba09228e29b8285953367a92"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.2",
+            "nextflow": "25.04.7"
+        },
+        "timestamp": "2025-10-06T12:21:21.202114469"
+    }
+}

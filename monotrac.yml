@@ -16,3 +16,4 @@ dependencies:
   - minimap2
   - bcftools
   - bedtools
+  - unzip

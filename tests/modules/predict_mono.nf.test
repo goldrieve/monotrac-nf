@@ -1,0 +1,26 @@
+nextflow_process {
+
+    name "Test Process PREDICT"
+    script "main.nf"
+    process "PREDICT"
+
+    test("Should predict outbreak potential - monomorphic") {
+
+        when {
+            params {
+                pkl = "${projectDir}/data/machine_learning/ml.pkl"
+            }
+            process {
+                """
+                input[0] = ["SVP_test", file("${projectDir}/tests/data/SVP_test_AA_counts.csv")]
+                input[1] = params.pkl
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert snapshot(process.out).match()
+        }
+    }
+}

@@ -1,0 +1,26 @@
+nextflow_process {
+
+    name "Test Process TRANSEQ"
+    script "main.nf"
+    process "TRANSEQ"
+
+    test("Should run transeq") {
+
+        when {
+            params {
+            }
+            process {
+                """
+                input[0] = ["SVP_test", file("${projectDir}/tests/data/SVP.fas")] 
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert snapshot(process.out).match()
+        }
+
+    }
+
+}

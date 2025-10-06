@@ -10,6 +10,19 @@ def calculate_aa_frequencies(fasta_file):
     isolate_name = os.path.splitext(os.path.basename(fasta_file))[0]
     csv_output = f"{isolate_name}_counts.csv"
     
+    # Define expected gene order based on your header
+    gene_order = [
+        "Tb927.10.13980_1", "Tb927.10.15300_1", "Tb927.9.10660_1", "Tb927.8.3810_1",
+        "Tb927.10.4720_1", "Tb927.11.1940_1", "Tb927.4.980_1", "Tb927.10.1820_1",
+        "Tb927.6.3660_1", "Tb927.1.3230_1", "Tb927.5.1220_1", "Tb927.6.1100_1",
+        "Tb927.11.3980_1", "Tb927.6.2630_1", "Tb927.7.6560_1", "Tb927.10.2810_1",
+        "Tb927.3.4350_1", "Tb927.6.5000_1", "Tb927.8.3480_1"
+    ]
+    
+    # Define amino acid order (standard amino acids + stop codon and X)
+    aa_order = ['*', 'A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 
+                'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y']
+    
     # Dictionary to store amino acid frequencies per gene
     gene_frequencies = {}
 
@@ -23,19 +36,24 @@ def calculate_aa_frequencies(fasta_file):
         aa_frequencies = {aa: sequence.count(aa) / total_aa for aa in set(sequence)}
         gene_frequencies[gene_id] = aa_frequencies
 
-    # Get all unique amino acids present
-    all_amino_acids = sorted(set(aa for freqs in gene_frequencies.values() for aa in freqs))
-
-    # Write frequencies to CSV
+    # Write frequencies to CSV with sorted columns
     with open(csv_output, "w", newline="") as csvfile:
         writer = csv.writer(csvfile)
         
-        # Write header row
-        header = ["isolate"] + [f"{gene}_{aa}" for gene in gene_frequencies.keys() for aa in all_amino_acids]
+        # Write header row in the specified order
+        header = ["isolate"]
+        for gene in gene_order:
+            for aa in aa_order:
+                header.append(f"{gene}_{aa}")
         writer.writerow(header)
         
-        # Write row with relative frequencies
-        row = [isolate_name] + [gene_frequencies[gene].get(aa, 0) for gene in gene_frequencies.keys() for aa in all_amino_acids]
+        # Write row with relative frequencies in the same order
+        row = [isolate_name]
+        for gene in gene_order:
+            for aa in aa_order:
+                # Get frequency for this gene-aa combination, default to 0 if not present
+                freq = gene_frequencies.get(gene, {}).get(aa, 0)
+                row.append(freq)
         writer.writerow(row)
 
     print(f"Amino acid frequencies saved to {csv_output}")

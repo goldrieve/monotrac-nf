@@ -1,0 +1,19 @@
+{
+    "Should run transeq": {
+        "content": [
+            {
+                "0": [
+                    [
+                        "SVP_test",
+                        "SVP_test_AA.fas:md5,b452ecefb384568e0e4be0769adf4722"
+                    ]
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.2",
+            "nextflow": "25.04.7"
+        },
+        "timestamp": "2025-10-06T14:40:02.396028079"
+    }
+}

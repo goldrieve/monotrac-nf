@@ -1,0 +1,31 @@
+nextflow_process {
+
+    name "Test Process GENERATE_CONSENSUS"
+    script "main.nf"
+    process "GENERATE_CONSENSUS"
+
+    test("Should generate consensus") {
+
+        when {
+            params {
+                reference = "${projectDir}/data/references/padded_targets_positive.fasta"
+                orf = "$projectDir/data/references/orf.bed"
+
+            }
+            process {
+                """
+                input[0] = ["SVP_test", file("${projectDir}/tests/data/SVP_test_final.vcf.gz"), file("${projectDir}/tests/data/SVP_test_final.vcf.gz.csi")] 
+                input[1] = params.reference
+                input[2] = params.orf
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert snapshot(process.out).match()
+        }
+
+    }
+
+}

@@ -1,0 +1,14 @@
+{
+    "Should run fastqc": {
+        "content": [
+            [
+                "summary.txt:md5,8759ba71da2825a37eae5f55ac890e0c"
+            ]
+        ],
+        "meta": {
+            "nf-test": "0.9.2",
+            "nextflow": "25.04.7"
+        },
+        "timestamp": "2025-10-06T08:43:48.022938324"
+    }
+}

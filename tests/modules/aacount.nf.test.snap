@@ -1,0 +1,31 @@
+{
+    "Should run AA count": {
+        "content": [
+            {
+                "0": [
+                    "SVP_test_AA_counts.csv:md5,f9fc7fe7fda1e29eefacef16a320e9d4"
+                ],
+                "1": [
+                    [
+                        "SVP_test",
+                        "SVP_test_AA_counts.csv:md5,f9fc7fe7fda1e29eefacef16a320e9d4"
+                    ]
+                ],
+                "counts": [
+                    "SVP_test_AA_counts.csv:md5,f9fc7fe7fda1e29eefacef16a320e9d4"
+                ],
+                "sample_counts": [
+                    [
+                        "SVP_test",
+                        "SVP_test_AA_counts.csv:md5,f9fc7fe7fda1e29eefacef16a320e9d4"
+                    ]
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.2",
+            "nextflow": "25.04.7"
+        },
+        "timestamp": "2025-10-06T12:36:59.694763695"
+    }
+}

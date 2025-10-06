@@ -1,0 +1,16 @@
+{
+    "Should predict outbreak potential - pleomorphic": {
+        "content": [
+            {
+                "0": [
+                    "108AT_test_prediction.txt:md5,77aa6454c0892e3003078f99d68ad340"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.2",
+            "nextflow": "25.04.7"
+        },
+        "timestamp": "2025-10-06T14:25:29.356339797"
+    }
+}

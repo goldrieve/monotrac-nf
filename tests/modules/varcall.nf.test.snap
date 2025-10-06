@@ -1,0 +1,18 @@
+{
+    "Should run variant calling": {
+        "content": [
+            [
+                [
+                    "SVP_test",
+                    "SVP_test_final.vcf.gz:md5,024f6d6a7c25e4e8aa6f850bd5e924c0",
+                    "SVP_test_final.vcf.gz.csi:md5,0b171c8ff6dd7506c0cdd8f2bf790701"
+                ]
+            ]
+        ],
+        "meta": {
+            "nf-test": "0.9.2",
+            "nextflow": "25.04.7"
+        },
+        "timestamp": "2025-10-06T15:27:38.365335287"
+    }
+}

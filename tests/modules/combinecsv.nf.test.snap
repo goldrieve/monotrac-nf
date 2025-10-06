@@ -1,0 +1,16 @@
+{
+    "Should combine AA count csvs": {
+        "content": [
+            {
+                "0": [
+                    "combined.csv:md5,cb8a28fe497e791765fffa7b577a7430"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.2",
+            "nextflow": "25.04.7"
+        },
+        "timestamp": "2025-10-06T14:43:12.010990942"
+    }
+}

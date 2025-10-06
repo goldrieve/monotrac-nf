@@ -1,0 +1,38 @@
+nextflow_process {
+
+    name "Test Process VARCALL"
+    script "main.nf"
+    process "VAR_CALL"
+
+    test("Should run variant calling") {
+
+        when {
+            params {
+                reference = "${projectDir}/data/references/padded_targets_positive.fasta"
+                model = "${projectDir}/data/model/r1041_e82_400bps_hac_v520"
+                depth = 20
+		        mpq = 5
+		        blank = "$projectDir/data/references/blank.vcf.gz"
+
+            }
+            process {
+                """
+                input[0] = ["SVP_test", file("${projectDir}/data/syn_reads/SVP.fq.gz")] 
+                input[1] = params.reference
+                input[2] = params.model
+                input[3] = params.depth
+                input[4] = params.mpq
+                input[5] = params.blank
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert path(process.out[0][0][1]).linesGzip.contains('Tb927.1.3230\t2858\t.\tA\tG\t36.68\tPASS\tF\tGT:GQ:DP:AD:AF\t1/1:36:23:0,20:0.8696')
+            assert path(process.out[0][0][1]).linesGzip.contains('Tb927.5.1220\t2934\t.\tC\tT\t43.94\tPASS\tF\tGT:GQ:DP:AD:AF\t1/1:43:23:0,21:0.9130')
+        }
+
+    }
+
+}

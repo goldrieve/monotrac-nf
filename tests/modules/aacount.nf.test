@@ -1,0 +1,22 @@
+nextflow_process {
+
+    name "Test Process AA_COUNT"
+    script "main.nf"
+    process "AA_COUNT"
+
+    test("Should run AA count") {
+
+        when {
+            process {
+                """
+                input[0] = ["SVP_test", file("${projectDir}/tests/data/SVP_test_AA.fas")]
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert snapshot(process.out).match()
+        }
+    }
+}
